@@ -9,8 +9,14 @@ def boot_cluster():
         p.wait()
 
 
+def boot_cluster_service():
+    ccm_commands = ["sudo service syclla-server stop","sudo rm -Rf /var/lib/scylla/data/* /var/lib/scylla/commitlog/*","sudo service scylla-server start","sleep 60"]
+    for ccm_command in ccm_commands:
+        p = subprocess.Popen(ccm_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        p.wait()
+
 def run_limit_size_test(clustering_row_count,clustering_row_size,limit_size):
-    command_read = "scylla-bench -workload sequential -mode read -partition-count 1 -clustering-row-count %d -clustering-row-size %d  -concurrency 1  -nodes 127.0.0.1 -rows-per-request %d -no-lower-bound -protocol-version 3 -no-client-compression -duration 20s" % (clustering_row_count,clustering_row_size,limit_size)
+    command_read = "taskset -cp 8,10,12,14 scylla-bench -workload sequential -mode read -partition-count 1 -clustering-row-count %d -clustering-row-size %d  -concurrency 1  -nodes 127.0.0.1 -rows-per-request %d -no-lower-bound -protocol-version 3 -no-client-compression -duration 20s" % (clustering_row_count,clustering_row_size,limit_size)
 #    print command_read
     p = subprocess.Popen(command_read, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     for line in p.stdout.readlines():
@@ -20,8 +26,8 @@ def run_limit_size_test(clustering_row_count,clustering_row_size,limit_size):
     
 def run_test(clustering_row_count,clustering_row_size):
     print "running test for rows %d size %d" % (clustering_row_count, clustering_row_size)
-    command_write = "scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count %d -clustering-row-size %d  -concurrency 1  --nodes 127.0.0.1" % (clustering_row_count, clustering_row_size)
-    command_read = "scylla-bench -workload sequential -mode read -partition-count 1 -clustering-row-count %d -clustering-row-size %d  -concurrency 1  --nodes 127.0.0.1" % (clustering_row_count, clustering_row_size)
+    command_write = "taskset -cp 8,10,12,14 scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count %d -clustering-row-size %d  -concurrency 1  --nodes 127.0.0.1" % (clustering_row_count, clustering_row_size)
+    command_read = "taskset -cp 8,10,12,14 scylla-bench -workload sequential -mode read -partition-count 1 -clustering-row-count %d -clustering-row-size %d  -concurrency 1  --nodes 127.0.0.1" % (clustering_row_count, clustering_row_size)
 #    print command_write
     p = subprocess.Popen(command_write, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     p.wait()
@@ -34,7 +40,7 @@ def run_test(clustering_row_count,clustering_row_size):
 
 
 for clustering_row_size in [10,100,1000,10000]:
-    boot_cluster()
+    boot_cluster_service()
     run_test(1*1000000/clustering_row_size,clustering_row_size)
 #    run_test(1*10000000/clustering_row_size,clustering_row_size)
 
