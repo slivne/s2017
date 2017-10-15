@@ -1,0 +1,1105 @@
+nohup: ignoring input
+run_test_limit -1
+cqlsh -f udt_10.cql
+column_count 10 , write_command writeUDT, read_command read  max_reqs -1
+Configuration
+Mode: writeUDT
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 26870.196976629504
+Rows/s: 26870.196976629504
+Latency:
+  max: 13.828095ms 
+  99.9th: 1.245183ms 
+  99th: 884.735µs 
+  95th: 786.431µs 
+  90th: 720.895µs 
+  median: 589.823µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 2630879
+Total rows: 2630879
+Operations/s: 21924.225464070303
+Rows/s: 21924.225464070303
+Latency:
+  max: 2.785279ms 
+  99.9th: 1.212415ms 
+  99th: 1.048575ms 
+  95th: 917.503µs 
+  90th: 851.967µs 
+  median: 720.895µs
+cqlsh -f udt_20.cql
+column_count 20 , write_command writeUDT, read_command read  max_reqs -1
+Configuration
+Mode: writeUDT
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 26151.796793691236
+Rows/s: 26151.796793691236
+Latency:
+  max: 14.024703ms 
+  99.9th: 1.310719ms 
+  99th: 950.271µs 
+  95th: 786.431µs 
+  90th: 753.663µs 
+  median: 622.591µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 2623027
+Total rows: 2623027
+Operations/s: 21858.830746642125
+Rows/s: 21858.830746642125
+Latency:
+  max: 2.326527ms 
+  99.9th: 1.245183ms 
+  99th: 1.048575ms 
+  95th: 917.503µs 
+  90th: 851.967µs 
+  median: 720.895µs
+cqlsh -f udt_30.cql
+column_count 30 , write_command writeUDT, read_command read  max_reqs -1
+Configuration
+Mode: writeUDT
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 25352.786454644003
+Rows/s: 25352.786454644003
+Latency:
+  max: 14.024703ms 
+  99.9th: 1.376255ms 
+  99th: 1.015807ms 
+  95th: 819.199µs 
+  90th: 753.663µs 
+  median: 622.591µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 2462421
+Total rows: 2462421
+Operations/s: 20520.39159136354
+Rows/s: 20520.39159136354
+Latency:
+  max: 3.768319ms 
+  99.9th: 1.310719ms 
+  99th: 1.114111ms 
+  95th: 1.015807ms 
+  90th: 917.503µs 
+  median: 786.431µs
+cqlsh -f udt_40.cql
+column_count 40 , write_command writeUDT, read_command read  max_reqs -1
+Configuration
+Mode: writeUDT
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 25179.01465423583
+Rows/s: 25179.01465423583
+Latency:
+  max: 14.417919ms 
+  99.9th: 1.441791ms 
+  99th: 1.081343ms 
+  95th: 851.967µs 
+  90th: 786.431µs 
+  median: 622.591µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 2499288
+Total rows: 2499288
+Operations/s: 20827.567574331348
+Rows/s: 20827.567574331348
+Latency:
+  max: 3.375103ms 
+  99.9th: 1.310719ms 
+  99th: 1.114111ms 
+  95th: 983.039µs 
+  90th: 917.503µs 
+  median: 786.431µs
+cqlsh -f udt_50.cql
+column_count 50 , write_command writeUDT, read_command read  max_reqs -1
+Configuration
+Mode: writeUDT
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 24562.72700407143
+Rows/s: 24562.72700407143
+Latency:
+  max: 14.876671ms 
+  99.9th: 1.474559ms 
+  99th: 1.114111ms 
+  95th: 851.967µs 
+  90th: 786.431µs 
+  median: 655.359µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 2453773
+Total rows: 2453773
+Operations/s: 20448.300443479457
+Rows/s: 20448.300443479457
+Latency:
+  max: 2.392063ms 
+  99.9th: 1.343487ms 
+  99th: 1.114111ms 
+  95th: 1.015807ms 
+  90th: 917.503µs 
+  median: 786.431µs
+run_test_limit -1
+cqlsh -f regular_10.cql
+column_count 10 , write_command write, read_command read  max_reqs -1
+Configuration
+Mode: write
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 23161.821461191023
+Rows/s: 23161.821461191023
+Latency:
+  max: 14.024703ms 
+  99.9th: 1.310719ms 
+  99th: 1.015807ms 
+  95th: 851.967µs 
+  90th: 819.199µs 
+  median: 688.127µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 2413777
+Total rows: 2413777
+Operations/s: 20114.996006209003
+Rows/s: 20114.996006209003
+Latency:
+  max: 2.424831ms 
+  99.9th: 1.310719ms 
+  99th: 1.146879ms 
+  95th: 1.015807ms 
+  90th: 950.271µs 
+  median: 786.431µs
+cqlsh -f regular_20.cql
+column_count 20 , write_command write, read_command read  max_reqs -1
+Configuration
+Mode: write
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 20403.72705816595
+Rows/s: 20403.72705816595
+Latency:
+  max: 15.040511ms 
+  99.9th: 1.474559ms 
+  99th: 1.114111ms 
+  95th: 983.039µs 
+  90th: 917.503µs 
+  median: 786.431µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 2102580
+Total rows: 2102580
+Operations/s: 17521.715434229514
+Rows/s: 17521.715434229514
+Latency:
+  max: 2.523135ms 
+  99.9th: 1.507327ms 
+  99th: 1.277951ms 
+  95th: 1.146879ms 
+  90th: 1.048575ms 
+  median: 917.503µs
+cqlsh -f regular_30.cql
+column_count 30 , write_command write, read_command read  max_reqs -1
+Configuration
+Mode: write
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 17759.65956943919
+Rows/s: 17759.65956943919
+Latency:
+  max: 16.089087ms 
+  99.9th: 2.031615ms 
+  99th: 1.277951ms 
+  95th: 1.114111ms 
+  90th: 1.048575ms 
+  median: 884.735µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1945441
+Total rows: 1945441
+Operations/s: 16212.197581471271
+Rows/s: 16212.197581471271
+Latency:
+  max: 2.686975ms 
+  99.9th: 1.605631ms 
+  99th: 1.409023ms 
+  95th: 1.212415ms 
+  90th: 1.114111ms 
+  median: 983.039µs
+cqlsh -f regular_40.cql
+column_count 40 , write_command write, read_command read  max_reqs -1
+Configuration
+Mode: write
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 11979.37982237178
+Rows/s: 11979.37982237178
+Latency:
+  max: 17.170431ms 
+  99.9th: 14.024703ms 
+  99th: 4.095999ms 
+  95th: 3.538943ms 
+  90th: 1.540095ms 
+  median: 1.081343ms
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1639668
+Total rows: 1639668
+Operations/s: 13664.00420806704
+Rows/s: 13664.00420806704
+Latency:
+  max: 3.932159ms 
+  99.9th: 1.998847ms 
+  99th: 1.671167ms 
+  95th: 1.474559ms 
+  90th: 1.376255ms 
+  median: 1.179647ms
+cqlsh -f regular_50.cql
+column_count 50 , write_command write, read_command read  max_reqs -1
+Configuration
+Mode: write
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 10738.296469141946
+Rows/s: 10738.296469141946
+Latency:
+  max: 17.727487ms 
+  99.9th: 14.221311ms 
+  99th: 4.456447ms 
+  95th: 3.538943ms 
+  90th: 1.835007ms 
+  median: 1.245183ms
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: unlimited
+Disable client compression: false
+Results
+Total ops: 1511399
+Total rows: 1511399
+Operations/s: 12595.180250360827
+Rows/s: 12595.180250360827
+Latency:
+  max: 5.079039ms 
+  99.9th: 2.195455ms 
+  99th: 1.769471ms 
+  95th: 1.572863ms 
+  90th: 1.474559ms 
+  median: 1.277951ms
+run_test_limit 8000
+cqlsh -f udt_10.cql
+column_count 10 , write_command writeUDT, read_command read  max_reqs 8000
+Configuration
+Mode: writeUDT
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 7999.983185854299
+Rows/s: 7999.983185854299
+Latency:
+  max: 13.860863ms 
+  99.9th: 5.341183ms 
+  99th: 720.895µs 
+  95th: 622.591µs 
+  90th: 589.823µs 
+  median: 458.751µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 960000
+Total rows: 960000
+Operations/s: 8000.046036448863
+Rows/s: 8000.046036448863
+Latency:
+  max: 2.064383ms 
+  99.9th: 1.081343ms 
+  99th: 851.967µs 
+  95th: 786.431µs 
+  90th: 753.663µs 
+  median: 655.359µs
+cqlsh -f udt_20.cql
+column_count 20 , write_command writeUDT, read_command read  max_reqs 8000
+Configuration
+Mode: writeUDT
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 7999.979898075557
+Rows/s: 7999.979898075557
+Latency:
+  max: 14.942207ms 
+  99.9th: 5.931007ms 
+  99th: 819.199µs 
+  95th: 688.127µs 
+  90th: 655.359µs 
+  median: 524.287µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 960000
+Total rows: 960000
+Operations/s: 8000.055779710433
+Rows/s: 8000.055779710433
+Latency:
+  max: 1.572863ms 
+  99.9th: 1.015807ms 
+  99th: 819.199µs 
+  95th: 753.663µs 
+  90th: 720.895µs 
+  median: 557.055µs
+cqlsh -f udt_30.cql
+column_count 30 , write_command writeUDT, read_command read  max_reqs 8000
+Configuration
+Mode: writeUDT
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 7999.96342305878
+Rows/s: 7999.96342305878
+Latency:
+  max: 14.057471ms 
+  99.9th: 6.324223ms 
+  99th: 851.967µs 
+  95th: 720.895µs 
+  90th: 688.127µs 
+  median: 557.055µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 960000
+Total rows: 960000
+Operations/s: 8000.0528720473685
+Rows/s: 8000.0528720473685
+Latency:
+  max: 1.572863ms 
+  99.9th: 1.081343ms 
+  99th: 884.735µs 
+  95th: 851.967µs 
+  90th: 786.431µs 
+  median: 688.127µs
+cqlsh -f udt_40.cql
+column_count 40 , write_command writeUDT, read_command read  max_reqs 8000
+Configuration
+Mode: writeUDT
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 7999.971510942555
+Rows/s: 7999.971510942555
+Latency:
+  max: 13.860863ms 
+  99.9th: 7.667711ms 
+  99th: 851.967µs 
+  95th: 688.127µs 
+  90th: 622.591µs 
+  median: 491.519µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 960000
+Total rows: 960000
+Operations/s: 8000.047013168435
+Rows/s: 8000.047013168435
+Latency:
+  max: 2.162687ms 
+  99.9th: 1.245183ms 
+  99th: 983.039µs 
+  95th: 917.503µs 
+  90th: 884.735µs 
+  median: 753.663µs
+cqlsh -f udt_50.cql
+column_count 50 , write_command writeUDT, read_command read  max_reqs 8000
+Configuration
+Mode: writeUDT
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 7999.982689982362
+Rows/s: 7999.982689982362
+Latency:
+  max: 14.123007ms 
+  99.9th: 9.371647ms 
+  99th: 917.503µs 
+  95th: 753.663µs 
+  90th: 688.127µs 
+  median: 524.287µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 960000
+Total rows: 960000
+Operations/s: 8000.066552143196
+Rows/s: 8000.066552143196
+Latency:
+  max: 2.195455ms 
+  99.9th: 1.146879ms 
+  99th: 917.503µs 
+  95th: 851.967µs 
+  90th: 819.199µs 
+  median: 688.127µs
+run_test_limit 8000
+cqlsh -f regular_10.cql
+column_count 10 , write_command write, read_command read  max_reqs 8000
+Configuration
+Mode: write
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 7999.985891508457
+Rows/s: 7999.985891508457
+Latency:
+  max: 13.926399ms 
+  99.9th: 7.962623ms 
+  99th: 819.199µs 
+  95th: 753.663µs 
+  90th: 720.895µs 
+  median: 557.055µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 960000
+Total rows: 960000
+Operations/s: 8000.053126390432
+Rows/s: 8000.053126390432
+Latency:
+  max: 2.129919ms 
+  99.9th: 1.146879ms 
+  99th: 983.039µs 
+  95th: 917.503µs 
+  90th: 851.967µs 
+  median: 688.127µs
+cqlsh -f regular_20.cql
+column_count 20 , write_command write, read_command read  max_reqs 8000
+Configuration
+Mode: write
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 7999.971106749872
+Rows/s: 7999.971106749872
+Latency:
+  max: 14.254079ms 
+  99.9th: 10.321919ms 
+  99th: 917.503µs 
+  95th: 819.199µs 
+  90th: 786.431µs 
+  median: 589.823µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 960000
+Total rows: 960000
+Operations/s: 8000.045805147614
+Rows/s: 8000.045805147614
+Latency:
+  max: 2.457599ms 
+  99.9th: 1.277951ms 
+  99th: 1.048575ms 
+  95th: 983.039µs 
+  90th: 950.271µs 
+  median: 786.431µs
+cqlsh -f regular_30.cql
+column_count 30 , write_command write, read_command read  max_reqs 8000
+Configuration
+Mode: write
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 7999.966474032903
+Rows/s: 7999.966474032903
+Latency:
+  max: 15.171583ms 
+  99.9th: 11.960319ms 
+  99th: 1.081343ms 
+  95th: 983.039µs 
+  90th: 917.503µs 
+  median: 753.663µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 960000
+Total rows: 960000
+Operations/s: 8000.04997701633
+Rows/s: 8000.04997701633
+Latency:
+  max: 2.228223ms 
+  99.9th: 1.343487ms 
+  99th: 1.114111ms 
+  95th: 1.048575ms 
+  90th: 1.015807ms 
+  median: 851.967µs
+cqlsh -f regular_40.cql
+column_count 40 , write_command write, read_command read  max_reqs 8000
+Configuration
+Mode: write
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 7999.970884962522
+Rows/s: 7999.970884962522
+Latency:
+  max: 17.694719ms 
+  99.9th: 13.860863ms 
+  99th: 4.554751ms 
+  95th: 3.571711ms 
+  90th: 2.195455ms 
+  median: 786.431µs
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 960000
+Total rows: 960000
+Operations/s: 8000.057569295563
+Rows/s: 8000.057569295563
+Latency:
+  max: 3.604479ms 
+  99.9th: 1.572863ms 
+  99th: 1.343487ms 
+  95th: 1.245183ms 
+  90th: 1.212415ms 
+  median: 950.271µs
+cqlsh -f regular_50.cql
+column_count 50 , write_command write, read_command read  max_reqs 8000
+Configuration
+Mode: write
+Workload: sequential
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 1000000
+Total rows: 1000000
+Operations/s: 7999.967883539262
+Rows/s: 7999.967883539262
+Latency:
+  max: 17.137663ms 
+  99.9th: 14.123007ms 
+  99th: 4.980735ms 
+  95th: 3.670015ms 
+  90th: 2.588671ms 
+  median: 1.048575ms
+Configuration
+Mode: read
+Workload: uniform
+Consistency level: quorum
+Partition count: 1000000
+Clustering rows: 1
+Clustering row size: 10
+Rows per request: 1
+Provide upper bound: false
+IN queries: false
+No lower bound: false
+Page size: 1000
+Concurrency: 16
+Connections: 4
+Maximum rate: 8000 op/s
+Disable client compression: false
+Results
+Total ops: 960000
+Total rows: 960000
+Operations/s: 8000.052204926513
+Rows/s: 8000.052204926513
+Latency:
+  max: 3.506175ms 
+  99.9th: 1.769471ms 
+  99th: 1.441791ms 
+  95th: 1.376255ms 
+  90th: 1.277951ms 
+  median: 983.039µs
