@@ -1,0 +1,484 @@
+nohup: ignoring input
+sudo service syclla-server stop
+sudo pkill -9 scylla
+sudo rm -Rf /var/lib/scylla/data/*
+sudo rm -Rf /var/lib/scylla/commitlog/*
+sleep 3
+sudo service scylla-server start
+sleep 60
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 2000000 -clustering-row-size 10  -concurrency 1  -nodes 127.0.0.1
+nodetool flush
+sudo service scylla-server stop
+sudo pkill -9 scylla
+sudo service scylla-server start
+sleep 60
+rows_per_request 1 concurrency 100
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 1
+
+Clustering rows:	 2000000
+
+Clustering row size:	 10
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 100
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.044069403s 	 3078 	 3078 	 0 	 49.414143ms 	 45.318143ms 	 41.189375ms 	 37.093375ms 	 36.143103ms 	 33.062911ms 
+
+2.077805086s 	 3086 	 3086 	 0 	 40.108031ms 	 39.682047ms 	 37.847039ms 	 36.601855ms 	 35.815423ms 	 33.226751ms 
+
+3.114719402s 	 3074 	 3074 	 0 	 40.632319ms 	 39.813119ms 	 38.731775ms 	 36.765695ms 	 36.044799ms 	 33.390591ms 
+
+4.132221841s 	 3080 	 3080 	 0 	 40.796159ms 	 40.042495ms 	 38.305791ms 	 36.634623ms 	 36.044799ms 	 33.259519ms 
+
+
+
+Results
+
+Time (avg):	 5.013436252s
+
+Total ops:	 15151
+
+Total rows:	 15151
+
+Operations/s:	 3022.0864570929675
+
+Rows/s:		 3022.0864570929675
+
+Latency:
+
+  max:		 49.414143ms 
+
+  99.9th:	 43.843583ms 
+
+  99th:		 38.666239ms 
+
+  95th:		 36.700159ms 
+
+  90th:		 36.012031ms 
+
+  median:	 33.226751ms
+
+sudo service scylla-server stop
+sudo pkill -9 scylla
+sudo service scylla-server start
+sleep 60
+rows_per_request 5 concurrency 1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 1
+
+Clustering rows:	 2000000
+
+Clustering row size:	 10
+
+Rows per request:	 5
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.003677761s 	 206 	 1030 	 0 	 6.127615ms 	 6.127615ms 	 5.865471ms 	 5.668863ms 	 5.406719ms 	 4.849663ms 
+
+2.008474502s 	 216 	 1080 	 0 	 6.553599ms 	 6.553599ms 	 6.455295ms 	 5.636095ms 	 5.439487ms 	 4.587519ms 
+
+3.01227242s 	 209 	 1045 	 0 	 7.372799ms 	 7.372799ms 	 7.340031ms 	 6.586367ms 	 5.537791ms 	 4.685823ms 
+
+4.014452194s 	 209 	 1045 	 0 	 10.551295ms 	 10.551295ms 	 7.897087ms 	 6.684671ms 	 5.570559ms 	 4.653055ms 
+
+
+
+Results
+
+Time (avg):	 4.999525715s
+
+Total ops:	 1048
+
+Total rows:	 5240
+
+Operations/s:	 209.61988391332838
+
+Rows/s:		 1048.099419566642
+
+Latency:
+
+  max:		 10.551295ms 
+
+  99.9th:	 9.273343ms 
+
+  99th:		 7.208959ms 
+
+  95th:		 6.193151ms 
+
+  90th:		 5.505023ms 
+
+  median:	 4.685823ms
+
+sudo service scylla-server stop
+sudo pkill -9 scylla
+sudo service scylla-server start
+sleep 60
+rows_per_request 10 concurrency 1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 1
+
+Clustering rows:	 2000000
+
+Clustering row size:	 10
+
+Rows per request:	 10
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.003100181s 	 118 	 1180 	 0 	 12.550143ms 	 12.550143ms 	 11.796479ms 	 9.732095ms 	 9.437183ms 	 8.388607ms 
+
+2.01145532s 	 114 	 1140 	 0 	 12.845055ms 	 12.845055ms 	 11.960319ms 	 11.075583ms 	 9.994239ms 	 8.617983ms 
+
+3.01431783s 	 119 	 1190 	 0 	 12.287999ms 	 12.287999ms 	 10.158079ms 	 9.568255ms 	 9.207807ms 	 8.421375ms 
+
+4.018519807s 	 116 	 1160 	 0 	 12.681215ms 	 12.681215ms 	 11.436031ms 	 10.780671ms 	 9.568255ms 	 8.552447ms 
+
+
+
+Results
+
+Time (avg):	 5.005999474s
+
+Total ops:	 583
+
+Total rows:	 5830
+
+Operations/s:	 116.46025993969171
+
+Rows/s:		 1164.6025993969172
+
+Latency:
+
+  max:		 12.845055ms 
+
+  99.9th:	 12.681215ms 
+
+  99th:		 11.796479ms 
+
+  95th:		 10.682367ms 
+
+  90th:		 9.633791ms 
+
+  median:	 8.454143ms
+
+sudo service scylla-server stop
+sudo pkill -9 scylla
+sudo service scylla-server start
+sleep 60
+rows_per_request 25 concurrency 1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 1
+
+Clustering rows:	 2000000
+
+Clustering row size:	 10
+
+Rows per request:	 25
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.010700997s 	 51 	 1275 	 0 	 24.444927ms 	 24.444927ms 	 22.446079ms 	 21.757951ms 	 21.331967ms 	 19.759103ms 
+
+2.018637058s 	 52 	 1300 	 0 	 21.725183ms 	 21.725183ms 	 21.331967ms 	 21.037055ms 	 20.873215ms 	 19.234815ms 
+
+3.033521951s 	 52 	 1300 	 0 	 23.166975ms 	 23.166975ms 	 21.233663ms 	 21.004287ms 	 20.938751ms 	 19.562495ms 
+
+4.051607632s 	 51 	 1275 	 0 	 35.258367ms 	 35.258367ms 	 27.983871ms 	 22.151167ms 	 21.135359ms 	 19.529727ms 
+
+
+
+Results
+
+Time (avg):	 5.010369713s
+
+Total ops:	 255
+
+Total rows:	 6375
+
+Operations/s:	 50.89444783652834
+
+Rows/s:		 1272.3611959132086
+
+Latency:
+
+  max:		 35.258367ms 
+
+  99.9th:	 35.258367ms 
+
+  99th:		 23.166975ms 
+
+  95th:		 21.331967ms 
+
+  90th:		 21.037055ms 
+
+  median:	 19.496959ms
+
+sudo service scylla-server stop
+sudo pkill -9 scylla
+sudo service scylla-server start
+sleep 60
+rows_per_request 50 concurrency 1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 1
+
+Clustering rows:	 2000000
+
+Clustering row size:	 10
+
+Rows per request:	 50
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.017823639s 	 27 	 1350 	 0 	 41.910271ms 	 41.910271ms 	 41.910271ms 	 40.665087ms 	 39.321599ms 	 37.715967ms 
+
+2.050746119s 	 27 	 1350 	 0 	 46.989311ms 	 46.989311ms 	 46.989311ms 	 40.304639ms 	 39.780351ms 	 37.781503ms 
+
+3.054548232s 	 26 	 1300 	 0 	 43.974655ms 	 43.974655ms 	 43.974655ms 	 40.959999ms 	 40.173567ms 	 38.764543ms 
+
+4.075459141s 	 27 	 1350 	 0 	 40.894463ms 	 40.894463ms 	 40.894463ms 	 40.337407ms 	 39.550975ms 	 37.879807ms 
+
+
+
+Results
+
+Time (avg):	 5.013383013s
+
+Total ops:	 131
+
+Total rows:	 6550
+
+Operations/s:	 26.130060212896005
+
+Rows/s:		 1306.5030106448003
+
+Latency:
+
+  max:		 66.158591ms 
+
+  99.9th:	 66.158591ms 
+
+  99th:		 46.989311ms 
+
+  95th:		 40.665087ms 
+
+  90th:		 40.206335ms 
+
+  median:	 37.978111ms
+
+sudo service scylla-server stop
+sudo pkill -9 scylla
+sudo service scylla-server start
+sleep 60
+rows_per_request 100 concurrency 1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 1
+
+Clustering rows:	 2000000
+
+Clustering row size:	 10
+
+Rows per request:	 100
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.030113469s 	 13 	 1300 	 0 	 83.689471ms 	 83.689471ms 	 83.689471ms 	 82.444287ms 	 82.444287ms 	 78.970879ms 
+
+2.056450198s 	 13 	 1300 	 0 	 83.099647ms 	 83.099647ms 	 83.099647ms 	 82.509823ms 	 82.509823ms 	 78.839807ms 
+
+3.08492103s 	 13 	 1300 	 0 	 84.344831ms 	 84.344831ms 	 84.344831ms 	 84.344831ms 	 84.344831ms 	 78.381055ms 
+
+4.116578977s 	 13 	 1300 	 0 	 85.721087ms 	 85.721087ms 	 85.721087ms 	 83.886079ms 	 83.886079ms 	 79.101951ms 
+
+
+
+Results
+
+Time (avg):	 5.040278787s
+
+Total ops:	 64
+
+Total rows:	 6400
+
+Operations/s:	 12.697710326077644
+
+Rows/s:		 1269.7710326077643
+
+Latency:
+
+  max:		 85.721087ms 
+
+  99.9th:	 85.721087ms 
+
+  99th:		 84.344831ms 
+
+  95th:		 83.886079ms 
+
+  90th:		 83.034111ms 
+
+  median:	 78.381055ms
+
