@@ -1,0 +1,4455 @@
+nohup: ignoring input
+run_test_in_query_vs_split_query limit rows 500
+sudo service syclla-server stop
+sudo pkill -9 scylla
+sudo rm -Rf /var/lib/scylla/data/*
+sudo rm -Rf /var/lib/scylla/commitlog/*
+sleep 3
+sudo service scylla-server start
+sleep 60
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 0
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 1
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 2
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 3
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 4
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 5
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 6
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 7
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 8
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 9
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 10
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 11
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 12
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 13
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 14
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 15
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 16
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 17
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 18
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 19
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 20
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 21
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 22
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 23
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 24
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 25
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 26
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 27
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 28
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 29
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 30
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 31
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 32
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 33
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 34
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 35
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 36
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 37
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 38
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 39
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 40
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 41
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 42
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 43
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 44
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 45
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 46
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 47
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 48
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 49
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 50
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 51
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 52
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 53
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 54
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 55
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 56
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 57
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 58
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 59
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 60
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 61
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 62
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 63
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 64
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 65
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 66
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 67
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 68
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 69
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 70
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 71
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 72
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 73
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 74
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 75
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 76
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 77
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 78
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 79
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 80
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 81
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 82
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 83
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 84
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 85
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 86
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 87
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 88
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 89
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 90
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 91
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 92
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 93
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 94
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 95
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 96
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 97
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 98
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 99
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 100
+nodetool flush
+rows_per_request 1 concurrency 1 max_reqs 500
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 500 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.041942639s 	 102 	 102 	 0 	 16.023551ms 	 16.023551ms 	 15.499263ms 	 13.533183ms 	 12.517375ms 	 7.241727ms 
+
+2.049199277s 	 106 	 106 	 0 	 15.990783ms 	 15.990783ms 	 15.073279ms 	 13.500415ms 	 12.517375ms 	 7.012351ms 
+
+3.049258634s 	 206 	 206 	 0 	 15.007743ms 	 15.007743ms 	 14.057471ms 	 12.976127ms 	 11.468799ms 	 4.128767ms 
+
+4.052612346s 	 412 	 412 	 0 	 4.554751ms 	 4.554751ms 	 4.390911ms 	 3.997695ms 	 3.899391ms 	 3.571711ms 
+
+5.055107838s 	 395 	 395 	 0 	 6.586367ms 	 6.586367ms 	 4.653055ms 	 3.932159ms 	 3.833855ms 	 3.538943ms 
+
+6.057930658s 	 413 	 413 	 0 	 5.505023ms 	 5.505023ms 	 4.521983ms 	 4.030463ms 	 3.899391ms 	 3.276799ms 
+
+7.061304415s 	 405 	 405 	 0 	 6.160383ms 	 6.160383ms 	 5.603327ms 	 5.177343ms 	 3.735551ms 	 3.244031ms 
+
+8.062653728s 	 431 	 431 	 0 	 6.062079ms 	 6.062079ms 	 5.505023ms 	 5.111807ms 	 3.866623ms 	 3.047423ms 
+
+9.063834892s 	 398 	 398 	 0 	 5.636095ms 	 5.636095ms 	 5.472255ms 	 4.849663ms 	 3.932159ms 	 3.211263ms 
+
+10.064470975s 	 431 	 431 	 0 	 4.423679ms 	 4.423679ms 	 4.194303ms 	 3.997695ms 	 3.735551ms 	 3.145727ms 
+
+11.068483337s 	 442 	 442 	 0 	 5.668863ms 	 5.668863ms 	 5.275647ms 	 3.932159ms 	 3.571711ms 	 3.112959ms 
+
+12.069559743s 	 402 	 402 	 0 	 6.651903ms 	 6.651903ms 	 5.701631ms 	 5.373951ms 	 4.816895ms 	 3.211263ms 
+
+13.07189084s 	 397 	 397 	 0 	 5.472255ms 	 5.472255ms 	 5.177343ms 	 4.849663ms 	 4.554751ms 	 3.047423ms 
+
+14.073778738s 	 454 	 454 	 0 	 9.797631ms 	 9.797631ms 	 5.963775ms 	 3.932159ms 	 3.768319ms 	 2.949119ms 
+
+15.073896036s 	 436 	 436 	 0 	 6.094847ms 	 6.094847ms 	 5.537791ms 	 5.177343ms 	 3.997695ms 	 2.981887ms 
+
+16.074942565s 	 418 	 418 	 0 	 6.619135ms 	 6.619135ms 	 5.373951ms 	 4.915199ms 	 4.653055ms 	 2.916351ms 
+
+17.076378996s 	 412 	 412 	 0 	 6.258687ms 	 6.258687ms 	 5.177343ms 	 4.227071ms 	 4.030463ms 	 3.080191ms 
+
+18.079788452s 	 408 	 408 	 0 	 11.042815ms 	 11.042815ms 	 7.045119ms 	 5.210111ms 	 3.964927ms 	 3.112959ms 
+
+19.080953048s 	 447 	 447 	 0 	 5.636095ms 	 5.636095ms 	 5.406719ms 	 4.095999ms 	 3.735551ms 	 2.949119ms 
+
+20.082025183s 	 384 	 384 	 0 	 15.597567ms 	 15.597567ms 	 7.602175ms 	 5.308415ms 	 5.046271ms 	 3.047423ms 
+
+21.082256966s 	 406 	 406 	 0 	 18.907135ms 	 18.907135ms 	 8.880127ms 	 4.816895ms 	 4.095999ms 	 2.916351ms 
+
+22.082762114s 	 402 	 402 	 0 	 11.862015ms 	 11.862015ms 	 5.832703ms 	 4.816895ms 	 4.095999ms 	 3.014655ms 
+
+23.084947663s 	 397 	 397 	 0 	 6.914047ms 	 6.914047ms 	 5.799935ms 	 5.341183ms 	 4.423679ms 	 3.112959ms 
+
+24.085800983s 	 412 	 412 	 0 	 28.049407ms 	 28.049407ms 	 18.055167ms 	 5.308415ms 	 3.964927ms 	 3.080191ms 
+
+25.086889305s 	 321 	 321 	 0 	 166.985727ms 	 166.985727ms 	 157.024255ms 	 120.979455ms 	 77.004799ms 	 3.276799ms 
+
+26.089184474s 	 436 	 436 	 0 	 9.732095ms 	 9.732095ms 	 5.341183ms 	 4.685823ms 	 3.964927ms 	 2.916351ms 
+
+27.090632088s 	 416 	 416 	 0 	 23.625727ms 	 23.625727ms 	 13.631487ms 	 4.882431ms 	 4.194303ms 	 3.047423ms 
+
+28.092487983s 	 393 	 393 	 0 	 6.062079ms 	 6.062079ms 	 5.668863ms 	 5.144575ms 	 4.063231ms 	 3.112959ms 
+
+29.094819595s 	 399 	 399 	 0 	 5.537791ms 	 5.537791ms 	 5.439487ms 	 5.046271ms 	 4.784127ms 	 2.981887ms 
+
+
+
+Results
+
+Time (avg):	 29.971791742s
+
+Total ops:	 11436
+
+Total rows:	 11436
+
+Operations/s:	 381.5587702744688
+
+Rows/s:		 381.5587702744688
+
+Latency:
+
+  max:		 166.985727ms 
+
+  99.9th:	 139.067391ms 
+
+  99th:		 14.024703ms 
+
+  95th:		 7.962623ms 
+
+  90th:		 5.079039ms 
+
+  median:	 3.112959ms
+
+rows_per_request 1 concurrency 2 max_reqs 500
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 2
+
+Connections:		 4
+
+Maximum rate:		 500 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.003765228s 	 500 	 500 	 0 	 5.767167ms 	 5.767167ms 	 5.210111ms 	 4.620287ms 	 4.227071ms 	 3.112959ms 
+
+2.005247212s 	 500 	 500 	 0 	 5.931007ms 	 5.931007ms 	 5.013503ms 	 4.161535ms 	 3.932159ms 	 3.178495ms 
+
+3.005919344s 	 495 	 495 	 0 	 19.824639ms 	 18.382847ms 	 11.829247ms 	 5.996543ms 	 5.537791ms 	 3.014655ms 
+
+4.009939349s 	 508 	 508 	 0 	 5.963775ms 	 5.931007ms 	 5.636095ms 	 5.210111ms 	 4.751359ms 	 3.145727ms 
+
+5.010164836s 	 501 	 501 	 0 	 17.203199ms 	 13.205503ms 	 9.207807ms 	 4.325375ms 	 3.997695ms 	 3.178495ms 
+
+6.017436174s 	 501 	 501 	 0 	 10.158079ms 	 6.225919ms 	 6.029311ms 	 5.603327ms 	 5.341183ms 	 3.047423ms 
+
+7.018503235s 	 501 	 501 	 0 	 6.455295ms 	 5.767167ms 	 5.472255ms 	 5.111807ms 	 4.816895ms 	 2.523135ms 
+
+8.020408244s 	 501 	 501 	 0 	 5.275647ms 	 5.079039ms 	 4.718591ms 	 4.095999ms 	 3.899391ms 	 3.080191ms 
+
+9.022057223s 	 500 	 500 	 0 	 25.165823ms 	 21.168127ms 	 12.812287ms 	 5.865471ms 	 5.570559ms 	 2.818047ms 
+
+10.027133408s 	 503 	 503 	 0 	 6.717439ms 	 6.193151ms 	 5.734399ms 	 5.308415ms 	 5.111807ms 	 2.424831ms 
+
+11.027886748s 	 500 	 500 	 0 	 4.947967ms 	 4.947967ms 	 4.456447ms 	 4.161535ms 	 3.997695ms 	 3.047423ms 
+
+12.02848168s 	 502 	 502 	 0 	 6.291455ms 	 6.160383ms 	 5.963775ms 	 5.537791ms 	 4.554751ms 	 3.014655ms 
+
+13.030891791s 	 501 	 501 	 0 	 6.914047ms 	 6.422527ms 	 6.062079ms 	 5.439487ms 	 5.177343ms 	 3.014655ms 
+
+14.035545204s 	 502 	 502 	 0 	 6.520831ms 	 6.193151ms 	 5.013503ms 	 4.358143ms 	 4.063231ms 	 3.014655ms 
+
+15.039186529s 	 500 	 500 	 0 	 6.356991ms 	 6.356991ms 	 5.832703ms 	 5.373951ms 	 4.521983ms 	 2.523135ms 
+
+16.039387747s 	 502 	 502 	 0 	 7.536639ms 	 6.455295ms 	 6.160383ms 	 5.472255ms 	 5.079039ms 	 2.752511ms 
+
+17.044075596s 	 502 	 502 	 0 	 5.996543ms 	 5.636095ms 	 5.439487ms 	 4.554751ms 	 4.128767ms 	 3.178495ms 
+
+18.045299175s 	 501 	 501 	 0 	 6.455295ms 	 6.094847ms 	 5.898239ms 	 5.439487ms 	 4.292607ms 	 3.178495ms 
+
+19.051570489s 	 503 	 503 	 0 	 6.225919ms 	 6.193151ms 	 5.767167ms 	 5.406719ms 	 4.259839ms 	 2.949119ms 
+
+20.05244005s 	 502 	 502 	 0 	 5.898239ms 	 5.537791ms 	 4.915199ms 	 4.030463ms 	 3.866623ms 	 2.949119ms 
+
+21.05645564s 	 502 	 502 	 0 	 19.103743ms 	 15.106047ms 	 9.207807ms 	 5.144575ms 	 4.259839ms 	 2.883583ms 
+
+22.059363015s 	 501 	 501 	 0 	 18.087935ms 	 14.090239ms 	 6.193151ms 	 4.259839ms 	 3.735551ms 	 3.014655ms 
+
+23.059422308s 	 500 	 500 	 0 	 6.094847ms 	 6.094847ms 	 4.751359ms 	 4.095999ms 	 3.702783ms 	 3.014655ms 
+
+24.060443193s 	 501 	 501 	 0 	 4.980735ms 	 4.685823ms 	 4.325375ms 	 3.899391ms 	 3.571711ms 	 2.949119ms 
+
+25.062580649s 	 500 	 500 	 0 	 4.915199ms 	 4.915199ms 	 4.227071ms 	 3.833855ms 	 3.604479ms 	 2.981887ms 
+
+26.063705165s 	 501 	 501 	 0 	 9.928703ms 	 5.931007ms 	 4.259839ms 	 3.899391ms 	 3.604479ms 	 2.916351ms 
+
+27.067201627s 	 502 	 502 	 0 	 7.176191ms 	 4.849663ms 	 4.423679ms 	 4.030463ms 	 3.801087ms 	 2.949119ms 
+
+28.071223626s 	 501 	 501 	 0 	 4.620287ms 	 4.489215ms 	 4.292607ms 	 3.997695ms 	 3.768319ms 	 2.916351ms 
+
+29.073773239s 	 501 	 501 	 0 	 8.159231ms 	 7.929855ms 	 6.193151ms 	 5.439487ms 	 4.030463ms 	 2.981887ms 
+
+
+
+Results
+
+Time (avg):	 30.002494027s
+
+Total ops:	 15000
+
+Total rows:	 15000
+
+Operations/s:	 499.95843633876893
+
+Rows/s:		 499.95843633876893
+
+Latency:
+
+  max:		 25.165823ms 
+
+  99.9th:	 14.385151ms 
+
+  99th:		 5.931007ms 
+
+  95th:		 5.144575ms 
+
+  90th:		 4.227071ms 
+
+  median:	 2.981887ms
+
+rows_per_request 1 concurrency 3 max_reqs 500
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 3
+
+Connections:		 4
+
+Maximum rate:		 500 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.003493569s 	 498 	 498 	 0 	 4.718591ms 	 4.718591ms 	 4.456447ms 	 4.227071ms 	 3.932159ms 	 3.244031ms 
+
+2.009576803s 	 500 	 500 	 0 	 4.784127ms 	 4.784127ms 	 4.554751ms 	 4.325375ms 	 4.030463ms 	 3.244031ms 
+
+3.012533682s 	 500 	 500 	 0 	 6.389759ms 	 6.389759ms 	 5.898239ms 	 5.472255ms 	 5.111807ms 	 3.211263ms 
+
+4.014417161s 	 499 	 499 	 0 	 7.897087ms 	 7.897087ms 	 5.570559ms 	 5.111807ms 	 4.390911ms 	 3.145727ms 
+
+5.016416938s 	 499 	 499 	 0 	 4.685823ms 	 4.685823ms 	 4.554751ms 	 4.325375ms 	 4.161535ms 	 3.178495ms 
+
+6.022043535s 	 501 	 501 	 0 	 6.520831ms 	 6.389759ms 	 6.258687ms 	 5.832703ms 	 5.472255ms 	 3.342335ms 
+
+7.028366799s 	 499 	 499 	 0 	 6.553599ms 	 6.553599ms 	 6.291455ms 	 5.767167ms 	 5.505023ms 	 3.309567ms 
+
+8.033915467s 	 502 	 502 	 0 	 5.996543ms 	 5.963775ms 	 5.668863ms 	 5.308415ms 	 4.816895ms 	 3.276799ms 
+
+9.036639384s 	 499 	 499 	 0 	 4.849663ms 	 4.849663ms 	 4.620287ms 	 4.390911ms 	 4.128767ms 	 3.309567ms 
+
+10.039606703s 	 500 	 500 	 0 	 5.865471ms 	 5.865471ms 	 4.751359ms 	 4.325375ms 	 3.997695ms 	 3.244031ms 
+
+11.041721273s 	 498 	 498 	 0 	 6.848511ms 	 6.848511ms 	 6.291455ms 	 5.898239ms 	 5.701631ms 	 3.375103ms 
+
+12.046514857s 	 500 	 500 	 0 	 6.553599ms 	 6.553599ms 	 5.898239ms 	 5.537791ms 	 5.242879ms 	 3.276799ms 
+
+13.051423867s 	 500 	 500 	 0 	 5.570559ms 	 5.570559ms 	 5.144575ms 	 4.390911ms 	 4.128767ms 	 3.309567ms 
+
+14.054605802s 	 500 	 500 	 0 	 5.734399ms 	 5.734399ms 	 4.816895ms 	 4.325375ms 	 4.063231ms 	 3.342335ms 
+
+15.060978811s 	 500 	 500 	 0 	 8.355839ms 	 8.355839ms 	 6.258687ms 	 5.865471ms 	 5.603327ms 	 3.309567ms 
+
+16.070848741s 	 502 	 502 	 0 	 6.324223ms 	 6.193151ms 	 5.963775ms 	 5.570559ms 	 5.275647ms 	 3.342335ms 
+
+17.072771324s 	 499 	 499 	 0 	 5.734399ms 	 5.734399ms 	 4.816895ms 	 4.358143ms 	 4.161535ms 	 3.375103ms 
+
+18.076305439s 	 499 	 499 	 0 	 5.931007ms 	 5.931007ms 	 4.882431ms 	 4.259839ms 	 4.095999ms 	 3.211263ms 
+
+19.081083794s 	 500 	 500 	 0 	 6.356991ms 	 6.356991ms 	 6.127615ms 	 5.734399ms 	 5.472255ms 	 3.211263ms 
+
+20.087803465s 	 501 	 501 	 0 	 7.176191ms 	 6.914047ms 	 5.931007ms 	 5.373951ms 	 5.144575ms 	 3.309567ms 
+
+21.089264999s 	 499 	 499 	 0 	 5.144575ms 	 5.144575ms 	 4.685823ms 	 4.390911ms 	 4.063231ms 	 3.178495ms 
+
+22.096119492s 	 499 	 499 	 0 	 13.860863ms 	 13.860863ms 	 5.767167ms 	 4.751359ms 	 4.292607ms 	 3.244031ms 
+
+23.101464556s 	 501 	 501 	 0 	 6.389759ms 	 6.193151ms 	 5.996543ms 	 5.767167ms 	 5.570559ms 	 3.375103ms 
+
+24.106440968s 	 499 	 499 	 0 	 6.029311ms 	 6.029311ms 	 5.734399ms 	 5.406719ms 	 5.111807ms 	 3.309567ms 
+
+25.110430132s 	 500 	 500 	 0 	 6.520831ms 	 6.520831ms 	 5.275647ms 	 4.554751ms 	 4.325375ms 	 3.375103ms 
+
+26.113823188s 	 500 	 500 	 0 	 6.881279ms 	 6.881279ms 	 6.029311ms 	 5.668863ms 	 4.456447ms 	 3.375103ms 
+
+27.118485467s 	 500 	 500 	 0 	 6.553599ms 	 6.553599ms 	 6.389759ms 	 5.898239ms 	 5.570559ms 	 3.276799ms 
+
+28.122525058s 	 501 	 501 	 0 	 9.699327ms 	 9.601023ms 	 6.160383ms 	 5.341183ms 	 4.980735ms 	 3.375103ms 
+
+29.133490296s 	 500 	 500 	 0 	 6.815743ms 	 6.815743ms 	 6.291455ms 	 5.799935ms 	 5.210111ms 	 3.407871ms 
+
+
+
+Results
+
+Time (avg):	 30.001548875s
+
+Total ops:	 14940
+
+Total rows:	 14940
+
+Operations/s:	 497.97429147456114
+
+Rows/s:		 497.97429147456114
+
+Latency:
+
+  max:		 13.860863ms 
+
+  99.9th:	 6.750207ms 
+
+  99th:		 6.029311ms 
+
+  95th:		 5.439487ms 
+
+  90th:		 4.816895ms 
+
+  median:	 3.309567ms
+
+rows_per_request 1 concurrency 4 max_reqs 500
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 4
+
+Connections:		 4
+
+Maximum rate:		 500 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.011677469s 	 502 	 502 	 0 	 6.029311ms 	 5.931007ms 	 5.799935ms 	 5.439487ms 	 4.980735ms 	 3.801087ms 
+
+2.013069358s 	 501 	 501 	 0 	 24.346623ms 	 23.560191ms 	 15.564799ms 	 4.980735ms 	 4.653055ms 	 3.571711ms 
+
+3.02063249s 	 504 	 504 	 0 	 7.110655ms 	 6.586367ms 	 6.193151ms 	 5.701631ms 	 4.980735ms 	 3.538943ms 
+
+4.027595934s 	 502 	 502 	 0 	 6.651903ms 	 6.586367ms 	 6.455295ms 	 6.029311ms 	 5.832703ms 	 3.637247ms 
+
+5.028668249s 	 503 	 503 	 0 	 6.488063ms 	 6.225919ms 	 6.094847ms 	 5.668863ms 	 5.242879ms 	 3.571711ms 
+
+6.035955687s 	 502 	 502 	 0 	 5.537791ms 	 5.505023ms 	 5.406719ms 	 4.554751ms 	 4.423679ms 	 3.506175ms 
+
+7.040607575s 	 502 	 502 	 0 	 6.815743ms 	 6.750207ms 	 6.225919ms 	 5.472255ms 	 4.685823ms 	 3.375103ms 
+
+8.044230093s 	 503 	 503 	 0 	 6.946815ms 	 6.914047ms 	 6.553599ms 	 5.865471ms 	 5.668863ms 	 3.440639ms 
+
+9.051993351s 	 504 	 504 	 0 	 6.684671ms 	 6.356991ms 	 5.963775ms 	 5.406719ms 	 4.849663ms 	 3.407871ms 
+
+10.05908416s 	 502 	 502 	 0 	 5.668863ms 	 5.668863ms 	 4.751359ms 	 4.489215ms 	 4.259839ms 	 3.342335ms 
+
+11.069947216s 	 504 	 504 	 0 	 6.488063ms 	 6.488063ms 	 6.324223ms 	 5.799935ms 	 5.537791ms 	 3.440639ms 
+
+12.075777377s 	 502 	 502 	 0 	 6.619135ms 	 6.389759ms 	 6.225919ms 	 5.734399ms 	 5.472255ms 	 3.604479ms 
+
+13.076167922s 	 502 	 502 	 0 	 6.062079ms 	 6.062079ms 	 5.799935ms 	 5.406719ms 	 4.882431ms 	 3.473407ms 
+
+14.080538738s 	 501 	 501 	 0 	 5.767167ms 	 5.767167ms 	 5.144575ms 	 4.620287ms 	 4.325375ms 	 3.440639ms 
+
+15.086012276s 	 501 	 501 	 0 	 7.471103ms 	 6.782975ms 	 6.422527ms 	 5.668863ms 	 4.849663ms 	 3.604479ms 
+
+16.088592385s 	 504 	 504 	 0 	 6.520831ms 	 6.389759ms 	 6.356991ms 	 5.898239ms 	 5.505023ms 	 3.571711ms 
+
+17.091560483s 	 503 	 503 	 0 	 5.472255ms 	 5.439487ms 	 5.242879ms 	 4.849663ms 	 4.521983ms 	 3.473407ms 
+
+18.102127815s 	 501 	 501 	 0 	 6.914047ms 	 6.717439ms 	 6.488063ms 	 5.963775ms 	 5.603327ms 	 3.473407ms 
+
+19.108480252s 	 503 	 503 	 0 	 8.552447ms 	 8.290303ms 	 6.389759ms 	 5.439487ms 	 4.980735ms 	 3.473407ms 
+
+20.11671143s 	 501 	 501 	 0 	 5.275647ms 	 5.242879ms 	 4.849663ms 	 4.554751ms 	 4.390911ms 	 3.440639ms 
+
+21.126023779s 	 504 	 504 	 0 	 9.666559ms 	 8.585215ms 	 6.848511ms 	 6.029311ms 	 5.668863ms 	 3.473407ms 
+
+22.131760066s 	 503 	 503 	 0 	 6.094847ms 	 5.963775ms 	 5.472255ms 	 4.849663ms 	 4.521983ms 	 3.506175ms 
+
+23.139107925s 	 502 	 502 	 0 	 6.815743ms 	 6.553599ms 	 6.324223ms 	 5.996543ms 	 5.439487ms 	 3.506175ms 
+
+24.150055786s 	 503 	 503 	 0 	 8.290303ms 	 7.012351ms 	 6.455295ms 	 6.029311ms 	 5.701631ms 	 3.538943ms 
+
+25.156077197s 	 504 	 504 	 0 	 6.422527ms 	 6.324223ms 	 5.963775ms 	 5.341183ms 	 4.980735ms 	 3.473407ms 
+
+26.164139863s 	 503 	 503 	 0 	 22.839295ms 	 22.446079ms 	 14.450687ms 	 4.784127ms 	 4.489215ms 	 3.440639ms 
+
+27.171576667s 	 502 	 502 	 0 	 6.619135ms 	 6.488063ms 	 6.029311ms 	 5.341183ms 	 4.456447ms 	 3.342335ms 
+
+28.17260076s 	 501 	 501 	 0 	 7.700479ms 	 7.602175ms 	 7.208959ms 	 5.996543ms 	 5.734399ms 	 3.506175ms 
+
+29.181018484s 	 502 	 502 	 0 	 7.438335ms 	 7.405567ms 	 6.422527ms 	 5.505023ms 	 5.275647ms 	 3.407871ms 
+
+
+
+Results
+
+Time (avg):	 30.001445986s
+
+Total ops:	 15000
+
+Total rows:	 15000
+
+Operations/s:	 499.97590229675586
+
+Rows/s:		 499.97590229675586
+
+Latency:
+
+  max:		 24.346623ms 
+
+  99.9th:	 9.666559ms 
+
+  99th:		 6.258687ms 
+
+  95th:		 5.603327ms 
+
+  90th:		 5.111807ms 
+
+  median:	 3.473407ms
+
+rows_per_request 1 concurrency 5 max_reqs 500
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 5
+
+Connections:		 4
+
+Maximum rate:		 500 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.013540172s 	 501 	 501 	 0 	 6.750207ms 	 6.684671ms 	 5.013503ms 	 4.653055ms 	 4.358143ms 	 3.440639ms 
+
+2.013771336s 	 501 	 501 	 0 	 6.520831ms 	 6.488063ms 	 6.389759ms 	 5.832703ms 	 5.373951ms 	 3.473407ms 
+
+3.024937828s 	 503 	 503 	 0 	 6.586367ms 	 6.225919ms 	 6.160383ms 	 5.865471ms 	 5.636095ms 	 3.604479ms 
+
+4.034211855s 	 503 	 503 	 0 	 6.651903ms 	 6.455295ms 	 6.225919ms 	 5.898239ms 	 5.570559ms 	 3.506175ms 
+
+5.040557992s 	 504 	 504 	 0 	 5.341183ms 	 5.308415ms 	 5.046271ms 	 4.784127ms 	 4.521983ms 	 3.407871ms 
+
+6.0405746s 	 502 	 502 	 0 	 5.439487ms 	 5.406719ms 	 5.308415ms 	 4.882431ms 	 4.620287ms 	 3.538943ms 
+
+7.04361613s 	 502 	 502 	 0 	 6.881279ms 	 6.815743ms 	 6.324223ms 	 5.799935ms 	 4.980735ms 	 3.473407ms 
+
+8.054133918s 	 505 	 505 	 0 	 6.782975ms 	 6.684671ms 	 6.356991ms 	 5.996543ms 	 5.767167ms 	 3.538943ms 
+
+9.066085846s 	 504 	 504 	 0 	 6.946815ms 	 6.717439ms 	 6.455295ms 	 5.996543ms 	 5.734399ms 	 3.702783ms 
+
+10.075368178s 	 504 	 504 	 0 	 5.832703ms 	 5.832703ms 	 5.537791ms 	 5.013503ms 	 4.849663ms 	 3.833855ms 
+
+11.083328454s 	 505 	 505 	 0 	 5.275647ms 	 5.177343ms 	 4.915199ms 	 4.620287ms 	 4.489215ms 	 3.604479ms 
+
+12.084393777s 	 501 	 501 	 0 	 6.586367ms 	 6.553599ms 	 6.422527ms 	 5.931007ms 	 5.570559ms 	 3.604479ms 
+
+13.09586161s 	 502 	 502 	 0 	 6.881279ms 	 6.848511ms 	 6.586367ms 	 6.160383ms 	 5.963775ms 	 3.833855ms 
+
+14.10303979s 	 505 	 505 	 0 	 6.520831ms 	 6.225919ms 	 6.127615ms 	 5.799935ms 	 5.406719ms 	 3.735551ms 
+
+15.103650668s 	 501 	 501 	 0 	 6.750207ms 	 5.832703ms 	 5.144575ms 	 4.849663ms 	 4.620287ms 	 3.440639ms 
+
+16.106114234s 	 500 	 500 	 0 	 9.175039ms 	 9.175039ms 	 6.717439ms 	 6.094847ms 	 5.767167ms 	 3.735551ms 
+
+17.110642451s 	 504 	 504 	 0 	 6.717439ms 	 6.619135ms 	 6.258687ms 	 5.832703ms 	 5.505023ms 	 3.440639ms 
+
+18.113477928s 	 503 	 503 	 0 	 6.094847ms 	 6.062079ms 	 6.029311ms 	 5.636095ms 	 5.308415ms 	 3.473407ms 
+
+19.124319402s 	 502 	 502 	 0 	 8.257535ms 	 8.159231ms 	 5.636095ms 	 4.718591ms 	 4.489215ms 	 3.375103ms 
+
+20.133911542s 	 504 	 504 	 0 	 6.160383ms 	 5.767167ms 	 5.472255ms 	 4.849663ms 	 4.554751ms 	 3.506175ms 
+
+21.137034823s 	 503 	 503 	 0 	 7.012351ms 	 6.881279ms 	 6.684671ms 	 6.225919ms 	 5.963775ms 	 3.801087ms 
+
+22.14366652s 	 504 	 504 	 0 	 6.750207ms 	 6.520831ms 	 6.324223ms 	 5.832703ms 	 5.570559ms 	 3.473407ms 
+
+23.15405716s 	 504 	 504 	 0 	 5.963775ms 	 5.963775ms 	 5.832703ms 	 5.111807ms 	 4.816895ms 	 3.702783ms 
+
+24.160520633s 	 502 	 502 	 0 	 5.439487ms 	 5.439487ms 	 5.079039ms 	 4.882431ms 	 4.620287ms 	 3.538943ms 
+
+25.163893831s 	 503 	 503 	 0 	 12.419071ms 	 11.862015ms 	 7.077887ms 	 5.898239ms 	 5.472255ms 	 3.604479ms 
+
+26.165819439s 	 502 	 502 	 0 	 7.077887ms 	 6.914047ms 	 6.520831ms 	 6.160383ms 	 5.963775ms 	 3.735551ms 
+
+27.174569439s 	 503 	 503 	 0 	 6.160383ms 	 6.127615ms 	 5.931007ms 	 5.636095ms 	 5.373951ms 	 3.473407ms 
+
+28.180536272s 	 503 	 503 	 0 	 6.684671ms 	 5.603327ms 	 5.406719ms 	 4.849663ms 	 4.554751ms 	 3.670015ms 
+
+29.184222635s 	 501 	 501 	 0 	 6.848511ms 	 6.488063ms 	 6.029311ms 	 5.013503ms 	 4.554751ms 	 3.440639ms 
+
+
+
+Results
+
+Time (avg):	 30.001881433s
+
+Total ops:	 15000
+
+Total rows:	 15000
+
+Operations/s:	 499.9686459517252
+
+Rows/s:		 499.9686459517252
+
+Latency:
+
+  max:		 18.219007ms 
+
+  99.9th:	 7.110655ms 
+
+  99th:		 6.356991ms 
+
+  95th:		 5.767167ms 
+
+  90th:		 5.308415ms 
+
+  median:	 3.571711ms
+
+rows_per_request 1 concurrency 10 max_reqs 500
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 10
+
+Connections:		 4
+
+Maximum rate:		 500 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.023175764s 	 501 	 501 	 0 	 7.438335ms 	 7.176191ms 	 7.012351ms 	 6.488063ms 	 6.291455ms 	 4.292607ms 
+
+2.02690259s 	 507 	 507 	 0 	 6.848511ms 	 6.750207ms 	 6.717439ms 	 6.389759ms 	 6.062079ms 	 4.128767ms 
+
+3.045292728s 	 507 	 507 	 0 	 7.307263ms 	 7.307263ms 	 6.782975ms 	 5.734399ms 	 5.177343ms 	 3.964927ms 
+
+4.064806598s 	 504 	 504 	 0 	 6.389759ms 	 6.389759ms 	 6.160383ms 	 5.570559ms 	 5.373951ms 	 4.194303ms 
+
+5.066027379s 	 507 	 507 	 0 	 6.094847ms 	 5.996543ms 	 5.898239ms 	 5.537791ms 	 5.308415ms 	 4.161535ms 
+
+6.066608901s 	 501 	 501 	 0 	 7.471103ms 	 7.307263ms 	 6.979583ms 	 5.767167ms 	 5.341183ms 	 4.095999ms 
+
+7.082850084s 	 506 	 506 	 0 	 7.929855ms 	 7.831551ms 	 7.405567ms 	 6.946815ms 	 6.422527ms 	 4.227071ms 
+
+8.086641578s 	 504 	 504 	 0 	 7.340031ms 	 7.208959ms 	 6.914047ms 	 6.586367ms 	 6.324223ms 	 3.997695ms 
+
+9.106890443s 	 510 	 510 	 0 	 7.471103ms 	 7.077887ms 	 6.815743ms 	 6.324223ms 	 6.062079ms 	 4.161535ms 
+
+10.125108444s 	 508 	 508 	 0 	 6.684671ms 	 6.520831ms 	 6.422527ms 	 5.996543ms 	 5.505023ms 	 3.997695ms 
+
+11.126736562s 	 504 	 504 	 0 	 6.619135ms 	 6.455295ms 	 6.389759ms 	 5.668863ms 	 5.275647ms 	 3.866623ms 
+
+12.145205433s 	 507 	 507 	 0 	 6.094847ms 	 6.094847ms 	 5.931007ms 	 5.603327ms 	 5.373951ms 	 4.063231ms 
+
+13.164504766s 	 505 	 505 	 0 	 6.356991ms 	 6.356991ms 	 6.258687ms 	 5.537791ms 	 5.242879ms 	 4.161535ms 
+
+14.180684937s 	 503 	 503 	 0 	 7.340031ms 	 7.307263ms 	 7.143423ms 	 6.717439ms 	 6.324223ms 	 4.063231ms 
+
+15.184861478s 	 508 	 508 	 0 	 7.471103ms 	 7.372799ms 	 7.274495ms 	 6.979583ms 	 6.750207ms 	 4.128767ms 
+
+16.202305022s 	 506 	 506 	 0 	 7.045119ms 	 7.012351ms 	 6.815743ms 	 6.488063ms 	 6.062079ms 	 4.063231ms 
+
+17.20570189s 	 508 	 508 	 0 	 20.938751ms 	 20.840447ms 	 11.698175ms 	 6.914047ms 	 6.422527ms 	 4.227071ms 
+
+18.225469974s 	 503 	 503 	 0 	 7.208959ms 	 7.176191ms 	 6.619135ms 	 6.193151ms 	 5.865471ms 	 3.997695ms 
+
+19.245274109s 	 508 	 508 	 0 	 6.291455ms 	 6.258687ms 	 5.996543ms 	 5.701631ms 	 5.472255ms 	 4.095999ms 
+
+20.260830673s 	 505 	 505 	 0 	 6.291455ms 	 6.127615ms 	 5.865471ms 	 5.505023ms 	 5.308415ms 	 4.128767ms 
+
+21.266108202s 	 504 	 504 	 0 	 7.045119ms 	 7.012351ms 	 6.881279ms 	 6.455295ms 	 6.029311ms 	 4.259839ms 
+
+22.287089356s 	 507 	 507 	 0 	 7.503871ms 	 7.503871ms 	 7.438335ms 	 6.684671ms 	 6.356991ms 	 4.227071ms 
+
+23.300968623s 	 508 	 508 	 0 	 7.241727ms 	 7.241727ms 	 7.012351ms 	 6.684671ms 	 6.422527ms 	 4.423679ms 
+
+24.305202066s 	 507 	 507 	 0 	 7.110655ms 	 7.110655ms 	 6.946815ms 	 6.586367ms 	 6.062079ms 	 4.259839ms 
+
+25.325389881s 	 504 	 504 	 0 	 6.848511ms 	 6.750207ms 	 6.455295ms 	 5.865471ms 	 5.472255ms 	 4.194303ms 
+
+26.343900164s 	 508 	 508 	 0 	 6.225919ms 	 5.963775ms 	 5.767167ms 	 5.472255ms 	 5.275647ms 	 4.095999ms 
+
+27.362564074s 	 505 	 505 	 0 	 6.946815ms 	 6.914047ms 	 6.291455ms 	 5.636095ms 	 5.308415ms 	 3.866623ms 
+
+28.365109397s 	 507 	 507 	 0 	 13.795327ms 	 13.697023ms 	 12.648447ms 	 5.799935ms 	 5.472255ms 	 4.259839ms 
+
+29.384940223s 	 505 	 505 	 0 	 7.405567ms 	 7.405567ms 	 7.208959ms 	 6.914047ms 	 6.586367ms 	 4.194303ms 
+
+
+
+Results
+
+Time (avg):	 30.003238716s
+
+Total ops:	 15000
+
+Total rows:	 15000
+
+Operations/s:	 499.9460311801113
+
+Rows/s:		 499.9460311801113
+
+Latency:
+
+  max:		 20.938751ms 
+
+  99.9th:	 7.929855ms 
+
+  99th:		 7.012351ms 
+
+  95th:		 6.356991ms 
+
+  90th:		 5.865471ms 
+
+  median:	 4.128767ms
+
+rows_per_request 1 concurrency 25 max_reqs 500
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 25
+
+Connections:		 4
+
+Maximum rate:		 500 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.055530782s 	 506 	 506 	 0 	 10.289151ms 	 10.289151ms 	 10.059775ms 	 9.273343ms 	 8.683519ms 	 5.308415ms 
+
+2.101658033s 	 521 	 521 	 0 	 8.847359ms 	 8.847359ms 	 8.716287ms 	 8.454143ms 	 8.126463ms 	 5.210111ms 
+
+3.153046263s 	 511 	 511 	 0 	 8.552447ms 	 8.552447ms 	 8.388607ms 	 7.929855ms 	 7.634943ms 	 5.144575ms 
+
+4.208066247s 	 518 	 518 	 0 	 8.781823ms 	 8.781823ms 	 8.716287ms 	 8.454143ms 	 7.995391ms 	 5.668863ms 
+
+5.253008272s 	 510 	 510 	 0 	 8.388607ms 	 8.290303ms 	 8.257535ms 	 7.929855ms 	 7.602175ms 	 5.341183ms 
+
+6.256868965s 	 518 	 518 	 0 	 9.240575ms 	 9.240575ms 	 9.011199ms 	 7.471103ms 	 7.208959ms 	 4.816895ms 
+
+7.257082763s 	 508 	 508 	 0 	 7.766015ms 	 7.733247ms 	 7.667711ms 	 7.503871ms 	 7.372799ms 	 5.111807ms 
+
+8.308351739s 	 519 	 519 	 0 	 7.929855ms 	 7.929855ms 	 7.569407ms 	 7.110655ms 	 6.914047ms 	 4.685823ms 
+
+9.35780204s 	 516 	 516 	 0 	 8.421375ms 	 8.421375ms 	 8.224767ms 	 7.864319ms 	 7.536639ms 	 5.505023ms 
+
+10.407273133s 	 517 	 517 	 0 	 8.093695ms 	 7.864319ms 	 7.667711ms 	 7.536639ms 	 7.307263ms 	 5.308415ms 
+
+11.45620982s 	 513 	 513 	 0 	 9.535487ms 	 9.535487ms 	 9.371647ms 	 8.650751ms 	 8.388607ms 	 5.570559ms 
+
+12.457603057s 	 513 	 513 	 0 	 9.830399ms 	 9.732095ms 	 9.568255ms 	 8.749055ms 	 8.290303ms 	 5.767167ms 
+
+13.508360735s 	 509 	 509 	 0 	 9.207807ms 	 9.207807ms 	 9.175039ms 	 8.847359ms 	 8.454143ms 	 5.865471ms 
+
+14.558135628s 	 522 	 522 	 0 	 9.142271ms 	 9.109503ms 	 9.076735ms 	 8.781823ms 	 8.224767ms 	 5.996543ms 
+
+15.607974569s 	 511 	 511 	 0 	 9.797631ms 	 9.601023ms 	 8.978431ms 	 8.486911ms 	 8.028159ms 	 5.570559ms 
+
+16.650923086s 	 514 	 514 	 0 	 10.190847ms 	 10.190847ms 	 10.059775ms 	 8.126463ms 	 7.929855ms 	 5.603327ms 
+
+17.657266637s 	 514 	 514 	 0 	 10.387455ms 	 10.354687ms 	 10.125311ms 	 8.683519ms 	 8.486911ms 	 5.898239ms 
+
+18.70656676s 	 518 	 518 	 0 	 9.043967ms 	 9.043967ms 	 8.388607ms 	 7.929855ms 	 7.733247ms 	 4.947967ms 
+
+19.708241734s 	 514 	 514 	 0 	 8.650751ms 	 8.650751ms 	 8.617983ms 	 7.798783ms 	 7.274495ms 	 5.210111ms 
+
+20.755950457s 	 513 	 513 	 0 	 7.929855ms 	 7.929855ms 	 7.733247ms 	 7.536639ms 	 7.438335ms 	 5.242879ms 
+
+21.801848036s 	 508 	 508 	 0 	 8.617983ms 	 8.552447ms 	 8.388607ms 	 7.733247ms 	 7.536639ms 	 5.308415ms 
+
+22.807634797s 	 516 	 516 	 0 	 8.323071ms 	 8.126463ms 	 8.093695ms 	 7.864319ms 	 7.667711ms 	 5.537791ms 
+
+23.857024444s 	 514 	 514 	 0 	 8.978431ms 	 8.945663ms 	 8.847359ms 	 7.700479ms 	 7.176191ms 	 4.784127ms 
+
+24.901832531s 	 514 	 514 	 0 	 9.699327ms 	 9.273343ms 	 9.109503ms 	 8.880127ms 	 8.650751ms 	 5.996543ms 
+
+25.908962172s 	 515 	 515 	 0 	 9.633791ms 	 9.601023ms 	 9.404415ms 	 8.912895ms 	 8.585215ms 	 6.193151ms 
+
+26.909852114s 	 512 	 512 	 0 	 9.371647ms 	 9.338879ms 	 8.683519ms 	 8.552447ms 	 8.323071ms 	 5.406719ms 
+
+27.958741551s 	 516 	 516 	 0 	 9.371647ms 	 9.338879ms 	 9.273343ms 	 9.076735ms 	 8.912895ms 	 6.258687ms 
+
+29.00113015s 	 514 	 514 	 0 	 9.207807ms 	 9.207807ms 	 8.978431ms 	 8.126463ms 	 7.733247ms 	 5.799935ms 
+
+30.00822815s 	 515 	 515 	 0 	 7.995391ms 	 7.995391ms 	 7.831551ms 	 7.634943ms 	 7.503871ms 	 5.373951ms 
+
+
+
+Results
+
+Time (avg):	 30.004739633s
+
+Total ops:	 15000
+
+Total rows:	 15000
+
+Operations/s:	 499.92102139384474
+
+Rows/s:		 499.92102139384474
+
+Latency:
+
+  max:		 10.387455ms 
+
+  99.9th:	 10.059775ms 
+
+  99th:		 9.109503ms 
+
+  95th:		 8.421375ms 
+
+  90th:		 7.864319ms 
+
+  median:	 5.439487ms
+
+rows_per_request 1 concurrency 50 max_reqs 500
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 50
+
+Connections:		 4
+
+Maximum rate:		 500 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.112428981s 	 509 	 509 	 0 	 11.239423ms 	 11.206655ms 	 11.141119ms 	 10.911743ms 	 10.747903ms 	 8.847359ms 
+
+2.211547091s 	 530 	 530 	 0 	 11.632639ms 	 11.632639ms 	 11.599871ms 	 10.944511ms 	 10.616831ms 	 7.077887ms 
+
+3.311064823s 	 538 	 538 	 0 	 11.304959ms 	 11.239423ms 	 11.206655ms 	 10.846207ms 	 10.518527ms 	 7.176191ms 
+
+4.409621102s 	 535 	 535 	 0 	 10.813439ms 	 10.813439ms 	 10.780671ms 	 10.584063ms 	 10.387455ms 	 7.241727ms 
+
+5.411058533s 	 520 	 520 	 0 	 12.746751ms 	 12.713983ms 	 12.648447ms 	 12.025855ms 	 10.649599ms 	 8.749055ms 
+
+6.512468799s 	 532 	 532 	 0 	 12.550143ms 	 11.960319ms 	 11.927551ms 	 11.436031ms 	 11.141119ms 	 7.176191ms 
+
+7.610504179s 	 520 	 520 	 0 	 11.927551ms 	 11.927551ms 	 11.698175ms 	 11.042815ms 	 10.584063ms 	 7.307263ms 
+
+8.712024892s 	 533 	 533 	 0 	 11.894783ms 	 11.894783ms 	 11.730943ms 	 11.042815ms 	 10.452991ms 	 7.634943ms 
+
+9.810890025s 	 524 	 524 	 0 	 11.534335ms 	 11.468799ms 	 11.403263ms 	 11.239423ms 	 11.042815ms 	 8.454143ms 
+
+10.903946373s 	 537 	 537 	 0 	 11.730943ms 	 11.730943ms 	 11.010047ms 	 10.518527ms 	 10.289151ms 	 8.716287ms 
+
+11.910079055s 	 527 	 527 	 0 	 11.927551ms 	 11.927551ms 	 11.730943ms 	 11.108351ms 	 10.780671ms 	 9.142271ms 
+
+13.009943868s 	 533 	 533 	 0 	 11.337727ms 	 11.337727ms 	 11.239423ms 	 10.649599ms 	 10.190847ms 	 9.109503ms 
+
+14.110813014s 	 533 	 533 	 0 	 11.403263ms 	 11.337727ms 	 11.272191ms 	 10.944511ms 	 10.092543ms 	 7.438335ms 
+
+15.211570389s 	 527 	 527 	 0 	 11.042815ms 	 10.977279ms 	 10.518527ms 	 10.289151ms 	 10.256383ms 	 6.914047ms 
+
+16.30578429s 	 538 	 538 	 0 	 12.222463ms 	 12.156927ms 	 12.091391ms 	 11.042815ms 	 10.059775ms 	 7.143423ms 
+
+17.312538659s 	 524 	 524 	 0 	 11.993087ms 	 11.534335ms 	 11.304959ms 	 10.780671ms 	 10.485759ms 	 6.946815ms 
+
+18.411032456s 	 526 	 526 	 0 	 12.517375ms 	 12.451839ms 	 12.287999ms 	 12.025855ms 	 11.796479ms 	 9.404415ms 
+
+19.501720214s 	 531 	 531 	 0 	 11.141119ms 	 11.108351ms 	 11.075583ms 	 10.780671ms 	 10.616831ms 	 9.273343ms 
+
+20.506668899s 	 524 	 524 	 0 	 11.632639ms 	 11.632639ms 	 11.468799ms 	 11.141119ms 	 10.747903ms 	 8.454143ms 
+
+21.610812716s 	 532 	 532 	 0 	 12.582911ms 	 12.550143ms 	 11.010047ms 	 10.813439ms 	 10.682367ms 	 8.323071ms 
+
+22.707917844s 	 529 	 529 	 0 	 12.648447ms 	 12.615679ms 	 12.517375ms 	 12.156927ms 	 11.829247ms 	 9.043967ms 
+
+23.811840355s 	 534 	 534 	 0 	 12.287999ms 	 12.156927ms 	 11.829247ms 	 11.665407ms 	 11.436031ms 	 9.011199ms 
+
+24.907546114s 	 521 	 521 	 0 	 12.287999ms 	 12.124159ms 	 11.862015ms 	 11.632639ms 	 11.436031ms 	 9.043967ms 
+
+25.911527257s 	 540 	 540 	 0 	 12.353535ms 	 12.320767ms 	 12.156927ms 	 11.927551ms 	 11.599871ms 	 7.536639ms 
+
+27.01141051s 	 526 	 526 	 0 	 12.320767ms 	 12.189695ms 	 11.960319ms 	 11.599871ms 	 10.944511ms 	 9.109503ms 
+
+28.106845478s 	 528 	 528 	 0 	 12.845055ms 	 12.713983ms 	 12.648447ms 	 12.156927ms 	 11.272191ms 	 8.323071ms 
+
+29.20670832s 	 531 	 531 	 0 	 13.041663ms 	 12.779519ms 	 12.550143ms 	 11.632639ms 	 11.436031ms 	 7.045119ms 
+
+
+
+Results
+
+Time (avg):	 30.002832482s
+
+Total ops:	 15000
+
+Total rows:	 15000
+
+Operations/s:	 499.95280268844033
+
+Rows/s:		 499.95280268844033
+
+Latency:
+
+  max:		 13.467647ms 
+
+  99.9th:	 13.172735ms 
+
+  99th:		 12.156927ms 
+
+  95th:		 11.370495ms 
+
+  90th:		 10.846207ms 
+
+  median:	 8.454143ms
+
+rows_per_request 1 concurrency 100 max_reqs 500
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 100
+
+Connections:		 4
+
+Maximum rate:		 500 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.218501803s 	 505 	 505 	 0 	 18.317311ms 	 18.284543ms 	 18.219007ms 	 18.087935ms 	 17.956863ms 	 15.466495ms 
+
+2.412720059s 	 543 	 543 	 0 	 19.791871ms 	 19.202047ms 	 18.939903ms 	 18.677759ms 	 18.382847ms 	 15.892479ms 
+
+3.420547628s 	 561 	 561 	 0 	 19.005439ms 	 18.907135ms 	 18.710527ms 	 18.513919ms 	 18.317311ms 	 16.547839ms 
+
+4.619330006s 	 568 	 568 	 0 	 18.448383ms 	 18.415615ms 	 18.284543ms 	 18.087935ms 	 17.858559ms 	 15.597567ms 
+
+5.81900026s 	 544 	 544 	 0 	 18.612223ms 	 18.546687ms 	 18.448383ms 	 18.120703ms 	 17.858559ms 	 14.843903ms 
+
+7.019229511s 	 562 	 562 	 0 	 19.333119ms 	 19.300351ms 	 19.005439ms 	 18.579455ms 	 18.284543ms 	 15.335423ms 
+
+8.216626127s 	 578 	 578 	 0 	 19.398655ms 	 19.398655ms 	 18.907135ms 	 18.219007ms 	 17.367039ms 	 14.483455ms 
+
+9.219774131s 	 539 	 539 	 0 	 18.415615ms 	 18.382847ms 	 18.219007ms 	 17.661951ms 	 17.268735ms 	 14.155775ms 
+
+10.41814435s 	 588 	 588 	 0 	 18.251775ms 	 18.153471ms 	 17.989631ms 	 17.694719ms 	 17.399807ms 	 14.221311ms 
+
+11.619131497s 	 545 	 545 	 0 	 19.267583ms 	 18.939903ms 	 18.677759ms 	 18.219007ms 	 17.465343ms 	 14.417919ms 
+
+12.814057214s 	 552 	 552 	 0 	 18.644991ms 	 18.579455ms 	 18.284543ms 	 17.891327ms 	 17.629183ms 	 13.926399ms 
+
+13.821427438s 	 568 	 568 	 0 	 19.464191ms 	 19.202047ms 	 18.448383ms 	 17.727487ms 	 17.530879ms 	 13.762559ms 
+
+15.019788673s 	 555 	 555 	 0 	 19.955711ms 	 19.824639ms 	 19.365887ms 	 19.005439ms 	 18.808831ms 	 16.252927ms 
+
+16.021558523s 	 558 	 558 	 0 	 18.907135ms 	 18.841599ms 	 18.579455ms 	 17.989631ms 	 17.760255ms 	 15.859711ms 
+
+17.218504879s 	 565 	 565 	 0 	 19.202047ms 	 19.136511ms 	 18.972671ms 	 18.710527ms 	 18.513919ms 	 16.941055ms 
+
+18.418883224s 	 552 	 552 	 0 	 18.841599ms 	 18.644991ms 	 18.251775ms 	 17.891327ms 	 17.694719ms 	 15.466495ms 
+
+19.60610021s 	 549 	 549 	 0 	 20.414463ms 	 20.185087ms 	 19.791871ms 	 18.907135ms 	 17.956863ms 	 15.237119ms 
+
+20.612655776s 	 562 	 562 	 0 	 19.988479ms 	 19.988479ms 	 19.660799ms 	 18.382847ms 	 17.924095ms 	 14.221311ms 
+
+21.818315585s 	 556 	 556 	 0 	 19.464191ms 	 19.267583ms 	 19.070975ms 	 18.743295ms 	 18.317311ms 	 14.942207ms 
+
+22.819907251s 	 562 	 562 	 0 	 19.103743ms 	 19.103743ms 	 18.251775ms 	 17.825791ms 	 17.530879ms 	 15.695871ms 
+
+24.020051196s 	 541 	 541 	 0 	 20.021247ms 	 19.955711ms 	 19.824639ms 	 19.267583ms 	 17.661951ms 	 16.089087ms 
+
+25.216070182s 	 565 	 565 	 0 	 20.054015ms 	 19.955711ms 	 19.595263ms 	 17.825791ms 	 17.596415ms 	 16.187391ms 
+
+26.418221826s 	 565 	 565 	 0 	 19.398655ms 	 19.234815ms 	 18.284543ms 	 17.629183ms 	 17.367039ms 	 14.155775ms 
+
+27.42011388s 	 542 	 542 	 0 	 19.595263ms 	 19.202047ms 	 18.939903ms 	 18.579455ms 	 18.317311ms 	 16.515071ms 
+
+28.61675979s 	 570 	 570 	 0 	 19.988479ms 	 19.365887ms 	 19.202047ms 	 18.841599ms 	 18.644991ms 	 16.449535ms 
+
+29.817338145s 	 579 	 579 	 0 	 19.234815ms 	 19.202047ms 	 18.776063ms 	 17.104895ms 	 16.711679ms 	 14.319615ms 
+
+
+
+Results
+
+Time (avg):	 30.00831101s
+
+Total ops:	 15000
+
+Total rows:	 15000
+
+Operations/s:	 499.8615366694113
+
+Rows/s:		 499.8615366694113
+
+Latency:
+
+  max:		 20.414463ms 
+
+  99.9th:	 19.824639ms 
+
+  99th:		 19.070975ms 
+
+  95th:		 18.350079ms 
+
+  90th:		 17.858559ms 
+
+  median:	 15.204351ms
+
+rows_per_request 2 concurrency 1 max_reqs 250
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 2
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 250 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.004370726s 	 251 	 502 	 0 	 5.144575ms 	 5.144575ms 	 4.947967ms 	 4.456447ms 	 4.325375ms 	 3.342335ms 
+
+2.008361544s 	 251 	 502 	 0 	 6.848511ms 	 6.848511ms 	 6.062079ms 	 5.701631ms 	 5.046271ms 	 3.604479ms 
+
+3.013438959s 	 250 	 500 	 0 	 17.629183ms 	 17.629183ms 	 6.750207ms 	 5.963775ms 	 5.734399ms 	 3.571711ms 
+
+4.016179418s 	 251 	 502 	 0 	 32.047103ms 	 32.047103ms 	 20.054015ms 	 5.406719ms 	 5.013503ms 	 3.309567ms 
+
+5.019778349s 	 251 	 502 	 0 	 8.060927ms 	 8.060927ms 	 5.996543ms 	 5.603327ms 	 4.620287ms 	 3.309567ms 
+
+6.019798092s 	 250 	 500 	 0 	 7.831551ms 	 7.831551ms 	 6.029311ms 	 5.799935ms 	 5.603327ms 	 2.785279ms 
+
+7.019966901s 	 250 	 500 	 0 	 7.864319ms 	 7.864319ms 	 5.701631ms 	 5.472255ms 	 5.275647ms 	 3.571711ms 
+
+8.022196565s 	 251 	 502 	 0 	 8.355839ms 	 8.355839ms 	 4.980735ms 	 4.587519ms 	 4.325375ms 	 3.473407ms 
+
+9.02555447s 	 250 	 500 	 0 	 22.151167ms 	 22.151167ms 	 10.158079ms 	 5.865471ms 	 5.537791ms 	 3.375103ms 
+
+10.027906573s 	 251 	 502 	 0 	 6.389759ms 	 6.389759ms 	 6.160383ms 	 5.734399ms 	 5.439487ms 	 3.375103ms 
+
+11.030596501s 	 251 	 502 	 0 	 5.734399ms 	 5.734399ms 	 5.701631ms 	 5.013503ms 	 4.390911ms 	 3.211263ms 
+
+12.032283891s 	 250 	 500 	 0 	 5.308415ms 	 5.308415ms 	 4.784127ms 	 4.521983ms 	 4.325375ms 	 3.309567ms 
+
+13.03232997s 	 251 	 502 	 0 	 6.651903ms 	 6.651903ms 	 6.160383ms 	 5.668863ms 	 5.505023ms 	 3.407871ms 
+
+14.036535614s 	 250 	 500 	 0 	 15.728639ms 	 15.728639ms 	 6.717439ms 	 5.832703ms 	 5.505023ms 	 3.276799ms 
+
+15.040576321s 	 251 	 502 	 0 	 5.996543ms 	 5.996543ms 	 5.275647ms 	 4.980735ms 	 4.620287ms 	 3.538943ms 
+
+16.044231565s 	 251 	 502 	 0 	 5.341183ms 	 5.341183ms 	 5.046271ms 	 4.554751ms 	 4.358143ms 	 3.506175ms 
+
+17.049484262s 	 251 	 502 	 0 	 7.700479ms 	 7.700479ms 	 6.258687ms 	 5.996543ms 	 5.734399ms 	 3.342335ms 
+
+18.049762669s 	 250 	 500 	 0 	 6.225919ms 	 6.225919ms 	 6.127615ms 	 5.734399ms 	 5.472255ms 	 3.407871ms 
+
+19.051639427s 	 251 	 502 	 0 	 5.898239ms 	 5.898239ms 	 5.177343ms 	 4.620287ms 	 4.325375ms 	 3.407871ms 
+
+20.054390318s 	 250 	 500 	 0 	 6.225919ms 	 6.225919ms 	 4.947967ms 	 4.489215ms 	 4.259839ms 	 3.178495ms 
+
+21.059531972s 	 251 	 502 	 0 	 10.518527ms 	 10.518527ms 	 6.356991ms 	 6.029311ms 	 5.865471ms 	 3.604479ms 
+
+22.062506007s 	 252 	 504 	 0 	 7.077887ms 	 7.077887ms 	 6.225919ms 	 5.799935ms 	 5.603327ms 	 3.506175ms 
+
+23.064045801s 	 250 	 500 	 0 	 5.210111ms 	 5.210111ms 	 4.751359ms 	 4.620287ms 	 4.423679ms 	 3.440639ms 
+
+24.064356347s 	 251 	 502 	 0 	 6.160383ms 	 6.160383ms 	 5.767167ms 	 4.653055ms 	 4.358143ms 	 3.407871ms 
+
+25.067136815s 	 249 	 498 	 0 	 6.291455ms 	 6.291455ms 	 6.225919ms 	 5.963775ms 	 5.734399ms 	 3.506175ms 
+
+26.071789076s 	 252 	 504 	 0 	 6.324223ms 	 6.324223ms 	 5.767167ms 	 5.472255ms 	 5.275647ms 	 3.342335ms 
+
+27.072222938s 	 250 	 500 	 0 	 5.177343ms 	 5.177343ms 	 5.013503ms 	 4.718591ms 	 4.521983ms 	 3.571711ms 
+
+28.07395226s 	 249 	 498 	 0 	 6.127615ms 	 6.127615ms 	 6.127615ms 	 4.882431ms 	 4.554751ms 	 3.375103ms 
+
+29.075667614s 	 252 	 504 	 0 	 8.519679ms 	 8.519679ms 	 6.291455ms 	 5.963775ms 	 5.767167ms 	 3.473407ms 
+
+
+
+Results
+
+Time (avg):	 29.99914722s
+
+Total ops:	 7500
+
+Total rows:	 15000
+
+Operations/s:	 250.0071067020151
+
+Rows/s:		 500.0142134040302
+
+Latency:
+
+  max:		 32.047103ms 
+
+  99.9th:	 15.728639ms 
+
+  99th:		 6.193151ms 
+
+  95th:		 5.636095ms 
+
+  90th:		 5.144575ms 
+
+  median:	 3.407871ms
+
+rows_per_request 3 concurrency 1 max_reqs 166
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 3
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 166 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.005126477s 	 166 	 498 	 0 	 5.537791ms 	 5.537791ms 	 5.472255ms 	 5.210111ms 	 4.947967ms 	 3.899391ms 
+
+2.006386744s 	 167 	 501 	 0 	 5.603327ms 	 5.603327ms 	 5.505023ms 	 5.144575ms 	 4.947967ms 	 3.211263ms 
+
+3.006390724s 	 166 	 498 	 0 	 6.881279ms 	 6.881279ms 	 6.488063ms 	 6.193151ms 	 5.210111ms 	 4.063231ms 
+
+4.009960944s 	 166 	 498 	 0 	 6.914047ms 	 6.914047ms 	 6.488063ms 	 6.422527ms 	 6.160383ms 	 3.145727ms 
+
+5.01845633s 	 167 	 501 	 0 	 8.323071ms 	 8.323071ms 	 6.979583ms 	 6.389759ms 	 6.193151ms 	 4.030463ms 
+
+6.022695645s 	 167 	 501 	 0 	 6.717439ms 	 6.717439ms 	 6.488063ms 	 6.029311ms 	 5.537791ms 	 3.735551ms 
+
+7.022982431s 	 166 	 498 	 0 	 17.498111ms 	 17.498111ms 	 5.701631ms 	 5.210111ms 	 4.980735ms 	 3.735551ms 
+
+8.023197852s 	 166 	 498 	 0 	 5.537791ms 	 5.537791ms 	 5.373951ms 	 5.079039ms 	 4.882431ms 	 3.964927ms 
+
+9.028658206s 	 167 	 501 	 0 	 6.782975ms 	 6.782975ms 	 6.619135ms 	 6.455295ms 	 6.193151ms 	 3.964927ms 
+
+10.036343996s 	 167 	 501 	 0 	 7.110655ms 	 7.110655ms 	 6.455295ms 	 6.258687ms 	 6.094847ms 	 3.964927ms 
+
+11.040741786s 	 167 	 501 	 0 	 22.478847ms 	 22.478847ms 	 10.420223ms 	 5.963775ms 	 5.308415ms 	 3.964927ms 
+
+12.046404708s 	 167 	 501 	 0 	 5.799935ms 	 5.799935ms 	 5.701631ms 	 5.439487ms 	 5.046271ms 	 4.030463ms 
+
+13.054602929s 	 167 	 501 	 0 	 7.045119ms 	 7.045119ms 	 6.914047ms 	 6.717439ms 	 6.127615ms 	 4.161535ms 
+
+14.057091654s 	 167 	 501 	 0 	 8.847359ms 	 8.847359ms 	 6.750207ms 	 6.520831ms 	 6.356991ms 	 3.571711ms 
+
+15.058099006s 	 166 	 498 	 0 	 6.619135ms 	 6.619135ms 	 6.586367ms 	 6.291455ms 	 5.931007ms 	 3.866623ms 
+
+16.064886002s 	 167 	 501 	 0 	 6.324223ms 	 6.324223ms 	 5.996543ms 	 5.799935ms 	 5.242879ms 	 3.833855ms 
+
+17.070340383s 	 167 	 501 	 0 	 19.660799ms 	 19.660799ms 	 9.109503ms 	 5.373951ms 	 5.046271ms 	 3.342335ms 
+
+18.079555935s 	 167 	 501 	 0 	 7.110655ms 	 7.110655ms 	 6.520831ms 	 5.701631ms 	 5.013503ms 	 4.161535ms 
+
+19.09083371s 	 168 	 504 	 0 	 6.979583ms 	 6.979583ms 	 6.717439ms 	 6.553599ms 	 6.291455ms 	 3.768319ms 
+
+20.096740229s 	 167 	 501 	 0 	 7.340031ms 	 7.340031ms 	 6.782975ms 	 6.488063ms 	 5.865471ms 	 3.997695ms 
+
+21.099842303s 	 167 	 501 	 0 	 7.897087ms 	 7.897087ms 	 6.455295ms 	 6.062079ms 	 5.603327ms 	 3.997695ms 
+
+22.106611948s 	 167 	 501 	 0 	 11.599871ms 	 11.599871ms 	 5.701631ms 	 5.242879ms 	 5.046271ms 	 3.866623ms 
+
+23.112552834s 	 167 	 501 	 0 	 7.110655ms 	 7.110655ms 	 6.782975ms 	 6.422527ms 	 5.406719ms 	 4.095999ms 
+
+24.120289531s 	 167 	 501 	 0 	 23.330815ms 	 23.330815ms 	 11.272191ms 	 6.684671ms 	 6.422527ms 	 3.932159ms 
+
+25.123763305s 	 167 	 501 	 0 	 6.946815ms 	 6.946815ms 	 6.553599ms 	 6.258687ms 	 5.898239ms 	 3.407871ms 
+
+26.126859227s 	 167 	 501 	 0 	 5.603327ms 	 5.603327ms 	 5.373951ms 	 5.177343ms 	 5.013503ms 	 3.899391ms 
+
+27.132521899s 	 166 	 498 	 0 	 7.077887ms 	 7.077887ms 	 6.455295ms 	 6.324223ms 	 5.767167ms 	 4.063231ms 
+
+28.135432268s 	 167 	 501 	 0 	 6.520831ms 	 6.520831ms 	 6.356991ms 	 6.193151ms 	 5.963775ms 	 3.964927ms 
+
+29.138143395s 	 166 	 498 	 0 	 6.979583ms 	 6.979583ms 	 6.520831ms 	 5.799935ms 	 5.308415ms 	 4.128767ms 
+
+
+
+Results
+
+Time (avg):	 30.004886976s
+
+Total ops:	 4980
+
+Total rows:	 14940
+
+Operations/s:	 165.97296313708333
+
+Rows/s:		 497.91888941125
+
+Latency:
+
+  max:		 23.330815ms 
+
+  99.9th:	 16.449535ms 
+
+  99th:		 6.782975ms 
+
+  95th:		 6.258687ms 
+
+  90th:		 5.701631ms 
+
+  median:	 3.932159ms
+
+rows_per_request 4 concurrency 1 max_reqs 125
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 4
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 125 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.005499671s 	 125 	 500 	 0 	 7.340031ms 	 7.340031ms 	 7.274495ms 	 6.914047ms 	 6.651903ms 	 4.521983ms 
+
+2.015641794s 	 126 	 504 	 0 	 7.471103ms 	 7.471103ms 	 7.110655ms 	 5.963775ms 	 5.668863ms 	 4.718591ms 
+
+3.020887053s 	 126 	 504 	 0 	 18.677759ms 	 18.677759ms 	 10.682367ms 	 7.340031ms 	 7.012351ms 	 4.685823ms 
+
+4.021482456s 	 125 	 500 	 0 	 8.552447ms 	 8.552447ms 	 7.503871ms 	 7.143423ms 	 6.914047ms 	 4.882431ms 
+
+5.030093106s 	 126 	 504 	 0 	 7.471103ms 	 7.471103ms 	 7.307263ms 	 7.045119ms 	 6.782975ms 	 3.899391ms 
+
+6.032449274s 	 126 	 504 	 0 	 7.012351ms 	 7.012351ms 	 6.291455ms 	 6.062079ms 	 5.701631ms 	 4.751359ms 
+
+7.035427996s 	 125 	 500 	 0 	 5.996543ms 	 5.996543ms 	 5.832703ms 	 5.668863ms 	 5.406719ms 	 4.390911ms 
+
+8.044022494s 	 126 	 504 	 0 	 7.471103ms 	 7.471103ms 	 6.193151ms 	 5.767167ms 	 5.505023ms 	 3.702783ms 
+
+9.044419783s 	 125 	 500 	 0 	 7.536639ms 	 7.536639ms 	 7.405567ms 	 7.045119ms 	 6.848511ms 	 3.866623ms 
+
+10.044888405s 	 125 	 500 	 0 	 8.617983ms 	 8.617983ms 	 7.241727ms 	 7.045119ms 	 6.848511ms 	 4.620287ms 
+
+11.053455673s 	 126 	 504 	 0 	 7.340031ms 	 7.340031ms 	 6.914047ms 	 6.750207ms 	 6.619135ms 	 4.521983ms 
+
+12.059837219s 	 126 	 504 	 0 	 6.946815ms 	 6.946815ms 	 6.914047ms 	 6.029311ms 	 5.767167ms 	 4.194303ms 
+
+13.06085723s 	 125 	 500 	 0 	 6.717439ms 	 6.717439ms 	 6.455295ms 	 5.734399ms 	 5.603327ms 	 4.358143ms 
+
+14.061290357s 	 125 	 500 	 0 	 7.208959ms 	 7.208959ms 	 7.176191ms 	 6.094847ms 	 5.734399ms 	 4.751359ms 
+
+15.062636202s 	 125 	 500 	 0 	 7.831551ms 	 7.831551ms 	 7.831551ms 	 7.077887ms 	 6.717439ms 	 4.587519ms 
+
+16.067385618s 	 126 	 504 	 0 	 7.307263ms 	 7.307263ms 	 7.274495ms 	 6.782975ms 	 6.455295ms 	 4.620287ms 
+
+17.077297244s 	 126 	 504 	 0 	 7.471103ms 	 7.471103ms 	 7.307263ms 	 6.881279ms 	 6.356991ms 	 4.751359ms 
+
+18.085682373s 	 126 	 504 	 0 	 6.225919ms 	 6.225919ms 	 6.193151ms 	 6.029311ms 	 5.865471ms 	 4.784127ms 
+
+19.093120305s 	 126 	 504 	 0 	 6.062079ms 	 6.062079ms 	 6.062079ms 	 5.832703ms 	 5.603327ms 	 4.653055ms 
+
+20.101738465s 	 126 	 504 	 0 	 7.536639ms 	 7.536639ms 	 7.438335ms 	 7.045119ms 	 6.422527ms 	 4.587519ms 
+
+21.103235589s 	 125 	 500 	 0 	 8.159231ms 	 8.159231ms 	 7.569407ms 	 7.241727ms 	 6.946815ms 	 4.620287ms 
+
+22.108286327s 	 126 	 504 	 0 	 7.536639ms 	 7.536639ms 	 7.405567ms 	 7.241727ms 	 6.782975ms 	 4.194303ms 
+
+23.117344864s 	 126 	 504 	 0 	 10.584063ms 	 10.584063ms 	 9.732095ms 	 6.848511ms 	 6.520831ms 	 4.456447ms 
+
+24.117629029s 	 125 	 500 	 0 	 8.552447ms 	 8.552447ms 	 7.143423ms 	 6.389759ms 	 5.799935ms 	 4.751359ms 
+
+25.120382007s 	 126 	 504 	 0 	 13.369343ms 	 13.369343ms 	 7.471103ms 	 5.832703ms 	 5.537791ms 	 4.063231ms 
+
+26.127465309s 	 125 	 500 	 0 	 7.602175ms 	 7.602175ms 	 7.307263ms 	 6.848511ms 	 6.094847ms 	 4.685823ms 
+
+27.12837491s 	 126 	 504 	 0 	 7.995391ms 	 7.995391ms 	 7.798783ms 	 7.143423ms 	 6.914047ms 	 4.423679ms 
+
+28.133147093s 	 125 	 500 	 0 	 8.060927ms 	 8.060927ms 	 7.995391ms 	 7.274495ms 	 6.946815ms 	 4.718591ms 
+
+29.136374528s 	 126 	 504 	 0 	 7.602175ms 	 7.602175ms 	 7.405567ms 	 7.045119ms 	 6.553599ms 	 4.718591ms 
+
+
+
+Results
+
+Time (avg):	 30.004723578s
+
+Total ops:	 3750
+
+Total rows:	 14999
+
+Operations/s:	 124.9803215234273
+
+Rows/s:		 499.88795800796964
+
+Latency:
+
+  max:		 18.677759ms 
+
+  99.9th:	 9.732095ms 
+
+  99th:		 7.438335ms 
+
+  95th:		 6.914047ms 
+
+  90th:		 6.422527ms 
+
+  median:	 4.587519ms
+
+rows_per_request 5 concurrency 1 max_reqs 100
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 5
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 100 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.005394152s 	 100 	 500 	 0 	 6.848511ms 	 6.848511ms 	 6.815743ms 	 6.324223ms 	 6.160383ms 	 5.013503ms 
+
+2.006423488s 	 100 	 500 	 0 	 7.012351ms 	 7.012351ms 	 6.782975ms 	 6.586367ms 	 6.356991ms 	 4.980735ms 
+
+3.010399275s 	 101 	 505 	 0 	 6.815743ms 	 6.815743ms 	 6.750207ms 	 6.422527ms 	 5.931007ms 	 5.111807ms 
+
+4.017207971s 	 100 	 500 	 0 	 9.043967ms 	 9.043967ms 	 8.323071ms 	 7.766015ms 	 7.536639ms 	 5.308415ms 
+
+5.023602841s 	 101 	 505 	 0 	 8.585215ms 	 8.585215ms 	 8.224767ms 	 7.897087ms 	 7.536639ms 	 5.308415ms 
+
+6.02665971s 	 100 	 500 	 0 	 7.864319ms 	 7.864319ms 	 7.700479ms 	 7.471103ms 	 7.176191ms 	 5.308415ms 
+
+7.037408896s 	 101 	 505 	 0 	 7.864319ms 	 7.864319ms 	 7.733247ms 	 7.340031ms 	 7.176191ms 	 4.816895ms 
+
+8.04616653s 	 101 	 505 	 0 	 6.979583ms 	 6.979583ms 	 6.815743ms 	 6.553599ms 	 6.291455ms 	 4.882431ms 
+
+9.055442791s 	 101 	 505 	 0 	 7.274495ms 	 7.274495ms 	 6.750207ms 	 6.356991ms 	 6.225919ms 	 5.341183ms 
+
+10.05576805s 	 100 	 500 	 0 	 7.438335ms 	 7.438335ms 	 7.176191ms 	 6.750207ms 	 6.324223ms 	 5.013503ms 
+
+11.065011607s 	 101 	 505 	 0 	 8.224767ms 	 8.224767ms 	 7.766015ms 	 7.700479ms 	 7.438335ms 	 4.816895ms 
+
+12.075932793s 	 101 	 505 	 0 	 8.617983ms 	 8.617983ms 	 8.552447ms 	 8.028159ms 	 7.667711ms 	 4.816895ms 
+
+13.083551123s 	 101 	 505 	 0 	 10.485759ms 	 10.485759ms 	 7.733247ms 	 7.536639ms 	 7.241727ms 	 5.177343ms 
+
+14.085442526s 	 100 	 500 	 0 	 8.126463ms 	 8.126463ms 	 8.028159ms 	 7.405567ms 	 7.012351ms 	 4.685823ms 
+
+15.095365078s 	 101 	 505 	 0 	 7.864319ms 	 7.864319ms 	 7.634943ms 	 6.389759ms 	 6.324223ms 	 5.111807ms 
+
+16.096154996s 	 100 	 500 	 0 	 6.848511ms 	 6.848511ms 	 6.848511ms 	 6.488063ms 	 6.258687ms 	 4.947967ms 
+
+17.10573764s 	 101 	 505 	 0 	 6.815743ms 	 6.815743ms 	 6.586367ms 	 6.422527ms 	 6.127615ms 	 5.177343ms 
+
+18.106604301s 	 100 	 500 	 0 	 6.586367ms 	 6.586367ms 	 6.586367ms 	 6.422527ms 	 6.193151ms 	 5.013503ms 
+
+19.11537951s 	 101 	 505 	 0 	 10.223615ms 	 10.223615ms 	 9.568255ms 	 7.864319ms 	 6.520831ms 	 4.784127ms 
+
+20.128198631s 	 101 	 505 	 0 	 8.355839ms 	 8.355839ms 	 8.191999ms 	 7.962623ms 	 7.634943ms 	 5.210111ms 
+
+21.136140818s 	 101 	 505 	 0 	 29.163519ms 	 29.163519ms 	 19.169279ms 	 8.093695ms 	 7.438335ms 	 4.980735ms 
+
+22.145951827s 	 101 	 505 	 0 	 9.240575ms 	 9.240575ms 	 7.831551ms 	 6.914047ms 	 6.717439ms 	 5.406719ms 
+
+23.146972777s 	 100 	 500 	 0 	 6.946815ms 	 6.946815ms 	 6.914047ms 	 6.750207ms 	 6.389759ms 	 5.308415ms 
+
+24.155268401s 	 101 	 505 	 0 	 6.881279ms 	 6.881279ms 	 6.815743ms 	 6.553599ms 	 6.324223ms 	 5.079039ms 
+
+25.165635256s 	 101 	 505 	 0 	 7.733247ms 	 7.733247ms 	 7.471103ms 	 6.684671ms 	 6.455295ms 	 5.341183ms 
+
+26.16761336s 	 100 	 500 	 0 	 12.320767ms 	 12.320767ms 	 8.781823ms 	 8.126463ms 	 7.798783ms 	 5.079039ms 
+
+27.176448217s 	 101 	 504 	 0 	 14.024703ms 	 14.024703ms 	 9.535487ms 	 8.191999ms 	 7.438335ms 	 5.341183ms 
+
+28.186128295s 	 101 	 505 	 0 	 6.782975ms 	 6.782975ms 	 6.750207ms 	 6.389759ms 	 6.291455ms 	 5.079039ms 
+
+29.195409406s 	 101 	 505 	 0 	 7.274495ms 	 7.274495ms 	 6.815743ms 	 6.520831ms 	 6.225919ms 	 5.111807ms 
+
+
+
+Results
+
+Time (avg):	 30.002748257s
+
+Total ops:	 3000
+
+Total rows:	 14999
+
+Operations/s:	 99.99083998246941
+
+Rows/s:		 499.9208696323529
+
+Latency:
+
+  max:		 29.163519ms 
+
+  99.9th:	 12.320767ms 
+
+  99th:		 8.191999ms 
+
+  95th:		 7.405567ms 
+
+  90th:		 6.684671ms 
+
+  median:	 5.111807ms
+
+rows_per_request 10 concurrency 1 max_reqs 50
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 10
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 50 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.008656187s 	 50 	 500 	 0 	 11.141119ms 	 11.141119ms 	 11.141119ms 	 10.911743ms 	 10.027007ms 	 7.864319ms 
+
+2.028779529s 	 51 	 510 	 0 	 42.958847ms 	 42.958847ms 	 22.970367ms 	 12.681215ms 	 12.451839ms 	 8.749055ms 
+
+3.048189167s 	 51 	 510 	 0 	 11.763711ms 	 11.763711ms 	 11.304959ms 	 10.878975ms 	 10.289151ms 	 7.897087ms 
+
+4.04965008s 	 50 	 500 	 0 	 10.682367ms 	 10.682367ms 	 10.682367ms 	 10.649599ms 	 10.420223ms 	 7.438335ms 
+
+5.049961441s 	 50 	 500 	 0 	 11.960319ms 	 11.960319ms 	 11.960319ms 	 10.649599ms 	 10.190847ms 	 8.257535ms 
+
+6.067551594s 	 51 	 510 	 0 	 10.878975ms 	 10.878975ms 	 10.223615ms 	 9.568255ms 	 9.469951ms 	 7.634943ms 
+
+7.087140072s 	 51 	 510 	 0 	 10.813439ms 	 10.813439ms 	 10.321919ms 	 9.797631ms 	 9.699327ms 	 7.569407ms 
+
+8.087904948s 	 50 	 500 	 0 	 9.863167ms 	 9.863167ms 	 9.863167ms 	 9.404415ms 	 9.076735ms 	 7.536639ms 
+
+9.108775564s 	 51 	 510 	 0 	 10.158079ms 	 10.158079ms 	 9.928703ms 	 9.764863ms 	 9.207807ms 	 7.340031ms 
+
+10.111097786s 	 50 	 500 	 0 	 10.911743ms 	 10.911743ms 	 10.911743ms 	 9.895935ms 	 9.535487ms 	 8.028159ms 
+
+11.12926411s 	 51 	 510 	 0 	 11.239423ms 	 11.239423ms 	 10.158079ms 	 9.764863ms 	 9.011199ms 	 7.569407ms 
+
+12.151246934s 	 51 	 510 	 0 	 11.173887ms 	 11.173887ms 	 11.075583ms 	 10.944511ms 	 10.584063ms 	 8.060927ms 
+
+13.160441946s 	 51 	 510 	 0 	 15.925247ms 	 15.925247ms 	 11.436031ms 	 11.173887ms 	 10.813439ms 	 7.405567ms 
+
+14.167505096s 	 50 	 500 	 0 	 12.058623ms 	 12.058623ms 	 12.058623ms 	 10.911743ms 	 10.649599ms 	 7.995391ms 
+
+15.18628941s 	 51 	 510 	 0 	 11.894783ms 	 11.894783ms 	 10.813439ms 	 10.485759ms 	 10.354687ms 	 7.634943ms 
+
+16.189615586s 	 50 	 500 	 0 	 11.632639ms 	 11.632639ms 	 11.632639ms 	 11.010047ms 	 10.747903ms 	 7.700479ms 
+
+17.207961922s 	 51 	 510 	 0 	 9.732095ms 	 9.732095ms 	 9.535487ms 	 9.404415ms 	 9.338879ms 	 7.700479ms 
+
+18.20974354s 	 50 	 500 	 0 	 10.321919ms 	 10.321919ms 	 10.321919ms 	 9.601023ms 	 9.535487ms 	 7.962623ms 
+
+19.227055181s 	 51 	 510 	 0 	 9.928703ms 	 9.928703ms 	 9.830399ms 	 9.699327ms 	 9.338879ms 	 8.126463ms 
+
+20.227948425s 	 50 	 500 	 0 	 10.387455ms 	 10.387455ms 	 10.387455ms 	 9.764863ms 	 9.404415ms 	 8.093695ms 
+
+21.248828799s 	 51 	 510 	 0 	 10.780671ms 	 10.780671ms 	 10.682367ms 	 9.830399ms 	 9.568255ms 	 7.766015ms 
+
+22.268692086s 	 51 	 510 	 0 	 12.713983ms 	 12.713983ms 	 10.977279ms 	 9.895935ms 	 9.568255ms 	 8.323071ms 
+
+23.280424279s 	 51 	 510 	 0 	 11.468799ms 	 11.468799ms 	 11.141119ms 	 10.780671ms 	 10.485759ms 	 8.519679ms 
+
+24.288013459s 	 50 	 500 	 0 	 11.599871ms 	 11.599871ms 	 11.599871ms 	 10.518527ms 	 10.125311ms 	 7.569407ms 
+
+25.292021988s 	 50 	 500 	 0 	 11.829247ms 	 11.829247ms 	 11.829247ms 	 10.518527ms 	 10.092543ms 	 7.962623ms 
+
+26.31045876s 	 51 	 510 	 0 	 10.682367ms 	 10.682367ms 	 10.616831ms 	 10.289151ms 	 10.027007ms 	 8.093695ms 
+
+27.320422542s 	 51 	 510 	 0 	 11.272191ms 	 11.272191ms 	 10.715135ms 	 10.027007ms 	 9.764863ms 	 8.093695ms 
+
+28.34651767s 	 51 	 510 	 0 	 10.223615ms 	 10.223615ms 	 9.863167ms 	 9.469951ms 	 9.437183ms 	 7.897087ms 
+
+29.346535093s 	 50 	 500 	 0 	 10.616831ms 	 10.616831ms 	 10.616831ms 	 9.732095ms 	 9.404415ms 	 7.864319ms 
+
+
+
+Results
+
+Time (avg):	 30.005996429s
+
+Total ops:	 1500
+
+Total rows:	 15000
+
+Operations/s:	 49.9900079488875
+
+Rows/s:		 499.900079488875
+
+Latency:
+
+  max:		 42.958847ms 
+
+  99.9th:	 15.925247ms 
+
+  99th:		 11.632639ms 
+
+  95th:		 10.616831ms 
+
+  90th:		 9.961471ms 
+
+  median:	 7.897087ms
+
+rows_per_request 25 concurrency 1 max_reqs 20
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 25
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 20 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.016009622s 	 20 	 500 	 0 	 19.464191ms 	 19.464191ms 	 19.464191ms 	 18.579455ms 	 17.727487ms 	 16.285695ms 
+
+2.017896791s 	 20 	 500 	 0 	 19.267583ms 	 19.267583ms 	 19.267583ms 	 18.972671ms 	 18.939903ms 	 16.875519ms 
+
+3.0681004s 	 21 	 525 	 0 	 20.086783ms 	 20.086783ms 	 20.086783ms 	 19.562495ms 	 18.284543ms 	 16.056319ms 
+
+4.068489856s 	 20 	 500 	 0 	 18.710527ms 	 18.710527ms 	 18.710527ms 	 18.317311ms 	 18.317311ms 	 16.678911ms 
+
+5.115530298s 	 21 	 525 	 0 	 19.726335ms 	 19.726335ms 	 19.726335ms 	 19.562495ms 	 19.496959ms 	 15.204351ms 
+
+6.119492015s 	 20 	 500 	 0 	 20.021247ms 	 20.021247ms 	 20.021247ms 	 19.922943ms 	 19.890175ms 	 16.711679ms 
+
+7.165571147s 	 21 	 525 	 0 	 21.299199ms 	 21.299199ms 	 21.299199ms 	 19.922943ms 	 19.890175ms 	 17.891327ms 
+
+8.171068867s 	 20 	 500 	 0 	 20.840447ms 	 20.840447ms 	 20.840447ms 	 18.710527ms 	 18.251775ms 	 15.466495ms 
+
+9.217975572s 	 21 	 525 	 0 	 20.217855ms 	 20.217855ms 	 20.217855ms 	 19.955711ms 	 19.464191ms 	 16.580607ms 
+
+10.250516225s 	 21 	 525 	 0 	 21.757951ms 	 21.757951ms 	 21.757951ms 	 20.086783ms 	 19.136511ms 	 17.039359ms 
+
+11.268691253s 	 20 	 500 	 0 	 19.955711ms 	 19.955711ms 	 19.955711ms 	 19.562495ms 	 19.070975ms 	 16.089087ms 
+
+12.316669215s 	 21 	 525 	 0 	 20.414463ms 	 20.414463ms 	 20.414463ms 	 18.284543ms 	 18.251775ms 	 16.482303ms 
+
+13.31825396s 	 20 	 500 	 0 	 20.512767ms 	 20.512767ms 	 20.512767ms 	 19.726335ms 	 19.333119ms 	 16.842751ms 
+
+14.367049175s 	 21 	 525 	 0 	 19.103743ms 	 19.103743ms 	 19.103743ms 	 18.120703ms 	 17.989631ms 	 16.383999ms 
+
+15.36781541s 	 20 	 500 	 0 	 18.612223ms 	 18.612223ms 	 18.612223ms 	 18.546687ms 	 17.924095ms 	 16.056319ms 
+
+16.417851873s 	 21 	 525 	 0 	 20.611071ms 	 20.611071ms 	 20.611071ms 	 20.054015ms 	 18.808831ms 	 16.220159ms 
+
+17.465790902s 	 21 	 525 	 0 	 18.350079ms 	 18.350079ms 	 18.350079ms 	 17.694719ms 	 17.563647ms 	 16.252927ms 
+
+18.469108999s 	 20 	 500 	 0 	 19.562495ms 	 19.562495ms 	 19.562495ms 	 18.841599ms 	 18.612223ms 	 17.432575ms 
+
+19.469803918s 	 20 	 500 	 0 	 22.052863ms 	 22.052863ms 	 22.052863ms 	 19.562495ms 	 19.070975ms 	 16.908287ms 
+
+20.51687824s 	 21 	 525 	 0 	 19.922943ms 	 19.922943ms 	 19.922943ms 	 19.791871ms 	 19.464191ms 	 15.990783ms 
+
+21.566668427s 	 21 	 525 	 0 	 18.350079ms 	 18.350079ms 	 18.350079ms 	 18.153471ms 	 17.793023ms 	 16.056319ms 
+
+22.568466494s 	 20 	 500 	 0 	 19.890175ms 	 19.890175ms 	 19.890175ms 	 19.529727ms 	 19.103743ms 	 16.809983ms 
+
+23.569764811s 	 20 	 499 	 0 	 19.562495ms 	 19.562495ms 	 19.562495ms 	 19.365887ms 	 18.677759ms 	 15.433727ms 
+
+24.61880206s 	 21 	 525 	 0 	 18.939903ms 	 18.939903ms 	 18.939903ms 	 18.939903ms 	 18.710527ms 	 15.269887ms 
+
+25.665757977s 	 21 	 525 	 0 	 21.200895ms 	 21.200895ms 	 21.200895ms 	 20.414463ms 	 18.481151ms 	 17.006591ms 
+
+26.669625473s 	 20 	 500 	 0 	 19.431423ms 	 19.431423ms 	 19.431423ms 	 18.644991ms 	 17.301503ms 	 15.859711ms 
+
+27.716484139s 	 21 	 525 	 0 	 20.217855ms 	 20.217855ms 	 20.217855ms 	 19.726335ms 	 19.628031ms 	 17.432575ms 
+
+28.717259017s 	 20 	 500 	 0 	 19.726335ms 	 19.726335ms 	 19.726335ms 	 19.398655ms 	 19.234815ms 	 17.072127ms 
+
+29.76801152s 	 21 	 525 	 0 	 20.643839ms 	 20.643839ms 	 20.643839ms 	 19.726335ms 	 19.529727ms 	 17.399807ms 
+
+
+
+Results
+
+Time (avg):	 29.999322112s
+
+Total ops:	 600
+
+Total rows:	 14999
+
+Operations/s:	 20.00045193554539
+
+Rows/s:		 499.97796430207546
+
+Latency:
+
+  max:		 22.052863ms 
+
+  99.9th:	 21.757951ms 
+
+  99th:		 20.611071ms 
+
+  95th:		 19.726335ms 
+
+  90th:		 19.103743ms 
+
+  median:	 16.547839ms
+
+rows_per_request 50 concurrency 1 max_reqs 10
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 50
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 10 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.035437987s 	 10 	 500 	 0 	 35.192831ms 	 35.192831ms 	 35.192831ms 	 35.192831ms 	 33.947647ms 	 31.358975ms 
+
+2.133135587s 	 11 	 550 	 0 	 33.292287ms 	 33.292287ms 	 33.292287ms 	 33.030143ms 	 33.030143ms 	 30.507007ms 
+
+3.234067833s 	 11 	 550 	 0 	 33.816575ms 	 33.816575ms 	 33.816575ms 	 33.521663ms 	 33.521663ms 	 31.555583ms 
+
+4.328778281s 	 11 	 550 	 0 	 34.766847ms 	 34.766847ms 	 34.766847ms 	 33.193983ms 	 33.193983ms 	 29.097983ms 
+
+5.329109021s 	 10 	 500 	 0 	 43.876351ms 	 43.876351ms 	 43.876351ms 	 43.876351ms 	 31.686655ms 	 30.736383ms 
+
+6.331161222s 	 10 	 500 	 0 	 34.177023ms 	 34.177023ms 	 34.177023ms 	 34.177023ms 	 33.980415ms 	 29.032447ms 
+
+7.429540922s 	 11 	 550 	 0 	 33.652735ms 	 33.652735ms 	 33.652735ms 	 32.243711ms 	 32.243711ms 	 29.982719ms 
+
+8.528826874s 	 11 	 550 	 0 	 32.899071ms 	 32.899071ms 	 32.899071ms 	 31.031295ms 	 31.031295ms 	 29.556735ms 
+
+9.534633501s 	 10 	 500 	 0 	 34.373631ms 	 34.373631ms 	 34.373631ms 	 34.373631ms 	 32.079871ms 	 27.885567ms 
+
+10.600655166s 	 11 	 550 	 0 	 33.882111ms 	 33.882111ms 	 33.882111ms 	 33.062911ms 	 33.062911ms 	 25.231359ms 
+
+11.631884949s 	 10 	 500 	 0 	 33.062911ms 	 33.062911ms 	 33.062911ms 	 33.062911ms 	 32.309247ms 	 29.917183ms 
+
+12.72854943s 	 11 	 550 	 0 	 34.045951ms 	 34.045951ms 	 34.045951ms 	 31.522815ms 	 31.522815ms 	 30.081023ms 
+
+13.731417544s 	 10 	 500 	 0 	 35.553279ms 	 35.553279ms 	 35.553279ms 	 35.553279ms 	 31.817727ms 	 29.229055ms 
+
+14.83187756s 	 11 	 549 	 0 	 34.406399ms 	 34.406399ms 	 34.406399ms 	 33.751039ms 	 33.751039ms 	 31.653887ms 
+
+15.900629206s 	 11 	 550 	 0 	 34.996223ms 	 34.996223ms 	 34.996223ms 	 33.390591ms 	 33.390591ms 	 31.293439ms 
+
+16.928242033s 	 10 	 500 	 0 	 31.064063ms 	 31.064063ms 	 31.064063ms 	 31.064063ms 	 29.949951ms 	 28.639231ms 
+
+18.030765766s 	 11 	 550 	 0 	 30.572543ms 	 30.572543ms 	 30.572543ms 	 30.507007ms 	 30.507007ms 	 28.082175ms 
+
+19.128434649s 	 11 	 550 	 0 	 34.537471ms 	 34.537471ms 	 34.537471ms 	 32.079871ms 	 32.079871ms 	 29.622271ms 
+
+20.131878141s 	 10 	 499 	 0 	 32.047103ms 	 32.047103ms 	 32.047103ms 	 32.047103ms 	 31.686655ms 	 29.032447ms 
+
+21.230387724s 	 11 	 550 	 0 	 33.456127ms 	 33.456127ms 	 33.456127ms 	 31.260671ms 	 31.260671ms 	 28.671999ms 
+
+22.333267358s 	 11 	 550 	 0 	 33.062911ms 	 33.062911ms 	 33.062911ms 	 30.867455ms 	 30.867455ms 	 28.901375ms 
+
+23.428575721s 	 11 	 549 	 0 	 36.339711ms 	 36.339711ms 	 36.339711ms 	 32.079871ms 	 32.079871ms 	 29.786111ms 
+
+24.53545556s 	 11 	 550 	 0 	 35.225599ms 	 35.225599ms 	 35.225599ms 	 34.570239ms 	 34.570239ms 	 28.442623ms 
+
+25.629205961s 	 11 	 550 	 0 	 31.457279ms 	 31.457279ms 	 31.457279ms 	 31.162367ms 	 31.162367ms 	 29.032447ms 
+
+26.735247746s 	 11 	 550 	 0 	 34.996223ms 	 34.996223ms 	 34.996223ms 	 33.062911ms 	 33.062911ms 	 28.803071ms 
+
+27.834128125s 	 11 	 550 	 0 	 34.078719ms 	 34.078719ms 	 34.078719ms 	 33.914879ms 	 33.914879ms 	 31.850495ms 
+
+28.926590169s 	 11 	 549 	 0 	 30.375935ms 	 30.375935ms 	 30.375935ms 	 29.818879ms 	 29.818879ms 	 27.787263ms 
+
+29.932702706s 	 10 	 500 	 0 	 32.505855ms 	 32.505855ms 	 32.505855ms 	 32.505855ms 	 30.605311ms 	 28.770303ms 
+
+
+
+Results
+
+Time (avg):	 30.032659536s
+
+Total ops:	 300
+
+Total rows:	 14996
+
+Operations/s:	 9.989125326726109
+
+Rows/s:		 499.32307799861576
+
+Latency:
+
+  max:		 43.876351ms 
+
+  99.9th:	 43.876351ms 
+
+  99th:		 35.225599ms 
+
+  95th:		 34.045951ms 
+
+  90th:		 33.259519ms 
+
+  median:	 29.589503ms
+
+rows_per_request 100 concurrency 1 max_reqs 5
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 100
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 5 op/s
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.258088993s 	 6 	 600 	 0 	 57.802751ms 	 57.802751ms 	 57.802751ms 	 57.802751ms 	 50.233343ms 	 655.359µs 
+
+2.450878406s 	 6 	 600 	 0 	 62.685183ms 	 62.685183ms 	 62.685183ms 	 62.685183ms 	 57.016319ms 	 51.150847ms 
+
+3.45089534s 	 5 	 500 	 0 	 59.342847ms 	 59.342847ms 	 59.342847ms 	 59.342847ms 	 59.342847ms 	 50.233343ms 
+
+4.456094382s 	 5 	 500 	 0 	 55.836671ms 	 55.836671ms 	 55.836671ms 	 55.836671ms 	 55.836671ms 	 49.446911ms 
+
+5.656788323s 	 6 	 600 	 0 	 56.524799ms 	 56.524799ms 	 56.524799ms 	 56.524799ms 	 53.051391ms 	 48.496639ms 
+
+6.800911964s 	 6 	 600 	 0 	 52.232191ms 	 52.232191ms 	 52.232191ms 	 52.232191ms 	 50.135039ms 	 655.359µs 
+
+7.850844193s 	 5 	 500 	 0 	 52.363263ms 	 52.363263ms 	 52.363263ms 	 52.363263ms 	 52.363263ms 	 48.234495ms 
+
+8.851498089s 	 5 	 500 	 0 	 54.001663ms 	 54.001663ms 	 54.001663ms 	 54.001663ms 	 54.001663ms 	 51.183615ms 
+
+10.0493735s 	 6 	 600 	 0 	 53.116927ms 	 53.116927ms 	 53.116927ms 	 53.116927ms 	 51.871743ms 	 48.463871ms 
+
+11.051054888s 	 5 	 500 	 0 	 54.624255ms 	 54.624255ms 	 54.624255ms 	 54.624255ms 	 54.624255ms 	 655.359µs 
+
+12.05588585s 	 5 	 500 	 0 	 55.607295ms 	 55.607295ms 	 55.607295ms 	 55.607295ms 	 55.607295ms 	 655.359µs 
+
+13.247089866s 	 6 	 600 	 0 	 51.838975ms 	 51.838975ms 	 51.838975ms 	 51.838975ms 	 50.593791ms 	 46.825471ms 
+
+14.247607585s 	 5 	 500 	 0 	 54.329343ms 	 54.329343ms 	 54.329343ms 	 54.329343ms 	 54.329343ms 	 50.462719ms 
+
+15.252387119s 	 5 	 500 	 0 	 63.995903ms 	 63.995903ms 	 63.995903ms 	 63.995903ms 	 63.995903ms 	 52.133887ms 
+
+16.449781575s 	 6 	 600 	 0 	 55.672831ms 	 55.672831ms 	 55.672831ms 	 55.672831ms 	 53.411839ms 	 50.429951ms 
+
+17.452437133s 	 5 	 499 	 0 	 53.673983ms 	 53.673983ms 	 53.673983ms 	 53.673983ms 	 53.673983ms 	 51.347455ms 
+
+18.649930674s 	 6 	 599 	 0 	 55.214079ms 	 55.214079ms 	 55.214079ms 	 55.214079ms 	 51.249151ms 	 47.939583ms 
+
+19.653798678s 	 5 	 500 	 0 	 62.881791ms 	 62.881791ms 	 62.881791ms 	 62.881791ms 	 62.881791ms 	 52.166655ms 
+
+20.800862128s 	 6 	 600 	 0 	 54.919167ms 	 54.919167ms 	 54.919167ms 	 54.919167ms 	 51.838975ms 	 50.397183ms 
+
+21.853216618s 	 5 	 500 	 0 	 55.705599ms 	 55.705599ms 	 55.705599ms 	 55.705599ms 	 55.705599ms 	 52.985855ms 
+
+22.857802272s 	 5 	 500 	 0 	 57.573375ms 	 57.573375ms 	 57.573375ms 	 57.573375ms 	 57.573375ms 	 622.591µs 
+
+24.055975547s 	 6 	 599 	 0 	 59.146239ms 	 59.146239ms 	 59.146239ms 	 59.146239ms 	 57.114623ms 	 655.359µs 
+
+25.200854206s 	 6 	 599 	 0 	 53.018623ms 	 53.018623ms 	 53.018623ms 	 53.018623ms 	 52.428799ms 	 655.359µs 
+
+26.201242564s 	 5 	 500 	 0 	 60.391423ms 	 60.391423ms 	 60.391423ms 	 60.391423ms 	 60.391423ms 	 983.039µs 
+
+27.255299935s 	 5 	 500 	 0 	 104.726527ms 	 104.726527ms 	 104.726527ms 	 104.726527ms 	 104.726527ms 	 52.199423ms 
+
+28.256408808s 	 5 	 499 	 0 	 62.062591ms 	 62.062591ms 	 62.062591ms 	 62.062591ms 	 62.062591ms 	 56.557567ms 
+
+29.401215748s 	 6 	 599 	 0 	 58.425343ms 	 58.425343ms 	 58.425343ms 	 58.425343ms 	 56.786943ms 	 1.048575ms 
+
+
+
+Results
+
+Time (avg):	 30.057205339s
+
+Total ops:	 150
+
+Total rows:	 14993
+
+Operations/s:	 4.990483922514617
+
+Rows/s:		 498.81550300174433
+
+Latency:
+
+  max:		 104.726527ms 
+
+  99.9th:	 104.726527ms 
+
+  99th:		 63.995903ms 
+
+  95th:		 59.342847ms 
+
+  90th:		 57.114623ms 
+
+  median:	 50.429951ms
+
+run_test_in_query_vs_split_query limit rows -1
+sudo service syclla-server stop
+sudo pkill -9 scylla
+sudo rm -Rf /var/lib/scylla/data/*
+sudo rm -Rf /var/lib/scylla/commitlog/*
+sleep 3
+sudo service scylla-server start
+sleep 60
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 0
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 1
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 2
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 3
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 4
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 5
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 6
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 7
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 8
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 9
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 10
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 11
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 12
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 13
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 14
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 15
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 16
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 17
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 18
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 19
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 20
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 21
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 22
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 23
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 24
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 25
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 26
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 27
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 28
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 29
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 30
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 31
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 32
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 33
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 34
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 35
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 36
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 37
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 38
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 39
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 40
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 41
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 42
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 43
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 44
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 45
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 46
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 47
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 48
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 49
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 50
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 51
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 52
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 53
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 54
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 55
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 56
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 57
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 58
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 59
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 60
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 61
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 62
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 63
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 64
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 65
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 66
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 67
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 68
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 69
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 70
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 71
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 72
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 73
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 74
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 75
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 76
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 77
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 78
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 79
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 80
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 81
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 82
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 83
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 84
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 85
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 86
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 87
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 88
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 89
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 90
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 91
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 92
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 93
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 94
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 95
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 96
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 97
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 98
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 99
+scylla-bench -workload sequential -mode write -partition-count 1 -clustering-row-count 100000 -clustering-row-size 100  -concurrency 4  -nodes 127.0.0.1 -partition-offset 100
+nodetool flush
+rows_per_request 1 concurrency 1 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.039003662s 	 100 	 100 	 0 	 18.481151ms 	 18.481151ms 	 17.039359ms 	 14.548991ms 	 13.991935ms 	 11.534335ms 
+
+2.047983199s 	 110 	 110 	 0 	 15.990783ms 	 15.990783ms 	 15.040511ms 	 13.959167ms 	 13.467647ms 	 10.518527ms 
+
+3.048921728s 	 200 	 200 	 0 	 18.022399ms 	 18.022399ms 	 17.498111ms 	 14.548991ms 	 12.976127ms 	 3.342335ms 
+
+4.049741674s 	 432 	 432 	 0 	 5.177343ms 	 5.177343ms 	 4.816895ms 	 3.735551ms 	 3.604479ms 	 3.178495ms 
+
+5.051280945s 	 447 	 447 	 0 	 4.554751ms 	 4.554751ms 	 4.227071ms 	 3.735551ms 	 3.604479ms 	 3.244031ms 
+
+6.052522578s 	 422 	 422 	 0 	 6.717439ms 	 6.717439ms 	 4.259839ms 	 3.932159ms 	 3.670015ms 	 3.244031ms 
+
+7.053751051s 	 419 	 419 	 0 	 5.734399ms 	 5.734399ms 	 5.636095ms 	 4.784127ms 	 3.702783ms 	 3.211263ms 
+
+8.055895582s 	 386 	 386 	 0 	 7.667711ms 	 7.667711ms 	 5.931007ms 	 5.406719ms 	 4.915199ms 	 3.342335ms 
+
+9.057683447s 	 412 	 412 	 0 	 5.570559ms 	 5.570559ms 	 5.210111ms 	 4.816895ms 	 4.456447ms 	 3.145727ms 
+
+10.059806647s 	 425 	 425 	 0 	 4.587519ms 	 4.587519ms 	 4.325375ms 	 3.997695ms 	 3.768319ms 	 3.145727ms 
+
+11.06207531s 	 444 	 444 	 0 	 5.603327ms 	 5.603327ms 	 5.111807ms 	 3.899391ms 	 3.604479ms 	 3.112959ms 
+
+12.062748031s 	 389 	 389 	 0 	 8.028159ms 	 8.028159ms 	 5.767167ms 	 5.406719ms 	 4.980735ms 	 3.211263ms 
+
+13.063197375s 	 400 	 400 	 0 	 5.373951ms 	 5.373951ms 	 5.111807ms 	 4.882431ms 	 4.489215ms 	 3.276799ms 
+
+14.06477144s 	 416 	 416 	 0 	 4.685823ms 	 4.685823ms 	 4.259839ms 	 4.063231ms 	 3.670015ms 	 3.211263ms 
+
+15.066756785s 	 436 	 436 	 0 	 5.931007ms 	 5.931007ms 	 5.439487ms 	 4.882431ms 	 3.833855ms 	 3.047423ms 
+
+16.067808057s 	 404 	 404 	 0 	 5.832703ms 	 5.832703ms 	 5.439487ms 	 5.111807ms 	 4.882431ms 	 3.112959ms 
+
+17.068794295s 	 443 	 443 	 0 	 6.619135ms 	 6.619135ms 	 5.177343ms 	 4.521983ms 	 3.964927ms 	 3.047423ms 
+
+18.074351336s 	 436 	 436 	 0 	 5.668863ms 	 5.668863ms 	 5.308415ms 	 4.128767ms 	 3.801087ms 	 3.112959ms 
+
+19.075409104s 	 407 	 407 	 0 	 5.931007ms 	 5.931007ms 	 5.701631ms 	 5.275647ms 	 4.915199ms 	 3.145727ms 
+
+20.07603547s 	 420 	 420 	 0 	 5.537791ms 	 5.537791ms 	 5.210111ms 	 4.685823ms 	 4.030463ms 	 3.080191ms 
+
+21.078387844s 	 419 	 419 	 0 	 6.619135ms 	 6.619135ms 	 5.046271ms 	 3.964927ms 	 3.735551ms 	 3.047423ms 
+
+22.07892408s 	 386 	 386 	 0 	 5.701631ms 	 5.701631ms 	 5.406719ms 	 5.111807ms 	 4.915199ms 	 3.112959ms 
+
+23.079417931s 	 436 	 436 	 0 	 4.784127ms 	 4.784127ms 	 4.161535ms 	 3.964927ms 	 3.768319ms 	 3.014655ms 
+
+24.08155103s 	 410 	 410 	 0 	 18.644991ms 	 18.644991ms 	 5.701631ms 	 5.308415ms 	 4.849663ms 	 2.949119ms 
+
+25.084621471s 	 411 	 411 	 0 	 15.400959ms 	 15.400959ms 	 5.406719ms 	 4.947967ms 	 4.718591ms 	 2.949119ms 
+
+26.087257399s 	 446 	 446 	 0 	 6.160383ms 	 6.160383ms 	 4.685823ms 	 3.866623ms 	 3.735551ms 	 3.047423ms 
+
+27.08840134s 	 403 	 403 	 0 	 8.388607ms 	 8.388607ms 	 5.570559ms 	 5.341183ms 	 5.144575ms 	 2.883583ms 
+
+28.089432566s 	 430 	 430 	 0 	 5.308415ms 	 5.308415ms 	 5.046271ms 	 4.653055ms 	 4.030463ms 	 3.014655ms 
+
+29.090451463s 	 400 	 400 	 0 	 15.695871ms 	 15.695871ms 	 5.734399ms 	 5.079039ms 	 3.932159ms 	 3.047423ms 
+
+
+
+Results
+
+Time (avg):	 29.972721426s
+
+Total ops:	 11659
+
+Total rows:	 11659
+
+Operations/s:	 388.9870337194786
+
+Rows/s:		 388.9870337194786
+
+Latency:
+
+  max:		 18.644991ms 
+
+  99.9th:	 15.695871ms 
+
+  99th:		 11.993087ms 
+
+  95th:		 5.079039ms 
+
+  90th:		 4.227071ms 
+
+  median:	 3.080191ms
+
+rows_per_request 1 concurrency 2 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 2
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.00319348s 	 922 	 922 	 0 	 23.855103ms 	 23.625727ms 	 4.947967ms 	 4.161535ms 	 3.866623ms 	 2.195455ms 
+
+2.00393899s 	 824 	 824 	 0 	 6.062079ms 	 6.029311ms 	 5.799935ms 	 5.439487ms 	 5.013503ms 	 2.555903ms 
+
+3.005804909s 	 881 	 881 	 0 	 5.931007ms 	 5.767167ms 	 5.439487ms 	 5.079039ms 	 4.325375ms 	 2.293759ms 
+
+4.007015092s 	 1000 	 1000 	 0 	 4.980735ms 	 4.882431ms 	 4.489215ms 	 4.063231ms 	 3.833855ms 	 2.031615ms 
+
+5.008587176s 	 862 	 862 	 0 	 6.553599ms 	 6.291455ms 	 5.767167ms 	 5.373951ms 	 5.013503ms 	 2.097151ms 
+
+6.0105982s 	 913 	 913 	 0 	 5.865471ms 	 5.603327ms 	 5.308415ms 	 4.423679ms 	 3.997695ms 	 2.260991ms 
+
+7.014281171s 	 905 	 905 	 0 	 6.488063ms 	 5.865471ms 	 5.636095ms 	 5.144575ms 	 4.128767ms 	 2.097151ms 
+
+8.016184376s 	 824 	 824 	 0 	 7.372799ms 	 6.455295ms 	 5.799935ms 	 5.341183ms 	 4.915199ms 	 2.392063ms 
+
+9.017313337s 	 933 	 933 	 0 	 5.701631ms 	 4.980735ms 	 4.653055ms 	 4.128767ms 	 3.932159ms 	 2.228223ms 
+
+10.017430012s 	 831 	 831 	 0 	 8.388607ms 	 6.651903ms 	 5.931007ms 	 5.472255ms 	 5.111807ms 	 2.326527ms 
+
+11.020584589s 	 930 	 930 	 0 	 7.766015ms 	 6.127615ms 	 5.242879ms 	 4.587519ms 	 3.997695ms 	 2.129919ms 
+
+12.021808501s 	 896 	 896 	 0 	 6.586367ms 	 6.389759ms 	 5.865471ms 	 5.079039ms 	 4.095999ms 	 2.129919ms 
+
+13.024977638s 	 864 	 864 	 0 	 6.389759ms 	 6.258687ms 	 5.603327ms 	 5.210111ms 	 4.784127ms 	 2.293759ms 
+
+14.027343818s 	 962 	 962 	 0 	 4.980735ms 	 4.751359ms 	 4.325375ms 	 4.030463ms 	 3.801087ms 	 2.228223ms 
+
+15.029097227s 	 901 	 901 	 0 	 6.356991ms 	 6.225919ms 	 5.865471ms 	 5.439487ms 	 4.947967ms 	 2.031615ms 
+
+16.032097381s 	 943 	 943 	 0 	 6.389759ms 	 6.193151ms 	 5.308415ms 	 4.784127ms 	 4.128767ms 	 2.097151ms 
+
+17.036948821s 	 951 	 951 	 0 	 6.914047ms 	 6.619135ms 	 5.570559ms 	 4.882431ms 	 3.932159ms 	 2.031615ms 
+
+18.038722015s 	 869 	 869 	 0 	 6.225919ms 	 6.160383ms 	 5.799935ms 	 5.210111ms 	 4.915199ms 	 2.195455ms 
+
+19.042073578s 	 929 	 929 	 0 	 7.438335ms 	 5.537791ms 	 4.751359ms 	 4.161535ms 	 3.932159ms 	 2.228223ms 
+
+20.042402899s 	 817 	 817 	 0 	 6.356991ms 	 6.291455ms 	 5.832703ms 	 5.341183ms 	 4.947967ms 	 2.424831ms 
+
+21.043750978s 	 918 	 918 	 0 	 6.356991ms 	 5.668863ms 	 5.242879ms 	 4.423679ms 	 3.997695ms 	 2.162687ms 
+
+22.045198086s 	 896 	 896 	 0 	 7.602175ms 	 7.536639ms 	 5.963775ms 	 5.308415ms 	 4.063231ms 	 2.162687ms 
+
+23.047025767s 	 870 	 870 	 0 	 34.013183ms 	 20.185087ms 	 5.636095ms 	 5.079039ms 	 4.751359ms 	 2.162687ms 
+
+24.0515569s 	 937 	 937 	 0 	 7.602175ms 	 6.160383ms 	 5.013503ms 	 4.128767ms 	 3.833855ms 	 2.162687ms 
+
+25.054484705s 	 864 	 864 	 0 	 6.193151ms 	 6.029311ms 	 5.767167ms 	 5.439487ms 	 5.144575ms 	 2.129919ms 
+
+26.056385611s 	 908 	 908 	 0 	 7.929855ms 	 7.110655ms 	 5.439487ms 	 4.390911ms 	 4.030463ms 	 2.162687ms 
+
+27.058006523s 	 851 	 851 	 0 	 11.796479ms 	 11.010047ms 	 5.865471ms 	 5.308415ms 	 4.751359ms 	 2.260991ms 
+
+28.060080947s 	 880 	 880 	 0 	 5.767167ms 	 5.734399ms 	 5.341183ms 	 4.882431ms 	 4.095999ms 	 2.228223ms 
+
+29.060376796s 	 858 	 858 	 0 	 6.324223ms 	 5.931007ms 	 5.668863ms 	 5.111807ms 	 4.030463ms 	 2.719743ms 
+
+
+
+Results
+
+Time (avg):	 30.000463489s
+
+Total ops:	 26738
+
+Total rows:	 26738
+
+Operations/s:	 891.2529154204469
+
+Rows/s:		 891.2529154204469
+
+Latency:
+
+  max:		 34.013183ms 
+
+  99.9th:	 6.651903ms 
+
+  99th:		 5.668863ms 
+
+  95th:		 5.046271ms 
+
+  90th:		 4.194303ms 
+
+  median:	 2.195455ms
+
+rows_per_request 1 concurrency 3 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 3
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.002398855s 	 1403 	 1403 	 0 	 5.111807ms 	 5.046271ms 	 4.718591ms 	 4.358143ms 	 4.030463ms 	 2.064383ms 
+
+2.002805681s 	 1259 	 1259 	 0 	 6.619135ms 	 6.553599ms 	 6.193151ms 	 5.668863ms 	 5.177343ms 	 2.195455ms 
+
+3.004250423s 	 1333 	 1333 	 0 	 8.290303ms 	 8.224767ms 	 5.636095ms 	 4.915199ms 	 4.292607ms 	 2.260991ms 
+
+4.006802553s 	 1246 	 1246 	 0 	 44.957695ms 	 31.031295ms 	 6.356991ms 	 5.177343ms 	 4.259839ms 	 2.260991ms 
+
+5.010062603s 	 1236 	 1236 	 0 	 7.110655ms 	 6.422527ms 	 6.127615ms 	 5.537791ms 	 5.111807ms 	 2.260991ms 
+
+6.012519389s 	 1355 	 1355 	 0 	 6.750207ms 	 5.636095ms 	 4.685823ms 	 4.325375ms 	 4.063231ms 	 2.326527ms 
+
+7.015379183s 	 1248 	 1248 	 0 	 7.929855ms 	 7.569407ms 	 6.258687ms 	 5.668863ms 	 5.210111ms 	 2.162687ms 
+
+8.017410179s 	 1301 	 1301 	 0 	 6.422527ms 	 6.422527ms 	 5.701631ms 	 5.013503ms 	 4.358143ms 	 2.260991ms 
+
+9.019370868s 	 1352 	 1352 	 0 	 8.126463ms 	 7.340031ms 	 6.062079ms 	 4.620287ms 	 4.161535ms 	 2.162687ms 
+
+10.022428356s 	 1250 	 1250 	 0 	 6.651903ms 	 6.389759ms 	 6.094847ms 	 5.537791ms 	 5.210111ms 	 2.260991ms 
+
+11.024163134s 	 1343 	 1343 	 0 	 5.963775ms 	 5.734399ms 	 5.144575ms 	 4.521983ms 	 4.227071ms 	 2.195455ms 
+
+12.025244554s 	 1171 	 1171 	 0 	 46.170111ms 	 46.006271ms 	 6.651903ms 	 5.570559ms 	 5.079039ms 	 2.359295ms 
+
+13.027218296s 	 1292 	 1292 	 0 	 5.963775ms 	 5.931007ms 	 5.505023ms 	 4.816895ms 	 4.292607ms 	 2.293759ms 
+
+14.029333749s 	 1263 	 1263 	 0 	 8.716287ms 	 8.552447ms 	 6.029311ms 	 5.373951ms 	 4.489215ms 	 2.326527ms 
+
+15.032068727s 	 1313 	 1313 	 0 	 7.438335ms 	 7.077887ms 	 5.898239ms 	 5.406719ms 	 4.849663ms 	 2.129919ms 
+
+16.032991046s 	 1436 	 1436 	 0 	 5.111807ms 	 5.013503ms 	 4.653055ms 	 4.227071ms 	 3.964927ms 	 2.031615ms 
+
+17.036304143s 	 1288 	 1288 	 0 	 6.946815ms 	 6.881279ms 	 6.160383ms 	 5.570559ms 	 5.013503ms 	 2.097151ms 
+
+18.037378611s 	 1317 	 1317 	 0 	 6.979583ms 	 6.062079ms 	 5.603327ms 	 4.947967ms 	 4.325375ms 	 2.293759ms 
+
+19.03925341s 	 1315 	 1315 	 0 	 8.552447ms 	 8.093695ms 	 6.193151ms 	 5.144575ms 	 4.227071ms 	 2.195455ms 
+
+20.041797485s 	 1272 	 1272 	 0 	 15.761407ms 	 13.598719ms 	 5.996543ms 	 5.373951ms 	 4.947967ms 	 2.129919ms 
+
+21.041918284s 	 1392 	 1392 	 0 	 5.636095ms 	 5.111807ms 	 4.784127ms 	 4.358143ms 	 4.063231ms 	 2.129919ms 
+
+22.042367017s 	 1206 	 1206 	 0 	 6.782975ms 	 6.750207ms 	 6.291455ms 	 5.636095ms 	 5.242879ms 	 2.326527ms 
+
+23.042880641s 	 1376 	 1376 	 0 	 6.127615ms 	 6.029311ms 	 5.341183ms 	 4.489215ms 	 4.095999ms 	 2.162687ms 
+
+24.044606382s 	 1266 	 1266 	 0 	 6.815743ms 	 6.586367ms 	 6.062079ms 	 5.472255ms 	 4.521983ms 	 2.392063ms 
+
+25.048272101s 	 1264 	 1264 	 0 	 10.584063ms 	 7.536639ms 	 5.996543ms 	 5.373951ms 	 4.947967ms 	 2.228223ms 
+
+26.049083397s 	 1333 	 1333 	 0 	 7.012351ms 	 6.619135ms 	 5.701631ms 	 4.423679ms 	 4.128767ms 	 2.228223ms 
+
+27.050475473s 	 1251 	 1251 	 0 	 8.781823ms 	 7.471103ms 	 6.193151ms 	 5.603327ms 	 5.242879ms 	 2.129919ms 
+
+28.051749325s 	 1324 	 1324 	 0 	 5.898239ms 	 5.898239ms 	 5.242879ms 	 4.489215ms 	 4.161535ms 	 2.392063ms 
+
+29.053931871s 	 1310 	 1310 	 0 	 6.750207ms 	 6.717439ms 	 6.094847ms 	 5.570559ms 	 4.816895ms 	 2.064383ms 
+
+
+
+Results
+
+Time (avg):	 30.000423617s
+
+Total ops:	 38988
+
+Total rows:	 38988
+
+Operations/s:	 1299.5816951417248
+
+Rows/s:		 1299.5816951417248
+
+Latency:
+
+  max:		 46.170111ms 
+
+  99.9th:	 7.208959ms 
+
+  99th:		 5.963775ms 
+
+  95th:		 5.210111ms 
+
+  90th:		 4.456447ms 
+
+  median:	 2.195455ms
+
+rows_per_request 1 concurrency 4 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 4
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.006765541s 	 1764 	 1764 	 0 	 6.553599ms 	 6.422527ms 	 5.046271ms 	 4.554751ms 	 4.325375ms 	 2.293759ms 
+
+2.007638215s 	 1720 	 1720 	 0 	 8.159231ms 	 7.307263ms 	 6.488063ms 	 5.275647ms 	 4.521983ms 	 2.228223ms 
+
+3.008625004s 	 1748 	 1748 	 0 	 7.241727ms 	 6.553599ms 	 5.767167ms 	 4.784127ms 	 4.325375ms 	 2.228223ms 
+
+4.011278784s 	 1763 	 1763 	 0 	 14.647295ms 	 14.155775ms 	 4.751359ms 	 4.325375ms 	 4.063231ms 	 2.326527ms 
+
+5.01400498s 	 1810 	 1810 	 0 	 10.911743ms 	 7.372799ms 	 4.849663ms 	 4.358143ms 	 4.063231ms 	 2.228223ms 
+
+6.015922257s 	 1809 	 1809 	 0 	 7.962623ms 	 7.274495ms 	 5.373951ms 	 4.521983ms 	 4.161535ms 	 2.195455ms 
+
+7.018465902s 	 1636 	 1636 	 0 	 25.690111ms 	 23.363583ms 	 5.472255ms 	 4.653055ms 	 4.292607ms 	 2.490367ms 
+
+8.022757369s 	 1719 	 1719 	 0 	 9.142271ms 	 6.422527ms 	 5.177343ms 	 4.521983ms 	 4.259839ms 	 2.392063ms 
+
+9.023736135s 	 1854 	 1854 	 0 	 6.062079ms 	 5.799935ms 	 4.816895ms 	 4.390911ms 	 4.128767ms 	 2.195455ms 
+
+10.025229235s 	 1769 	 1769 	 0 	 5.898239ms 	 5.472255ms 	 5.013503ms 	 4.456447ms 	 4.128767ms 	 2.326527ms 
+
+11.026442528s 	 1830 	 1830 	 0 	 12.550143ms 	 10.682367ms 	 5.505023ms 	 4.489215ms 	 4.128767ms 	 2.162687ms 
+
+12.027192719s 	 1788 	 1788 	 0 	 8.847359ms 	 7.307263ms 	 6.389759ms 	 5.505023ms 	 4.423679ms 	 2.031615ms 
+
+13.027784509s 	 1749 	 1749 	 0 	 6.193151ms 	 5.472255ms 	 5.046271ms 	 4.554751ms 	 4.259839ms 	 2.260991ms 
+
+14.030710128s 	 1787 	 1787 	 0 	 7.634943ms 	 6.389759ms 	 5.931007ms 	 4.849663ms 	 4.227071ms 	 2.097151ms 
+
+15.031606861s 	 1747 	 1747 	 0 	 7.110655ms 	 6.684671ms 	 6.094847ms 	 4.915199ms 	 4.325375ms 	 2.195455ms 
+
+16.033998504s 	 1759 	 1759 	 0 	 5.996543ms 	 5.472255ms 	 5.111807ms 	 4.521983ms 	 4.227071ms 	 2.293759ms 
+
+17.037018971s 	 1704 	 1704 	 0 	 10.616831ms 	 9.666559ms 	 6.750207ms 	 5.373951ms 	 4.423679ms 	 2.195455ms 
+
+18.038047332s 	 1631 	 1631 	 0 	 7.831551ms 	 7.438335ms 	 6.520831ms 	 5.734399ms 	 5.013503ms 	 2.293759ms 
+
+19.040364164s 	 1699 	 1699 	 0 	 10.649599ms 	 7.962623ms 	 5.931007ms 	 4.947967ms 	 4.390911ms 	 2.293759ms 
+
+20.040558494s 	 1630 	 1630 	 0 	 7.569407ms 	 6.979583ms 	 6.422527ms 	 5.111807ms 	 4.554751ms 	 2.392063ms 
+
+21.041949529s 	 1548 	 1548 	 0 	 7.602175ms 	 7.110655ms 	 6.553599ms 	 5.898239ms 	 5.373951ms 	 2.457599ms 
+
+22.042584611s 	 1751 	 1751 	 0 	 8.126463ms 	 7.569407ms 	 6.160383ms 	 5.242879ms 	 4.489215ms 	 2.097151ms 
+
+23.047865288s 	 1779 	 1779 	 0 	 6.094847ms 	 5.701631ms 	 5.177343ms 	 4.653055ms 	 4.325375ms 	 2.162687ms 
+
+24.047900149s 	 1562 	 1562 	 0 	 8.388607ms 	 7.208959ms 	 6.684671ms 	 6.029311ms 	 5.439487ms 	 2.359295ms 
+
+25.049731237s 	 1630 	 1630 	 0 	 10.223615ms 	 9.043967ms 	 6.586367ms 	 5.505023ms 	 4.882431ms 	 2.326527ms 
+
+26.051530795s 	 1710 	 1710 	 0 	 9.011199ms 	 7.438335ms 	 6.127615ms 	 4.784127ms 	 4.423679ms 	 2.228223ms 
+
+27.052568107s 	 1529 	 1529 	 0 	 10.125311ms 	 8.912895ms 	 7.405567ms 	 6.029311ms 	 5.537791ms 	 2.260991ms 
+
+28.0545731s 	 1619 	 1619 	 0 	 10.649599ms 	 8.617983ms 	 7.700479ms 	 5.603327ms 	 4.947967ms 	 2.228223ms 
+
+29.055813539s 	 1714 	 1714 	 0 	 8.093695ms 	 7.602175ms 	 5.734399ms 	 4.784127ms 	 4.456447ms 	 2.260991ms 
+
+
+
+Results
+
+Time (avg):	 30.000423499s
+
+Total ops:	 51207
+
+Total rows:	 51207
+
+Operations/s:	 1706.8759144046617
+
+Rows/s:		 1706.8759144046617
+
+Latency:
+
+  max:		 25.690111ms 
+
+  99.9th:	 8.257535ms 
+
+  99th:		 6.258687ms 
+
+  95th:		 5.013503ms 
+
+  90th:		 4.390911ms 
+
+  median:	 2.260991ms
+
+rows_per_request 1 concurrency 5 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 5
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.004329112s 	 1927 	 1927 	 0 	 9.338879ms 	 8.191999ms 	 6.651903ms 	 5.570559ms 	 4.947967ms 	 2.457599ms 
+
+2.006941457s 	 1953 	 1953 	 0 	 11.632639ms 	 10.092543ms 	 7.569407ms 	 5.537791ms 	 4.849663ms 	 2.326527ms 
+
+3.007527432s 	 1796 	 1796 	 0 	 8.454143ms 	 8.060927ms 	 7.208959ms 	 6.389759ms 	 5.767167ms 	 2.555903ms 
+
+4.008513225s 	 1959 	 1959 	 0 	 9.437183ms 	 9.076735ms 	 6.946815ms 	 5.931007ms 	 5.177343ms 	 2.359295ms 
+
+5.015130636s 	 2026 	 2026 	 0 	 9.633791ms 	 8.159231ms 	 6.520831ms 	 5.079039ms 	 4.653055ms 	 2.326527ms 
+
+6.019720225s 	 1816 	 1816 	 0 	 14.188543ms 	 11.960319ms 	 7.831551ms 	 6.422527ms 	 5.832703ms 	 2.457599ms 
+
+7.020249565s 	 1978 	 1978 	 0 	 9.601023ms 	 8.912895ms 	 7.503871ms 	 5.701631ms 	 5.013503ms 	 2.293759ms 
+
+8.022423952s 	 1926 	 1926 	 0 	 8.749055ms 	 8.585215ms 	 6.979583ms 	 5.603327ms 	 4.849663ms 	 2.457599ms 
+
+9.022964858s 	 1786 	 1786 	 0 	 9.994239ms 	 9.601023ms 	 7.471103ms 	 6.389759ms 	 5.799935ms 	 2.523135ms 
+
+10.025157588s 	 1946 	 1946 	 0 	 9.994239ms 	 9.863167ms 	 7.405567ms 	 5.767167ms 	 5.046271ms 	 2.359295ms 
+
+11.026096165s 	 2000 	 2000 	 0 	 9.633791ms 	 9.011199ms 	 7.176191ms 	 5.832703ms 	 4.882431ms 	 2.260991ms 
+
+12.028793167s 	 1803 	 1803 	 0 	 8.945663ms 	 8.749055ms 	 7.208959ms 	 6.324223ms 	 5.767167ms 	 2.490367ms 
+
+13.030443745s 	 2040 	 2040 	 0 	 9.338879ms 	 9.142271ms 	 6.651903ms 	 5.472255ms 	 4.849663ms 	 2.326527ms 
+
+14.037036335s 	 1966 	 1966 	 0 	 9.797631ms 	 8.617983ms 	 7.667711ms 	 5.963775ms 	 4.947967ms 	 2.293759ms 
+
+15.039628525s 	 1826 	 1826 	 0 	 9.568255ms 	 9.207807ms 	 7.733247ms 	 6.389759ms 	 5.832703ms 	 2.424831ms 
+
+16.042864754s 	 1909 	 1909 	 0 	 11.272191ms 	 8.880127ms 	 7.077887ms 	 5.603327ms 	 5.013503ms 	 2.523135ms 
+
+17.047345651s 	 1847 	 1847 	 0 	 8.814591ms 	 7.766015ms 	 6.782975ms 	 5.668863ms 	 5.079039ms 	 2.588671ms 
+
+18.050346749s 	 1808 	 1808 	 0 	 9.371647ms 	 9.240575ms 	 7.929855ms 	 6.389759ms 	 5.767167ms 	 2.457599ms 
+
+19.051177262s 	 1926 	 1926 	 0 	 14.450687ms 	 13.697023ms 	 7.208959ms 	 5.472255ms 	 4.947967ms 	 2.392063ms 
+
+20.052038376s 	 1814 	 1814 	 0 	 9.404415ms 	 8.912895ms 	 7.929855ms 	 6.356991ms 	 5.275647ms 	 2.588671ms 
+
+21.053258985s 	 1797 	 1797 	 0 	 9.535487ms 	 9.273343ms 	 8.224767ms 	 6.455295ms 	 5.767167ms 	 2.392063ms 
+
+22.056153392s 	 2093 	 2093 	 0 	 9.469951ms 	 9.142271ms 	 6.553599ms 	 5.144575ms 	 4.718591ms 	 2.195455ms 
+
+23.05758936s 	 1922 	 1922 	 0 	 10.092543ms 	 9.306111ms 	 7.208959ms 	 6.225919ms 	 5.406719ms 	 2.359295ms 
+
+24.058578539s 	 1827 	 1827 	 0 	 9.175039ms 	 8.781823ms 	 7.471103ms 	 6.160383ms 	 5.603327ms 	 2.490367ms 
+
+25.063489153s 	 2045 	 2045 	 0 	 9.928703ms 	 8.519679ms 	 6.422527ms 	 5.242879ms 	 4.816895ms 	 2.228223ms 
+
+26.064349432s 	 1762 	 1762 	 0 	 12.058623ms 	 10.452991ms 	 7.110655ms 	 6.356991ms 	 5.799935ms 	 2.719743ms 
+
+27.065895798s 	 1864 	 1864 	 0 	 11.370495ms 	 10.715135ms 	 7.176191ms 	 6.094847ms 	 5.472255ms 	 2.359295ms 
+
+28.066977339s 	 2040 	 2040 	 0 	 6.651903ms 	 6.356991ms 	 5.767167ms 	 5.013503ms 	 4.653055ms 	 2.326527ms 
+
+29.070281062s 	 1798 	 1798 	 0 	 9.863167ms 	 8.945663ms 	 7.766015ms 	 6.488063ms 	 5.931007ms 	 2.424831ms 
+
+
+
+Results
+
+Time (avg):	 29.999361237s
+
+Total ops:	 56972
+
+Total rows:	 56972
+
+Operations/s:	 1899.1071173648347
+
+Rows/s:		 1899.1071173648347
+
+Latency:
+
+  max:		 14.450687ms 
+
+  99.9th:	 9.338879ms 
+
+  99th:		 7.340031ms 
+
+  95th:		 5.996543ms 
+
+  90th:		 5.210111ms 
+
+  median:	 2.392063ms
+
+rows_per_request 1 concurrency 10 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 10
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.006943692s 	 3188 	 3188 	 0 	 10.944511ms 	 9.502719ms 	 8.290303ms 	 6.684671ms 	 5.898239ms 	 2.883583ms 
+
+2.011161473s 	 3070 	 3070 	 0 	 11.698175ms 	 11.534335ms 	 9.240575ms 	 7.634943ms 	 6.651903ms 	 2.818047ms 
+
+3.016985244s 	 2988 	 2988 	 0 	 12.582911ms 	 11.632639ms 	 9.437183ms 	 7.438335ms 	 6.684671ms 	 2.850815ms 
+
+4.018242436s 	 3144 	 3144 	 0 	 11.304959ms 	 10.420223ms 	 8.912895ms 	 6.881279ms 	 6.127615ms 	 2.850815ms 
+
+5.018634906s 	 3026 	 3026 	 0 	 12.713983ms 	 11.337727ms 	 8.912895ms 	 7.372799ms 	 6.684671ms 	 2.981887ms 
+
+6.023793179s 	 3073 	 3073 	 0 	 11.927551ms 	 11.108351ms 	 9.043967ms 	 7.176191ms 	 6.258687ms 	 2.949119ms 
+
+7.026858555s 	 3156 	 3156 	 0 	 11.599871ms 	 11.567103ms 	 8.650751ms 	 6.946815ms 	 6.193151ms 	 2.818047ms 
+
+8.030197578s 	 2919 	 2919 	 0 	 21.037055ms 	 20.905983ms 	 9.109503ms 	 7.766015ms 	 6.914047ms 	 2.916351ms 
+
+9.034044922s 	 3039 	 3039 	 0 	 12.451839ms 	 11.993087ms 	 8.585215ms 	 6.815743ms 	 6.160383ms 	 3.112959ms 
+
+10.039286804s 	 2912 	 2912 	 0 	 12.779519ms 	 11.075583ms 	 9.797631ms 	 7.897087ms 	 7.045119ms 	 2.981887ms 
+
+11.043461784s 	 3037 	 3037 	 0 	 11.632639ms 	 11.173887ms 	 8.781823ms 	 7.143423ms 	 6.291455ms 	 3.047423ms 
+
+12.046008232s 	 3150 	 3150 	 0 	 9.437183ms 	 9.338879ms 	 8.257535ms 	 6.979583ms 	 6.356991ms 	 2.818047ms 
+
+13.046803614s 	 3092 	 3092 	 0 	 16.056319ms 	 15.794175ms 	 9.142271ms 	 7.208959ms 	 6.324223ms 	 2.883583ms 
+
+14.054107041s 	 3133 	 3133 	 0 	 10.584063ms 	 9.895935ms 	 8.454143ms 	 6.881279ms 	 6.127615ms 	 2.916351ms 
+
+15.056054967s 	 3005 	 3005 	 0 	 11.665407ms 	 11.206655ms 	 9.404415ms 	 7.372799ms 	 6.553599ms 	 2.949119ms 
+
+16.062068549s 	 2912 	 2912 	 0 	 12.058623ms 	 10.551295ms 	 8.880127ms 	 7.602175ms 	 6.914047ms 	 3.014655ms 
+
+17.066552696s 	 3158 	 3158 	 0 	 10.747903ms 	 9.306111ms 	 8.323071ms 	 6.750207ms 	 6.062079ms 	 2.850815ms 
+
+18.068475895s 	 3072 	 3072 	 0 	 12.091391ms 	 11.436031ms 	 8.650751ms 	 7.077887ms 	 6.258687ms 	 2.949119ms 
+
+19.069700341s 	 2816 	 2816 	 0 	 11.304959ms 	 10.059775ms 	 8.781823ms 	 7.634943ms 	 6.946815ms 	 3.211263ms 
+
+20.073357633s 	 3100 	 3100 	 0 	 11.075583ms 	 10.321919ms 	 8.683519ms 	 6.881279ms 	 6.225919ms 	 2.883583ms 
+
+21.078605333s 	 3055 	 3055 	 0 	 11.468799ms 	 10.813439ms 	 8.847359ms 	 7.143423ms 	 6.389759ms 	 2.916351ms 
+
+22.082583734s 	 2795 	 2795 	 0 	 10.977279ms 	 10.911743ms 	 9.601023ms 	 8.028159ms 	 7.208959ms 	 3.211263ms 
+
+23.085696321s 	 2965 	 2965 	 0 	 18.513919ms 	 15.269887ms 	 9.076735ms 	 7.274495ms 	 6.520831ms 	 3.080191ms 
+
+24.09054267s 	 3097 	 3097 	 0 	 11.567103ms 	 10.387455ms 	 8.323071ms 	 6.717439ms 	 6.127615ms 	 2.949119ms 
+
+25.091517804s 	 2832 	 2832 	 0 	 16.973823ms 	 14.843903ms 	 9.404415ms 	 7.995391ms 	 7.110655ms 	 3.080191ms 
+
+26.09487427s 	 2925 	 2925 	 0 	 15.138815ms 	 14.417919ms 	 9.797631ms 	 7.634943ms 	 6.750207ms 	 2.949119ms 
+
+27.095861234s 	 3173 	 3173 	 0 	 12.156927ms 	 10.977279ms 	 8.617983ms 	 6.782975ms 	 6.127615ms 	 2.785279ms 
+
+28.096640654s 	 2964 	 2964 	 0 	 12.058623ms 	 10.616831ms 	 8.716287ms 	 7.372799ms 	 6.651903ms 	 3.112959ms 
+
+29.098707409s 	 2907 	 2907 	 0 	 19.103743ms 	 18.513919ms 	 9.109503ms 	 7.438335ms 	 6.782975ms 	 3.047423ms 
+
+
+
+Results
+
+Time (avg):	 30.000513166s
+
+Total ops:	 90583
+
+Total rows:	 90583
+
+Operations/s:	 3019.381724602386
+
+Rows/s:		 3019.381724602386
+
+Latency:
+
+  max:		 21.037055ms 
+
+  99.9th:	 11.698175ms 
+
+  99th:		 8.945663ms 
+
+  95th:		 7.274495ms 
+
+  90th:		 6.488063ms 
+
+  median:	 2.949119ms
+
+rows_per_request 1 concurrency 25 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 25
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.013416505s 	 4774 	 4774 	 0 	 14.581759ms 	 13.107199ms 	 11.829247ms 	 10.158079ms 	 9.175039ms 	 5.210111ms 
+
+2.020521631s 	 4819 	 4819 	 0 	 14.417919ms 	 14.319615ms 	 12.943359ms 	 10.649599ms 	 9.666559ms 	 4.947967ms 
+
+3.022124184s 	 4893 	 4893 	 0 	 14.254079ms 	 14.221311ms 	 12.419071ms 	 10.518527ms 	 9.535487ms 	 4.915199ms 
+
+4.027245391s 	 4718 	 4718 	 0 	 17.072127ms 	 14.319615ms 	 12.582911ms 	 10.780671ms 	 9.535487ms 	 5.111807ms 
+
+5.03172558s 	 4744 	 4744 	 0 	 15.007743ms 	 14.319615ms 	 12.451839ms 	 10.289151ms 	 9.338879ms 	 5.210111ms 
+
+6.03643765s 	 4971 	 4971 	 0 	 16.351231ms 	 14.548991ms 	 12.287999ms 	 10.059775ms 	 9.011199ms 	 4.915199ms 
+
+7.047259212s 	 4817 	 4817 	 0 	 15.630335ms 	 15.073279ms 	 12.255231ms 	 10.289151ms 	 9.175039ms 	 5.079039ms 
+
+8.05379628s 	 4506 	 4506 	 0 	 27.000831ms 	 24.215551ms 	 14.090239ms 	 11.436031ms 	 10.125311ms 	 5.242879ms 
+
+9.057394073s 	 4659 	 4659 	 0 	 15.237119ms 	 13.959167ms 	 12.582911ms 	 10.780671ms 	 9.732095ms 	 5.210111ms 
+
+10.058734748s 	 4814 	 4814 	 0 	 15.695871ms 	 15.532031ms 	 12.779519ms 	 10.747903ms 	 9.535487ms 	 4.980735ms 
+
+11.059641436s 	 4879 	 4879 	 0 	 17.825791ms 	 13.860863ms 	 12.353535ms 	 10.158079ms 	 9.109503ms 	 5.046271ms 
+
+12.063016212s 	 4923 	 4923 	 0 	 13.762559ms 	 13.434879ms 	 11.829247ms 	 9.961471ms 	 9.109503ms 	 4.882431ms 
+
+13.067380656s 	 4802 	 4802 	 0 	 14.450687ms 	 14.254079ms 	 12.615679ms 	 10.387455ms 	 9.404415ms 	 5.013503ms 
+
+14.076564774s 	 4596 	 4596 	 0 	 24.018943ms 	 23.953407ms 	 12.877823ms 	 10.878975ms 	 9.994239ms 	 5.177343ms 
+
+15.081711399s 	 4864 	 4864 	 0 	 14.942207ms 	 14.286847ms 	 11.960319ms 	 10.387455ms 	 9.601023ms 	 4.980735ms 
+
+16.089174688s 	 4797 	 4797 	 0 	 15.761407ms 	 14.680063ms 	 12.582911ms 	 10.485759ms 	 9.699327ms 	 5.046271ms 
+
+17.092961661s 	 4754 	 4754 	 0 	 15.794175ms 	 14.548991ms 	 12.189695ms 	 10.616831ms 	 9.502719ms 	 5.177343ms 
+
+18.098296225s 	 4732 	 4732 	 0 	 27.394047ms 	 22.511615ms 	 13.336575ms 	 10.813439ms 	 9.666559ms 	 5.046271ms 
+
+19.099735567s 	 4748 	 4748 	 0 	 18.710527ms 	 16.187391ms 	 13.074431ms 	 10.584063ms 	 9.666559ms 	 5.111807ms 
+
+20.10375829s 	 4840 	 4840 	 0 	 15.859711ms 	 15.499263ms 	 12.058623ms 	 10.354687ms 	 9.371647ms 	 5.046271ms 
+
+21.108537887s 	 4796 	 4796 	 0 	 17.760255ms 	 15.302655ms 	 12.484607ms 	 10.780671ms 	 9.633791ms 	 5.079039ms 
+
+22.110972399s 	 4781 	 4781 	 0 	 16.351231ms 	 14.385151ms 	 12.910591ms 	 10.125311ms 	 9.306111ms 	 5.111807ms 
+
+23.113219426s 	 4611 	 4611 	 0 	 15.826943ms 	 14.614527ms 	 12.910591ms 	 10.911743ms 	 9.601023ms 	 5.242879ms 
+
+24.113813493s 	 4607 	 4607 	 0 	 19.300351ms 	 16.973823ms 	 13.598719ms 	 11.370495ms 	 10.256383ms 	 5.177343ms 
+
+25.114527711s 	 4822 	 4822 	 0 	 15.007743ms 	 14.909439ms 	 12.681215ms 	 10.715135ms 	 9.863167ms 	 5.013503ms 
+
+26.119309216s 	 4654 	 4654 	 0 	 16.187391ms 	 14.778367ms 	 12.386303ms 	 10.878975ms 	 9.764863ms 	 5.111807ms 
+
+27.121340546s 	 4797 	 4797 	 0 	 14.811135ms 	 13.565951ms 	 12.451839ms 	 10.125311ms 	 9.404415ms 	 5.079039ms 
+
+28.126010582s 	 4740 	 4740 	 0 	 21.790719ms 	 19.955711ms 	 12.845055ms 	 10.223615ms 	 9.306111ms 	 5.111807ms 
+
+29.126421464s 	 4743 	 4743 	 0 	 16.515071ms 	 14.647295ms 	 12.320767ms 	 10.584063ms 	 9.371647ms 	 5.144575ms 
+
+
+
+Results
+
+Time (avg):	 30.001595955s
+
+Total ops:	 142461
+
+Total rows:	 142461
+
+Operations/s:	 4748.446347006005
+
+Rows/s:		 4748.446347006005
+
+Latency:
+
+  max:		 27.394047ms 
+
+  99.9th:	 15.630335ms 
+
+  99th:		 12.615679ms 
+
+  95th:		 10.584063ms 
+
+  90th:		 9.535487ms 
+
+  median:	 5.079039ms
+
+rows_per_request 1 concurrency 50 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 50
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.017723726s 	 5565 	 5565 	 0 	 22.708223ms 	 20.709375ms 	 17.956863ms 	 15.794175ms 	 14.483455ms 	 9.404415ms 
+
+2.021496257s 	 5346 	 5346 	 0 	 19.726335ms 	 19.005439ms 	 17.498111ms 	 14.712831ms 	 13.271039ms 	 9.961471ms 
+
+3.03063036s 	 5519 	 5519 	 0 	 21.102591ms 	 18.743295ms 	 16.187391ms 	 14.516223ms 	 13.369343ms 	 9.437183ms 
+
+4.036886807s 	 5283 	 5283 	 0 	 19.922943ms 	 19.464191ms 	 17.727487ms 	 14.843903ms 	 13.828095ms 	 9.994239ms 
+
+5.043439386s 	 5494 	 5494 	 0 	 20.840447ms 	 19.496959ms 	 17.203199ms 	 15.663103ms 	 14.221311ms 	 9.535487ms 
+
+6.047316679s 	 5331 	 5331 	 0 	 22.216703ms 	 19.431423ms 	 17.235967ms 	 15.630335ms 	 14.024703ms 	 9.895935ms 
+
+7.055661802s 	 5395 	 5395 	 0 	 24.575999ms 	 20.676607ms 	 17.596415ms 	 15.597567ms 	 14.123007ms 	 9.863167ms 
+
+8.070278697s 	 5374 	 5374 	 0 	 20.185087ms 	 19.628031ms 	 17.170431ms 	 14.614527ms 	 13.271039ms 	 9.928703ms 
+
+9.079558716s 	 5269 	 5269 	 0 	 21.004287ms 	 20.348927ms 	 18.710527ms 	 16.482303ms 	 15.335423ms 	 10.027007ms 
+
+10.079852111s 	 5409 	 5409 	 0 	 23.494655ms 	 20.676607ms 	 18.317311ms 	 15.958015ms 	 14.057471ms 	 9.699327ms 
+
+11.082953892s 	 5294 	 5294 	 0 	 22.937599ms 	 19.464191ms 	 18.022399ms 	 15.958015ms 	 14.680063ms 	 9.863167ms 
+
+12.087321605s 	 5373 	 5373 	 0 	 19.791871ms 	 19.169279ms 	 17.727487ms 	 15.400959ms 	 13.762559ms 	 9.863167ms 
+
+13.095589639s 	 5398 	 5398 	 0 	 19.857407ms 	 18.939903ms 	 16.744447ms 	 14.548991ms 	 13.467647ms 	 9.732095ms 
+
+14.105056854s 	 5358 	 5358 	 0 	 22.577151ms 	 21.594111ms 	 18.022399ms 	 15.106047ms 	 13.828095ms 	 9.797631ms 
+
+15.11934186s 	 5360 	 5360 	 0 	 23.822335ms 	 21.757951ms 	 18.022399ms 	 14.974975ms 	 13.533183ms 	 9.895935ms 
+
+16.123182017s 	 5224 	 5224 	 0 	 26.279935ms 	 25.559039ms 	 19.365887ms 	 16.089087ms 	 14.385151ms 	 9.895935ms 
+
+17.132971621s 	 5410 	 5410 	 0 	 25.133055ms 	 23.101439ms 	 17.563647ms 	 15.138815ms 	 13.729791ms 	 9.797631ms 
+
+18.138762718s 	 5423 	 5423 	 0 	 26.411007ms 	 24.018943ms 	 17.858559ms 	 15.073279ms 	 13.598719ms 	 9.601023ms 
+
+19.149820347s 	 5301 	 5301 	 0 	 19.464191ms 	 18.710527ms 	 17.203199ms 	 15.204351ms 	 13.729791ms 	 9.895935ms 
+
+20.159165942s 	 5162 	 5162 	 0 	 21.266431ms 	 20.086783ms 	 17.563647ms 	 15.237119ms 	 14.057471ms 	 10.289151ms 
+
+21.168549359s 	 5243 	 5243 	 0 	 22.380543ms 	 20.381695ms 	 17.203199ms 	 15.007743ms 	 13.828095ms 	 10.125311ms 
+
+22.171265314s 	 5340 	 5340 	 0 	 24.510463ms 	 22.052863ms 	 18.186239ms 	 15.204351ms 	 13.631487ms 	 9.895935ms 
+
+23.181055326s 	 4807 	 4807 	 0 	 108.199935ms 	 106.627071ms 	 95.813631ms 	 16.547839ms 	 14.090239ms 	 9.764863ms 
+
+24.189786818s 	 4764 	 4764 	 0 	 129.957887ms 	 121.962495ms 	 83.165183ms 	 16.089087ms 	 14.254079ms 	 9.961471ms 
+
+25.186138208s 	 5240 	 5240 	 0 	 41.222143ms 	 38.961151ms 	 19.922943ms 	 15.400959ms 	 13.762559ms 	 10.027007ms 
+
+26.192997319s 	 5431 	 5431 	 0 	 26.148863ms 	 21.757951ms 	 17.891327ms 	 15.269887ms 	 13.860863ms 	 9.601023ms 
+
+27.206887914s 	 5401 	 5401 	 0 	 19.496959ms 	 17.661951ms 	 16.613375ms 	 14.712831ms 	 13.697023ms 	 9.994239ms 
+
+28.209307945s 	 5473 	 5473 	 0 	 19.890175ms 	 18.939903ms 	 17.301503ms 	 15.269887ms 	 13.762559ms 	 9.535487ms 
+
+29.21512196s 	 5443 	 5443 	 0 	 20.643839ms 	 18.874367ms 	 17.039359ms 	 14.843903ms 	 13.795327ms 	 9.568255ms 
+
+
+
+Results
+
+Time (avg):	 29.997929956s
+
+Total ops:	 158695
+
+Total rows:	 158695
+
+Operations/s:	 5290.198418194666
+
+Rows/s:		 5290.198418194666
+
+Latency:
+
+  max:		 129.957887ms 
+
+  99.9th:	 35.127295ms 
+
+  99th:		 17.956863ms 
+
+  95th:		 15.400959ms 
+
+  90th:		 13.959167ms 
+
+  median:	 9.830399ms
+
+rows_per_request 1 concurrency 100 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 1
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 100
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.032454697s 	 5603 	 5603 	 0 	 34.471935ms 	 31.621119ms 	 27.885567ms 	 24.543231ms 	 23.298047ms 	 19.365887ms 
+
+2.044350698s 	 5730 	 5730 	 0 	 32.800767ms 	 30.441471ms 	 26.443775ms 	 23.298047ms 	 22.249471ms 	 19.070975ms 
+
+3.062153507s 	 5627 	 5627 	 0 	 32.505855ms 	 29.884415ms 	 26.279935ms 	 23.789567ms 	 22.740991ms 	 19.398655ms 
+
+4.065576396s 	 5710 	 5710 	 0 	 30.998527ms 	 28.606463ms 	 25.591807ms 	 23.625727ms 	 22.577151ms 	 18.907135ms 
+
+5.084522606s 	 5783 	 5783 	 0 	 33.783807ms 	 30.081023ms 	 26.050559ms 	 23.134207ms 	 22.183935ms 	 18.808831ms 
+
+6.093906955s 	 5696 	 5696 	 0 	 42.172415ms 	 38.109183ms 	 30.507007ms 	 24.051711ms 	 22.740991ms 	 18.841599ms 
+
+7.105407599s 	 5780 	 5780 	 0 	 31.916031ms 	 29.130751ms 	 25.821183ms 	 23.396351ms 	 22.282239ms 	 18.776063ms 
+
+8.110702165s 	 5676 	 5676 	 0 	 34.013183ms 	 30.998527ms 	 26.574847ms 	 24.248319ms 	 22.970367ms 	 19.267583ms 
+
+9.123307712s 	 5694 	 5694 	 0 	 32.276479ms 	 29.851647ms 	 25.919487ms 	 23.691263ms 	 22.642687ms 	 19.202047ms 
+
+10.136869169s 	 5829 	 5829 	 0 	 32.407551ms 	 30.343167ms 	 26.279935ms 	 23.396351ms 	 22.183935ms 	 18.644991ms 
+
+11.154899947s 	 5743 	 5743 	 0 	 46.071807ms 	 40.009727ms 	 36.995071ms 	 23.691263ms 	 22.249471ms 	 18.612223ms 
+
+12.170528145s 	 5730 	 5730 	 0 	 33.914879ms 	 29.523967ms 	 25.853951ms 	 23.396351ms 	 22.511615ms 	 18.907135ms 
+
+13.180107818s 	 5530 	 5530 	 0 	 32.997375ms 	 30.834687ms 	 27.000831ms 	 24.575999ms 	 23.396351ms 	 19.562495ms 
+
+14.187526533s 	 5761 	 5761 	 0 	 32.505855ms 	 30.474239ms 	 26.279935ms 	 23.527423ms 	 22.347775ms 	 18.808831ms 
+
+15.20229441s 	 5836 	 5836 	 0 	 31.686655ms 	 29.982719ms 	 25.526271ms 	 23.298047ms 	 22.249471ms 	 18.644991ms 
+
+16.21775254s 	 5731 	 5731 	 0 	 32.473087ms 	 28.737535ms 	 25.657343ms 	 23.396351ms 	 22.282239ms 	 19.103743ms 
+
+17.227175375s 	 5727 	 5727 	 0 	 31.588351ms 	 29.229055ms 	 26.443775ms 	 23.592959ms 	 22.511615ms 	 18.972671ms 
+
+18.233447923s 	 5789 	 5789 	 0 	 32.964607ms 	 29.622271ms 	 25.853951ms 	 23.429119ms 	 22.446079ms 	 18.808831ms 
+
+19.238925827s 	 5691 	 5691 	 0 	 31.358975ms 	 29.753343ms 	 26.443775ms 	 24.018943ms 	 22.806527ms 	 19.005439ms 
+
+20.253359703s 	 5647 	 5647 	 0 	 31.883263ms 	 30.900223ms 	 27.033599ms 	 23.986175ms 	 22.970367ms 	 19.333119ms 
+
+21.259510789s 	 5715 	 5715 	 0 	 38.666239ms 	 34.734079ms 	 29.360127ms 	 24.117247ms 	 22.806527ms 	 18.907135ms 
+
+22.272388173s 	 5665 	 5665 	 0 	 33.980415ms 	 30.965759ms 	 26.148863ms 	 23.789567ms 	 22.872063ms 	 19.202047ms 
+
+23.275886378s 	 5579 	 5579 	 0 	 36.044799ms 	 30.048255ms 	 26.574847ms 	 24.248319ms 	 23.166975ms 	 19.398655ms 
+
+24.288014068s 	 5823 	 5823 	 0 	 32.243711ms 	 28.934143ms 	 25.853951ms 	 23.527423ms 	 22.413311ms 	 18.612223ms 
+
+25.307521473s 	 5639 	 5639 	 0 	 35.717119ms 	 33.357823ms 	 27.557887ms 	 24.248319ms 	 22.937599ms 	 19.333119ms 
+
+26.323496946s 	 5630 	 5630 	 0 	 35.225599ms 	 30.965759ms 	 27.066367ms 	 24.182783ms 	 22.970367ms 	 19.300351ms 
+
+27.337834909s 	 5622 	 5622 	 0 	 33.062911ms 	 29.753343ms 	 26.640383ms 	 24.084479ms 	 23.003135ms 	 19.333119ms 
+
+28.354994746s 	 5756 	 5756 	 0 	 32.407551ms 	 29.163519ms 	 26.181631ms 	 23.822335ms 	 22.839295ms 	 18.972671ms 
+
+29.366705371s 	 5717 	 5717 	 0 	 31.031295ms 	 29.261823ms 	 25.919487ms 	 23.560191ms 	 22.642687ms 	 19.038207ms 
+
+
+
+Results
+
+Time (avg):	 29.999075372s
+
+Total ops:	 169593
+
+Total rows:	 169593
+
+Operations/s:	 5653.274042181465
+
+Rows/s:		 5653.274042181465
+
+Latency:
+
+  max:		 46.071807ms 
+
+  99.9th:	 32.931839ms 
+
+  99th:		 26.673151ms 
+
+  95th:		 23.789567ms 
+
+  90th:		 22.675455ms 
+
+  median:	 19.005439ms
+
+rows_per_request 2 concurrency 1 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 2
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.008938009s 	 307 	 614 	 0 	 9.633791ms 	 9.633791ms 	 8.781823ms 	 6.062079ms 	 4.882431ms 	 3.571711ms 
+
+2.012157085s 	 305 	 610 	 0 	 10.092543ms 	 10.092543ms 	 8.060927ms 	 6.291455ms 	 5.799935ms 	 3.375103ms 
+
+3.012977358s 	 336 	 672 	 0 	 9.568255ms 	 9.568255ms 	 8.585215ms 	 5.734399ms 	 5.341183ms 	 3.407871ms 
+
+4.016342068s 	 347 	 694 	 0 	 9.666559ms 	 9.666559ms 	 8.060927ms 	 5.734399ms 	 4.685823ms 	 3.309567ms 
+
+5.016922507s 	 314 	 628 	 0 	 10.158079ms 	 10.158079ms 	 8.159231ms 	 6.717439ms 	 5.898239ms 	 3.309567ms 
+
+6.021443549s 	 334 	 668 	 0 	 9.502719ms 	 9.502719ms 	 7.798783ms 	 5.931007ms 	 5.406719ms 	 3.440639ms 
+
+7.023885776s 	 346 	 692 	 0 	 11.501567ms 	 11.501567ms 	 7.274495ms 	 5.767167ms 	 5.210111ms 	 3.440639ms 
+
+8.027201016s 	 318 	 636 	 0 	 10.485759ms 	 10.485759ms 	 8.847359ms 	 6.127615ms 	 5.603327ms 	 3.375103ms 
+
+9.032450027s 	 342 	 684 	 0 	 10.485759ms 	 10.485759ms 	 7.602175ms 	 5.799935ms 	 4.849663ms 	 3.342335ms 
+
+10.034783106s 	 302 	 604 	 0 	 22.708223ms 	 22.708223ms 	 8.650751ms 	 7.471103ms 	 5.898239ms 	 3.375103ms 
+
+11.036456021s 	 337 	 674 	 0 	 10.059775ms 	 10.059775ms 	 8.257535ms 	 6.586367ms 	 4.882431ms 	 3.211263ms 
+
+12.037926169s 	 315 	 630 	 0 	 11.370495ms 	 11.370495ms 	 9.666559ms 	 6.258687ms 	 5.898239ms 	 3.473407ms 
+
+13.039615008s 	 321 	 642 	 0 	 8.945663ms 	 8.945663ms 	 8.388607ms 	 6.193151ms 	 5.308415ms 	 3.538943ms 
+
+14.044894165s 	 311 	 622 	 0 	 12.124159ms 	 12.124159ms 	 9.437183ms 	 6.750207ms 	 5.668863ms 	 3.604479ms 
+
+15.045687812s 	 324 	 648 	 0 	 9.273343ms 	 9.273343ms 	 8.060927ms 	 6.258687ms 	 5.308415ms 	 3.407871ms 
+
+16.046652588s 	 349 	 698 	 0 	 11.403263ms 	 11.403263ms 	 8.585215ms 	 6.127615ms 	 5.505023ms 	 2.949119ms 
+
+17.048548538s 	 311 	 622 	 0 	 23.592959ms 	 23.592959ms 	 9.699327ms 	 7.077887ms 	 5.996543ms 	 3.080191ms 
+
+18.049694794s 	 309 	 618 	 0 	 8.617983ms 	 8.617983ms 	 8.224767ms 	 6.586367ms 	 5.734399ms 	 3.506175ms 
+
+19.054203495s 	 310 	 620 	 0 	 10.256383ms 	 10.256383ms 	 8.683519ms 	 6.815743ms 	 5.963775ms 	 3.604479ms 
+
+20.059361663s 	 316 	 632 	 0 	 10.321919ms 	 10.321919ms 	 8.880127ms 	 7.110655ms 	 5.898239ms 	 3.473407ms 
+
+21.062136168s 	 325 	 650 	 0 	 18.907135ms 	 18.907135ms 	 8.421375ms 	 6.979583ms 	 4.882431ms 	 3.440639ms 
+
+22.062800933s 	 305 	 610 	 0 	 10.059775ms 	 10.059775ms 	 8.519679ms 	 6.422527ms 	 5.865471ms 	 3.440639ms 
+
+23.063746961s 	 302 	 604 	 0 	 11.239423ms 	 11.239423ms 	 8.486911ms 	 6.553599ms 	 5.603327ms 	 3.571711ms 
+
+24.064903586s 	 344 	 688 	 0 	 8.617983ms 	 8.617983ms 	 7.929855ms 	 6.291455ms 	 4.751359ms 	 3.506175ms 
+
+25.066274387s 	 317 	 634 	 0 	 13.991935ms 	 13.991935ms 	 9.371647ms 	 6.586367ms 	 5.767167ms 	 3.244031ms 
+
+26.068312535s 	 308 	 616 	 0 	 9.895935ms 	 9.895935ms 	 8.552447ms 	 6.717439ms 	 5.636095ms 	 3.407871ms 
+
+27.068636085s 	 309 	 618 	 0 	 12.877823ms 	 12.877823ms 	 8.912895ms 	 6.160383ms 	 5.537791ms 	 3.440639ms 
+
+28.070868202s 	 303 	 606 	 0 	 20.250623ms 	 20.250623ms 	 9.469951ms 	 6.750207ms 	 5.832703ms 	 3.571711ms 
+
+29.072279378s 	 322 	 644 	 0 	 10.059775ms 	 10.059775ms 	 7.962623ms 	 5.799935ms 	 5.177343ms 	 3.473407ms 
+
+
+
+Results
+
+Time (avg):	 29.997110238s
+
+Total ops:	 9600
+
+Total rows:	 19200
+
+Operations/s:	 320.03082709743245
+
+Rows/s:		 640.0616541948649
+
+Latency:
+
+  max:		 23.592959ms 
+
+  99.9th:	 11.403263ms 
+
+  99th:		 8.683519ms 
+
+  95th:		 6.356991ms 
+
+  90th:		 5.603327ms 
+
+  median:	 3.440639ms
+
+rows_per_request 3 concurrency 1 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 3
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.00264776s 	 273 	 819 	 0 	 19.431423ms 	 19.431423ms 	 10.256383ms 	 7.241727ms 	 6.586367ms 	 3.932159ms 
+
+2.003743033s 	 276 	 828 	 0 	 10.682367ms 	 10.682367ms 	 8.388607ms 	 6.815743ms 	 6.193151ms 	 4.259839ms 
+
+3.007978891s 	 294 	 882 	 0 	 11.665407ms 	 11.665407ms 	 9.273343ms 	 6.586367ms 	 5.537791ms 	 3.964927ms 
+
+4.01193139s 	 267 	 801 	 0 	 10.616831ms 	 10.616831ms 	 8.650751ms 	 7.143423ms 	 6.520831ms 	 4.063231ms 
+
+5.015340444s 	 254 	 762 	 0 	 21.397503ms 	 21.397503ms 	 8.814591ms 	 7.307263ms 	 6.651903ms 	 4.095999ms 
+
+6.019042272s 	 292 	 876 	 0 	 10.452991ms 	 10.452991ms 	 9.437183ms 	 6.848511ms 	 5.537791ms 	 3.866623ms 
+
+7.024419153s 	 268 	 804 	 0 	 11.862015ms 	 11.862015ms 	 9.895935ms 	 7.340031ms 	 6.324223ms 	 4.095999ms 
+
+8.025776409s 	 261 	 783 	 0 	 11.468799ms 	 11.468799ms 	 9.961471ms 	 7.372799ms 	 6.651903ms 	 4.128767ms 
+
+9.028928684s 	 273 	 819 	 0 	 10.354687ms 	 10.354687ms 	 8.912895ms 	 7.143423ms 	 6.127615ms 	 3.866623ms 
+
+10.029321687s 	 292 	 876 	 0 	 11.010047ms 	 11.010047ms 	 9.469951ms 	 6.979583ms 	 5.308415ms 	 3.899391ms 
+
+11.032843488s 	 266 	 798 	 0 	 9.306111ms 	 9.306111ms 	 8.617983ms 	 7.143423ms 	 6.651903ms 	 4.030463ms 
+
+12.042852606s 	 281 	 843 	 0 	 11.960319ms 	 11.960319ms 	 8.880127ms 	 6.914047ms 	 6.291455ms 	 3.866623ms 
+
+13.045099245s 	 284 	 852 	 0 	 19.300351ms 	 19.300351ms 	 9.207807ms 	 6.651903ms 	 5.472255ms 	 3.997695ms 
+
+14.047107377s 	 286 	 858 	 0 	 11.272191ms 	 11.272191ms 	 9.142271ms 	 6.946815ms 	 6.488063ms 	 3.899391ms 
+
+15.049292432s 	 277 	 831 	 0 	 12.517375ms 	 12.517375ms 	 10.027007ms 	 7.569407ms 	 6.324223ms 	 3.768319ms 
+
+16.051145909s 	 265 	 795 	 0 	 11.108351ms 	 11.108351ms 	 9.469951ms 	 6.979583ms 	 6.127615ms 	 4.095999ms 
+
+17.055582186s 	 293 	 879 	 0 	 11.567103ms 	 11.567103ms 	 9.142271ms 	 6.586367ms 	 5.898239ms 	 3.866623ms 
+
+18.058064228s 	 262 	 786 	 0 	 10.354687ms 	 10.354687ms 	 9.273343ms 	 7.536639ms 	 6.553599ms 	 4.063231ms 
+
+19.062391089s 	 264 	 792 	 0 	 11.599871ms 	 11.599871ms 	 9.437183ms 	 6.946815ms 	 6.193151ms 	 4.128767ms 
+
+20.064507061s 	 298 	 894 	 0 	 13.336575ms 	 13.336575ms 	 9.764863ms 	 6.684671ms 	 5.570559ms 	 3.932159ms 
+
+21.065462919s 	 282 	 846 	 0 	 10.780671ms 	 10.780671ms 	 8.978431ms 	 6.979583ms 	 6.062079ms 	 4.030463ms 
+
+22.066032713s 	 268 	 804 	 0 	 10.715135ms 	 10.715135ms 	 9.338879ms 	 7.536639ms 	 6.324223ms 	 4.063231ms 
+
+23.066281523s 	 297 	 891 	 0 	 10.682367ms 	 10.682367ms 	 8.323071ms 	 6.651903ms 	 5.537791ms 	 3.866623ms 
+
+24.070348008s 	 304 	 912 	 0 	 10.977279ms 	 10.977279ms 	 8.093695ms 	 6.324223ms 	 5.668863ms 	 3.932159ms 
+
+25.070397508s 	 270 	 810 	 0 	 12.517375ms 	 12.517375ms 	 10.354687ms 	 7.700479ms 	 6.619135ms 	 4.030463ms 
+
+26.073638197s 	 281 	 843 	 0 	 11.141119ms 	 11.141119ms 	 8.912895ms 	 6.750207ms 	 6.094847ms 	 3.768319ms 
+
+27.076921476s 	 283 	 849 	 0 	 10.649599ms 	 10.649599ms 	 8.224767ms 	 6.062079ms 	 5.275647ms 	 4.030463ms 
+
+28.07719172s 	 301 	 903 	 0 	 9.961471ms 	 9.961471ms 	 8.421375ms 	 6.553599ms 	 5.734399ms 	 3.604479ms 
+
+29.079115637s 	 293 	 879 	 0 	 9.502719ms 	 9.502719ms 	 8.486911ms 	 6.684671ms 	 6.225919ms 	 3.702783ms 
+
+
+
+Results
+
+Time (avg):	 30.000383569s
+
+Total ops:	 8364
+
+Total rows:	 25092
+
+Operations/s:	 278.79643541100216
+
+Rows/s:		 836.3893062330066
+
+Latency:
+
+  max:		 21.397503ms 
+
+  99.9th:	 11.665407ms 
+
+  99th:		 9.502719ms 
+
+  95th:		 6.979583ms 
+
+  90th:		 6.258687ms 
+
+  median:	 3.964927ms
+
+rows_per_request 4 concurrency 1 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 4
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.003906342s 	 246 	 984 	 0 	 11.993087ms 	 11.993087ms 	 9.240575ms 	 7.307263ms 	 5.996543ms 	 4.653055ms 
+
+2.007816908s 	 248 	 992 	 0 	 11.272191ms 	 11.272191ms 	 9.535487ms 	 8.093695ms 	 7.110655ms 	 4.325375ms 
+
+3.009149564s 	 242 	 968 	 0 	 11.206655ms 	 11.206655ms 	 9.142271ms 	 7.864319ms 	 6.914047ms 	 4.653055ms 
+
+4.010422196s 	 245 	 980 	 0 	 11.239423ms 	 11.239423ms 	 9.043967ms 	 7.733247ms 	 6.520831ms 	 4.718591ms 
+
+5.014280995s 	 265 	 1060 	 0 	 10.223615ms 	 10.223615ms 	 8.060927ms 	 6.324223ms 	 5.898239ms 	 4.456447ms 
+
+6.016548919s 	 249 	 996 	 0 	 12.222463ms 	 12.222463ms 	 11.632639ms 	 8.323071ms 	 7.208959ms 	 4.292607ms 
+
+7.021859991s 	 242 	 968 	 0 	 10.944511ms 	 10.944511ms 	 10.387455ms 	 7.241727ms 	 6.684671ms 	 4.554751ms 
+
+8.0248065s 	 258 	 1032 	 0 	 9.699327ms 	 9.699327ms 	 8.355839ms 	 7.045119ms 	 6.029311ms 	 4.489215ms 
+
+9.026685403s 	 256 	 1024 	 0 	 10.584063ms 	 10.584063ms 	 8.978431ms 	 6.946815ms 	 6.029311ms 	 4.325375ms 
+
+10.026848043s 	 234 	 936 	 0 	 11.173887ms 	 11.173887ms 	 9.928703ms 	 7.536639ms 	 7.045119ms 	 4.489215ms 
+
+11.030652942s 	 243 	 972 	 0 	 15.269887ms 	 15.269887ms 	 8.880127ms 	 7.143423ms 	 6.750207ms 	 4.620287ms 
+
+12.032850023s 	 262 	 1048 	 0 	 11.829247ms 	 11.829247ms 	 8.814591ms 	 6.782975ms 	 5.963775ms 	 4.259839ms 
+
+13.034584775s 	 257 	 1028 	 0 	 9.011199ms 	 9.011199ms 	 8.257535ms 	 6.979583ms 	 5.963775ms 	 4.554751ms 
+
+14.03549482s 	 241 	 964 	 0 	 12.353535ms 	 12.353535ms 	 9.207807ms 	 7.503871ms 	 7.045119ms 	 4.259839ms 
+
+15.035615016s 	 253 	 1012 	 0 	 8.224767ms 	 8.224767ms 	 7.405567ms 	 6.782975ms 	 6.520831ms 	 4.587519ms 
+
+16.038329331s 	 264 	 1056 	 0 	 9.338879ms 	 9.338879ms 	 6.881279ms 	 6.193151ms 	 5.701631ms 	 4.423679ms 
+
+17.042830737s 	 255 	 1020 	 0 	 8.912895ms 	 8.912895ms 	 7.733247ms 	 6.848511ms 	 6.160383ms 	 4.521983ms 
+
+18.04290223s 	 253 	 1012 	 0 	 10.027007ms 	 10.027007ms 	 7.962623ms 	 7.176191ms 	 6.881279ms 	 4.554751ms 
+
+19.046792285s 	 262 	 1048 	 0 	 14.811135ms 	 14.811135ms 	 7.634943ms 	 6.782975ms 	 6.422527ms 	 4.259839ms 
+
+20.048259256s 	 257 	 1028 	 0 	 9.961471ms 	 9.961471ms 	 6.356991ms 	 5.996543ms 	 5.636095ms 	 4.456447ms 
+
+21.053408238s 	 250 	 1000 	 0 	 11.173887ms 	 11.173887ms 	 9.338879ms 	 7.176191ms 	 6.815743ms 	 4.620287ms 
+
+22.058593666s 	 262 	 1048 	 0 	 9.895935ms 	 9.895935ms 	 7.667711ms 	 6.979583ms 	 6.651903ms 	 4.358143ms 
+
+23.061233878s 	 270 	 1080 	 0 	 8.552447ms 	 8.552447ms 	 6.651903ms 	 5.931007ms 	 5.636095ms 	 4.423679ms 
+
+24.067075855s 	 269 	 1076 	 0 	 8.617983ms 	 8.617983ms 	 6.848511ms 	 5.963775ms 	 5.636095ms 	 4.521983ms 
+
+25.068991565s 	 245 	 980 	 0 	 9.699327ms 	 9.699327ms 	 8.486911ms 	 7.438335ms 	 7.045119ms 	 4.456447ms 
+
+26.070606188s 	 267 	 1068 	 0 	 8.159231ms 	 8.159231ms 	 7.241727ms 	 6.717439ms 	 6.389759ms 	 4.095999ms 
+
+27.074147228s 	 264 	 1056 	 0 	 7.045119ms 	 7.045119ms 	 6.586367ms 	 5.996543ms 	 5.734399ms 	 4.423679ms 
+
+28.074179849s 	 266 	 1064 	 0 	 7.995391ms 	 7.995391ms 	 7.274495ms 	 6.848511ms 	 6.029311ms 	 4.554751ms 
+
+29.074639024s 	 243 	 972 	 0 	 11.370495ms 	 11.370495ms 	 9.895935ms 	 7.110655ms 	 6.815743ms 	 4.489215ms 
+
+
+
+Results
+
+Time (avg):	 30.000056668s
+
+Total ops:	 7641
+
+Total rows:	 30564
+
+Operations/s:	 254.6995188895888
+
+Rows/s:		 1018.7980755583552
+
+Latency:
+
+  max:		 15.269887ms 
+
+  99.9th:	 11.370495ms 
+
+  99th:		 8.880127ms 
+
+  95th:		 7.045119ms 
+
+  90th:		 6.488063ms 
+
+  median:	 4.456447ms
+
+rows_per_request 5 concurrency 1 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 5
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.002597912s 	 239 	 1195 	 0 	 14.909439ms 	 14.909439ms 	 9.699327ms 	 7.536639ms 	 6.422527ms 	 5.111807ms 
+
+2.005928431s 	 230 	 1150 	 0 	 12.615679ms 	 12.615679ms 	 9.928703ms 	 7.864319ms 	 7.471103ms 	 4.947967ms 
+
+3.00867003s 	 244 	 1220 	 0 	 10.092543ms 	 10.092543ms 	 8.650751ms 	 7.110655ms 	 6.520831ms 	 4.915199ms 
+
+4.013527875s 	 241 	 1205 	 0 	 10.584063ms 	 10.584063ms 	 9.469951ms 	 7.471103ms 	 7.176191ms 	 5.013503ms 
+
+5.016591755s 	 227 	 1135 	 0 	 10.158079ms 	 10.158079ms 	 8.716287ms 	 7.208959ms 	 6.881279ms 	 5.177343ms 
+
+6.01995322s 	 225 	 1125 	 0 	 11.534335ms 	 11.534335ms 	 10.780671ms 	 7.929855ms 	 7.307263ms 	 5.079039ms 
+
+7.023578901s 	 239 	 1195 	 0 	 10.321919ms 	 10.321919ms 	 9.404415ms 	 7.602175ms 	 6.914047ms 	 4.947967ms 
+
+8.028839753s 	 235 	 1175 	 0 	 8.847359ms 	 8.847359ms 	 8.552447ms 	 6.750207ms 	 6.356991ms 	 4.947967ms 
+
+9.031886809s 	 220 	 1100 	 0 	 10.158079ms 	 10.158079ms 	 9.338879ms 	 7.864319ms 	 7.536639ms 	 4.915199ms 
+
+10.032785447s 	 213 	 1065 	 0 	 10.223615ms 	 10.223615ms 	 8.552447ms 	 7.602175ms 	 7.241727ms 	 5.144575ms 
+
+11.033143377s 	 251 	 1255 	 0 	 8.519679ms 	 8.519679ms 	 7.307263ms 	 6.651903ms 	 6.258687ms 	 4.685823ms 
+
+12.038792486s 	 254 	 1270 	 0 	 7.864319ms 	 7.864319ms 	 7.045119ms 	 6.488063ms 	 6.160383ms 	 4.784127ms 
+
+13.039840611s 	 242 	 1210 	 0 	 8.552447ms 	 8.552447ms 	 8.224767ms 	 7.667711ms 	 7.143423ms 	 4.620287ms 
+
+14.039969244s 	 218 	 1090 	 0 	 12.451839ms 	 12.451839ms 	 8.486911ms 	 7.733247ms 	 7.307263ms 	 5.144575ms 
+
+15.042458284s 	 240 	 1200 	 0 	 8.552447ms 	 8.552447ms 	 7.700479ms 	 7.110655ms 	 6.651903ms 	 4.947967ms 
+
+16.047578625s 	 244 	 1220 	 0 	 10.715135ms 	 10.715135ms 	 8.781823ms 	 6.684671ms 	 6.356991ms 	 4.882431ms 
+
+17.047803416s 	 238 	 1190 	 0 	 10.256383ms 	 10.256383ms 	 8.126463ms 	 7.405567ms 	 6.651903ms 	 5.046271ms 
+
+18.048392341s 	 207 	 1035 	 0 	 11.304959ms 	 11.304959ms 	 9.895935ms 	 8.323071ms 	 7.733247ms 	 5.406719ms 
+
+19.055061573s 	 219 	 1095 	 0 	 10.944511ms 	 10.944511ms 	 10.354687ms 	 7.438335ms 	 6.946815ms 	 5.177343ms 
+
+20.057234309s 	 227 	 1135 	 0 	 9.240575ms 	 9.240575ms 	 8.486911ms 	 6.848511ms 	 6.520831ms 	 5.242879ms 
+
+21.060984931s 	 250 	 1250 	 0 	 12.976127ms 	 12.976127ms 	 8.028159ms 	 6.651903ms 	 6.193151ms 	 4.816895ms 
+
+22.06331497s 	 226 	 1130 	 0 	 11.010047ms 	 11.010047ms 	 9.175039ms 	 7.864319ms 	 7.471103ms 	 5.079039ms 
+
+23.063756505s 	 211 	 1055 	 0 	 12.976127ms 	 12.976127ms 	 8.257535ms 	 7.503871ms 	 7.274495ms 	 5.308415ms 
+
+24.066747813s 	 237 	 1185 	 0 	 8.683519ms 	 8.683519ms 	 8.257535ms 	 7.405567ms 	 6.520831ms 	 5.046271ms 
+
+25.071088704s 	 252 	 1260 	 0 	 8.486911ms 	 8.486911ms 	 7.733247ms 	 6.619135ms 	 6.356991ms 	 4.849663ms 
+
+26.080871304s 	 231 	 1155 	 0 	 12.091391ms 	 12.091391ms 	 10.158079ms 	 7.897087ms 	 7.372799ms 	 5.046271ms 
+
+27.081885201s 	 232 	 1160 	 0 	 8.650751ms 	 8.650751ms 	 8.290303ms 	 7.438335ms 	 7.274495ms 	 5.013503ms 
+
+28.083295567s 	 243 	 1215 	 0 	 8.683519ms 	 8.683519ms 	 7.864319ms 	 7.077887ms 	 6.782975ms 	 4.980735ms 
+
+29.087727392s 	 253 	 1265 	 0 	 8.028159ms 	 8.028159ms 	 7.077887ms 	 6.553599ms 	 6.258687ms 	 4.849663ms 
+
+
+
+Results
+
+Time (avg):	 30.005183537s
+
+Total ops:	 7011
+
+Total rows:	 35055
+
+Operations/s:	 233.65962722256285
+
+Rows/s:		 1168.2981361128143
+
+Latency:
+
+  max:		 14.909439ms 
+
+  99.9th:	 11.337727ms 
+
+  99th:		 8.650751ms 
+
+  95th:		 7.536639ms 
+
+  90th:		 6.946815ms 
+
+  median:	 5.013503ms
+
+rows_per_request 10 concurrency 1 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 10
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.014600086s 	 140 	 1400 	 0 	 13.991935ms 	 13.991935ms 	 12.812287ms 	 11.534335ms 	 10.747903ms 	 8.093695ms 
+
+2.015978348s 	 151 	 1510 	 0 	 23.461887ms 	 23.461887ms 	 12.451839ms 	 10.878975ms 	 10.256383ms 	 7.897087ms 
+
+3.024047391s 	 144 	 1439 	 0 	 13.631487ms 	 13.631487ms 	 13.205503ms 	 10.682367ms 	 10.092543ms 	 7.766015ms 
+
+4.025201756s 	 157 	 1570 	 0 	 13.172735ms 	 13.172735ms 	 12.484607ms 	 10.223615ms 	 9.502719ms 	 7.798783ms 
+
+5.030078054s 	 149 	 1490 	 0 	 13.205503ms 	 13.205503ms 	 12.681215ms 	 10.780671ms 	 10.158079ms 	 7.733247ms 
+
+6.037236229s 	 153 	 1530 	 0 	 14.614527ms 	 14.614527ms 	 11.698175ms 	 10.977279ms 	 10.584063ms 	 7.602175ms 
+
+7.045201664s 	 145 	 1450 	 0 	 30.244863ms 	 30.244863ms 	 13.697023ms 	 11.599871ms 	 10.289151ms 	 7.700479ms 
+
+8.052073124s 	 160 	 1600 	 0 	 16.646143ms 	 16.646143ms 	 12.910591ms 	 12.025855ms 	 10.289151ms 	 7.536639ms 
+
+9.057596118s 	 146 	 1460 	 0 	 26.542079ms 	 26.542079ms 	 14.778367ms 	 11.141119ms 	 9.732095ms 	 7.831551ms 
+
+10.060745622s 	 155 	 1550 	 0 	 19.169279ms 	 19.169279ms 	 12.025855ms 	 10.420223ms 	 9.732095ms 	 7.766015ms 
+
+11.065020506s 	 145 	 1450 	 0 	 17.956863ms 	 17.956863ms 	 14.254079ms 	 10.846207ms 	 10.551295ms 	 7.700479ms 
+
+12.06580725s 	 156 	 1560 	 0 	 13.762559ms 	 13.762559ms 	 12.943359ms 	 11.042815ms 	 10.518527ms 	 7.897087ms 
+
+13.070677084s 	 146 	 1459 	 0 	 12.681215ms 	 12.681215ms 	 12.255231ms 	 11.173887ms 	 10.354687ms 	 7.897087ms 
+
+14.078419175s 	 146 	 1460 	 0 	 12.320767ms 	 12.320767ms 	 11.862015ms 	 10.158079ms 	 9.666559ms 	 8.093695ms 
+
+15.081694711s 	 147 	 1470 	 0 	 13.336575ms 	 13.336575ms 	 12.353535ms 	 10.059775ms 	 9.797631ms 	 7.995391ms 
+
+16.089995167s 	 150 	 1500 	 0 	 15.106047ms 	 15.106047ms 	 13.697023ms 	 11.042815ms 	 10.059775ms 	 7.864319ms 
+
+17.093621663s 	 142 	 1420 	 0 	 15.171583ms 	 15.171583ms 	 13.860863ms 	 11.567103ms 	 10.813439ms 	 7.798783ms 
+
+18.095777474s 	 147 	 1470 	 0 	 15.892479ms 	 15.892479ms 	 13.467647ms 	 11.468799ms 	 10.452991ms 	 7.831551ms 
+
+19.10432636s 	 134 	 1340 	 0 	 35.061759ms 	 35.061759ms 	 25.985023ms 	 11.534335ms 	 10.551295ms 	 8.257535ms 
+
+20.104567307s 	 151 	 1510 	 0 	 12.287999ms 	 12.287999ms 	 11.501567ms 	 10.092543ms 	 9.666559ms 	 7.995391ms 
+
+21.108451128s 	 155 	 1550 	 0 	 16.678911ms 	 16.678911ms 	 11.599871ms 	 10.223615ms 	 9.469951ms 	 7.929855ms 
+
+22.109391547s 	 140 	 1400 	 0 	 18.055167ms 	 18.055167ms 	 14.712831ms 	 11.567103ms 	 11.239423ms 	 8.028159ms 
+
+23.112541388s 	 138 	 1380 	 0 	 15.171583ms 	 15.171583ms 	 14.188543ms 	 11.468799ms 	 10.747903ms 	 7.864319ms 
+
+24.113794346s 	 162 	 1620 	 0 	 13.828095ms 	 13.828095ms 	 11.272191ms 	 10.747903ms 	 10.092543ms 	 7.569407ms 
+
+25.114705831s 	 148 	 1480 	 0 	 21.889023ms 	 21.889023ms 	 11.862015ms 	 10.190847ms 	 9.732095ms 	 7.864319ms 
+
+26.115094672s 	 155 	 1550 	 0 	 13.303807ms 	 13.303807ms 	 11.632639ms 	 9.601023ms 	 9.273343ms 	 7.471103ms 
+
+27.12161578s 	 153 	 1530 	 0 	 11.698175ms 	 11.698175ms 	 10.616831ms 	 9.895935ms 	 9.502719ms 	 7.766015ms 
+
+28.125160233s 	 158 	 1579 	 0 	 18.972671ms 	 18.972671ms 	 11.730943ms 	 10.452991ms 	 10.190847ms 	 7.503871ms 
+
+29.128185572s 	 148 	 1480 	 0 	 13.893631ms 	 13.893631ms 	 13.729791ms 	 11.108351ms 	 10.616831ms 	 7.667711ms 
+
+
+
+Results
+
+Time (avg):	 30.004287489s
+
+Total ops:	 4453
+
+Total rows:	 44527
+
+Operations/s:	 148.4121228218645
+
+Rows/s:		 1484.0212425082327
+
+Latency:
+
+  max:		 35.061759ms 
+
+  99.9th:	 23.461887ms 
+
+  99th:		 13.074431ms 
+
+  95th:		 10.977279ms 
+
+  90th:		 10.190847ms 
+
+  median:	 7.831551ms
+
+rows_per_request 25 concurrency 1 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 25
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.004083085s 	 82 	 2050 	 0 	 23.068671ms 	 23.068671ms 	 21.430271ms 	 19.365887ms 	 18.677759ms 	 15.728639ms 
+
+2.015079281s 	 71 	 1775 	 0 	 21.364735ms 	 21.364735ms 	 20.381695ms 	 18.513919ms 	 18.382847ms 	 16.711679ms 
+
+3.031409977s 	 76 	 1898 	 0 	 27.590655ms 	 27.590655ms 	 25.427967ms 	 19.890175ms 	 18.939903ms 	 16.383999ms 
+
+4.031456733s 	 75 	 1875 	 0 	 20.054015ms 	 20.054015ms 	 19.628031ms 	 19.267583ms 	 18.612223ms 	 16.121855ms 
+
+5.036361377s 	 72 	 1800 	 0 	 22.151167ms 	 22.151167ms 	 21.463039ms 	 19.726335ms 	 19.365887ms 	 16.351231ms 
+
+6.038301461s 	 73 	 1825 	 0 	 47.513599ms 	 47.513599ms 	 31.752191ms 	 20.054015ms 	 19.496959ms 	 16.318463ms 
+
+7.047307503s 	 79 	 1975 	 0 	 25.067519ms 	 25.067519ms 	 21.725183ms 	 20.152319ms 	 19.496959ms 	 15.892479ms 
+
+8.052363012s 	 72 	 1799 	 0 	 22.708223ms 	 22.708223ms 	 21.561343ms 	 19.300351ms 	 18.546687ms 	 16.121855ms 
+
+9.0535997s 	 76 	 1899 	 0 	 22.183935ms 	 22.183935ms 	 21.266431ms 	 19.660799ms 	 19.300351ms 	 15.728639ms 
+
+10.056773437s 	 79 	 1975 	 0 	 25.165823ms 	 25.165823ms 	 22.708223ms 	 19.529727ms 	 18.579455ms 	 16.154623ms 
+
+11.065785599s 	 83 	 2075 	 0 	 22.315007ms 	 22.315007ms 	 21.495807ms 	 19.988479ms 	 19.005439ms 	 15.597567ms 
+
+12.075518275s 	 80 	 2000 	 0 	 22.642687ms 	 22.642687ms 	 19.398655ms 	 18.513919ms 	 18.055167ms 	 15.761407ms 
+
+13.086000118s 	 77 	 1925 	 0 	 29.687807ms 	 29.687807ms 	 20.447231ms 	 19.333119ms 	 18.612223ms 	 16.383999ms 
+
+14.091264078s 	 68 	 1699 	 0 	 28.639231ms 	 28.639231ms 	 24.739839ms 	 20.742143ms 	 20.381695ms 	 16.613375ms 
+
+15.107541375s 	 79 	 1975 	 0 	 21.594111ms 	 21.594111ms 	 19.824639ms 	 19.365887ms 	 18.382847ms 	 15.400959ms 
+
+16.109672252s 	 80 	 2000 	 0 	 22.511615ms 	 22.511615ms 	 20.807679ms 	 19.005439ms 	 18.481151ms 	 15.368191ms 
+
+17.112866346s 	 76 	 1900 	 0 	 19.136511ms 	 19.136511ms 	 18.874367ms 	 18.382847ms 	 18.022399ms 	 15.925247ms 
+
+18.123067299s 	 75 	 1875 	 0 	 20.250623ms 	 20.250623ms 	 19.693567ms 	 19.169279ms 	 18.120703ms 	 15.663103ms 
+
+19.131582313s 	 76 	 1899 	 0 	 20.348927ms 	 20.348927ms 	 19.333119ms 	 18.022399ms 	 17.661951ms 	 15.663103ms 
+
+20.13408864s 	 74 	 1850 	 0 	 22.315007ms 	 22.315007ms 	 20.676607ms 	 18.415615ms 	 17.891327ms 	 15.728639ms 
+
+21.150170886s 	 77 	 1925 	 0 	 20.578303ms 	 20.578303ms 	 20.021247ms 	 19.791871ms 	 18.317311ms 	 15.925247ms 
+
+22.162861609s 	 84 	 2100 	 0 	 21.987327ms 	 21.987327ms 	 21.463039ms 	 20.054015ms 	 19.005439ms 	 15.302655ms 
+
+23.173234319s 	 74 	 1850 	 0 	 20.185087ms 	 20.185087ms 	 20.185087ms 	 19.496959ms 	 19.333119ms 	 15.859711ms 
+
+24.186233924s 	 69 	 1724 	 0 	 20.545535ms 	 20.545535ms 	 20.119551ms 	 19.660799ms 	 19.234815ms 	 16.351231ms 
+
+25.189651283s 	 72 	 1800 	 0 	 21.266431ms 	 21.266431ms 	 20.054015ms 	 19.365887ms 	 18.481151ms 	 16.252927ms 
+
+26.193080135s 	 73 	 1825 	 0 	 23.068671ms 	 23.068671ms 	 21.364735ms 	 18.546687ms 	 18.120703ms 	 15.794175ms 
+
+27.195424438s 	 77 	 1925 	 0 	 20.512767ms 	 20.512767ms 	 20.283391ms 	 18.644991ms 	 18.022399ms 	 15.368191ms 
+
+28.207694887s 	 75 	 1875 	 0 	 36.569087ms 	 36.569087ms 	 34.603007ms 	 19.398655ms 	 18.677759ms 	 15.794175ms 
+
+29.217367972s 	 72 	 1800 	 0 	 20.086783ms 	 20.086783ms 	 19.955711ms 	 18.841599ms 	 18.546687ms 	 16.056319ms 
+
+
+
+Results
+
+Time (avg):	 30.005748288s
+
+Total ops:	 2255
+
+Total rows:	 56368
+
+Operations/s:	 75.1522667708916
+
+Rows/s:		 1878.5733806392984
+
+Latency:
+
+  max:		 47.513599ms 
+
+  99.9th:	 34.603007ms 
+
+  99th:		 22.151167ms 
+
+  95th:		 19.628031ms 
+
+  90th:		 18.776063ms 
+
+  median:	 15.958015ms
+
+rows_per_request 50 concurrency 1 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 50
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.008963323s 	 41 	 2049 	 0 	 37.060607ms 	 37.060607ms 	 37.060607ms 	 33.882111ms 	 32.309247ms 	 28.835839ms 
+
+2.017039671s 	 43 	 2150 	 0 	 35.061759ms 	 35.061759ms 	 35.061759ms 	 33.718271ms 	 32.604159ms 	 28.573695ms 
+
+3.038392502s 	 52 	 2600 	 0 	 33.292287ms 	 33.292287ms 	 32.899071ms 	 31.686655ms 	 31.326207ms 	 27.852799ms 
+
+4.062047284s 	 40 	 1998 	 0 	 33.849343ms 	 33.849343ms 	 33.849343ms 	 33.062911ms 	 32.210943ms 	 27.885567ms 
+
+5.061977274s 	 40 	 2000 	 0 	 32.997375ms 	 32.997375ms 	 32.997375ms 	 32.669695ms 	 31.916031ms 	 29.261823ms 
+
+6.076683304s 	 42 	 2100 	 0 	 32.178175ms 	 32.178175ms 	 32.178175ms 	 32.014335ms 	 31.096831ms 	 28.508159ms 
+
+7.086163231s 	 42 	 2100 	 0 	 34.766847ms 	 34.766847ms 	 34.766847ms 	 32.702463ms 	 30.867455ms 	 27.918335ms 
+
+8.103381587s 	 45 	 2250 	 0 	 33.456127ms 	 33.456127ms 	 33.456127ms 	 32.636927ms 	 31.424511ms 	 28.082175ms 
+
+9.129218676s 	 46 	 2300 	 0 	 34.013183ms 	 34.013183ms 	 34.013183ms 	 32.538623ms 	 31.817727ms 	 27.852799ms 
+
+10.143165695s 	 44 	 2200 	 0 	 32.800767ms 	 32.800767ms 	 32.800767ms 	 31.686655ms 	 31.522815ms 	 28.278783ms 
+
+11.158626362s 	 42 	 2100 	 0 	 35.717119ms 	 35.717119ms 	 35.717119ms 	 34.144255ms 	 33.488895ms 	 28.540927ms 
+
+12.160943209s 	 40 	 1998 	 0 	 36.929535ms 	 36.929535ms 	 36.929535ms 	 33.488895ms 	 32.800767ms 	 29.949951ms 
+
+13.181465482s 	 44 	 2199 	 0 	 35.061759ms 	 35.061759ms 	 35.061759ms 	 32.342015ms 	 32.112639ms 	 28.180479ms 
+
+14.201104563s 	 43 	 2149 	 0 	 35.389439ms 	 35.389439ms 	 35.389439ms 	 34.340863ms 	 32.735231ms 	 27.688959ms 
+
+15.208401195s 	 47 	 2350 	 0 	 44.007423ms 	 44.007423ms 	 44.007423ms 	 32.669695ms 	 31.391743ms 	 27.852799ms 
+
+16.234192713s 	 44 	 2199 	 0 	 34.766847ms 	 34.766847ms 	 34.766847ms 	 33.030143ms 	 31.817727ms 	 28.508159ms 
+
+17.236995263s 	 46 	 2300 	 0 	 45.154303ms 	 45.154303ms 	 45.154303ms 	 34.111487ms 	 31.948799ms 	 28.409855ms 
+
+18.249980855s 	 46 	 2298 	 0 	 35.192831ms 	 35.192831ms 	 35.192831ms 	 32.342015ms 	 31.162367ms 	 26.771455ms 
+
+19.251110386s 	 37 	 1849 	 0 	 35.684351ms 	 35.684351ms 	 35.684351ms 	 34.897919ms 	 33.390591ms 	 30.113791ms 
+
+20.265684996s 	 40 	 2000 	 0 	 36.110335ms 	 36.110335ms 	 36.110335ms 	 31.981567ms 	 31.129599ms 	 28.671999ms 
+
+21.291473056s 	 47 	 2349 	 0 	 35.487743ms 	 35.487743ms 	 35.487743ms 	 33.816575ms 	 31.424511ms 	 28.049407ms 
+
+22.315704541s 	 45 	 2249 	 0 	 33.292287ms 	 33.292287ms 	 33.292287ms 	 32.473087ms 	 31.588351ms 	 28.114943ms 
+
+23.324058779s 	 46 	 2298 	 0 	 34.013183ms 	 34.013183ms 	 34.013183ms 	 31.424511ms 	 30.769151ms 	 28.082175ms 
+
+24.333988764s 	 52 	 2600 	 0 	 34.471935ms 	 34.471935ms 	 33.456127ms 	 32.178175ms 	 31.850495ms 	 28.016639ms 
+
+25.344307406s 	 45 	 2250 	 0 	 33.357823ms 	 33.357823ms 	 33.357823ms 	 32.407551ms 	 31.457279ms 	 27.623423ms 
+
+26.350902239s 	 43 	 2149 	 0 	 32.964607ms 	 32.964607ms 	 32.964607ms 	 32.342015ms 	 30.834687ms 	 28.344319ms 
+
+27.369980295s 	 45 	 2248 	 0 	 34.963455ms 	 34.963455ms 	 34.963455ms 	 32.145407ms 	 31.490047ms 	 27.951103ms 
+
+28.381411758s 	 41 	 2050 	 0 	 34.209791ms 	 34.209791ms 	 34.209791ms 	 32.800767ms 	 31.850495ms 	 27.885567ms 
+
+29.396592549s 	 47 	 2349 	 0 	 31.948799ms 	 31.948799ms 	 31.948799ms 	 31.817727ms 	 31.227903ms 	 28.213247ms 
+
+
+
+Results
+
+Time (avg):	 30.004704196s
+
+Total ops:	 1302
+
+Total rows:	 65079
+
+Operations/s:	 43.393195663417764
+
+Rows/s:		 2168.9598929182525
+
+Latency:
+
+  max:		 45.154303ms 
+
+  99.9th:	 44.007423ms 
+
+  99th:		 35.061759ms 
+
+  95th:		 32.899071ms 
+
+  90th:		 31.948799ms 
+
+  median:	 28.278783ms
+
+rows_per_request 100 concurrency 1 max_reqs -1
+Configuration
+
+Mode:			 read
+
+Workload:		 uniform
+
+Timeout:		 5s
+
+Consistency level:	 quorum
+
+Partition count:	 100
+
+Clustering rows:	 100000
+
+Clustering row size:	 100
+
+Rows per request:	 100
+
+Provide upper bound:	 false
+
+IN queries:		 true
+
+No lower bound:		 false
+
+Page size:		 1000
+
+Concurrency:		 1
+
+Connections:		 4
+
+Maximum rate:		 unlimited
+
+Disable client compression:	 false
+
+
+
+time		operations/s	rows/s		errors	max		99.9th		99th		95th		90th		median
+
+1.020181299s 	 24 	 2396 	 0 	 59.736063ms 	 59.736063ms 	 59.736063ms 	 58.392575ms 	 57.475071ms 	 48.988159ms 
+
+2.065002452s 	 29 	 2897 	 0 	 57.212927ms 	 57.212927ms 	 57.212927ms 	 56.623103ms 	 55.672831ms 	 50.069503ms 
+
+3.09865652s 	 23 	 2298 	 0 	 62.619647ms 	 62.619647ms 	 62.619647ms 	 55.967743ms 	 55.541759ms 	 50.298879ms 
+
+4.119057739s 	 22 	 2200 	 0 	 61.079551ms 	 61.079551ms 	 61.079551ms 	 56.000511ms 	 56.000511ms 	 51.249151ms 
+
+5.145449007s 	 23 	 2297 	 0 	 58.490879ms 	 58.490879ms 	 58.490879ms 	 57.835519ms 	 56.098815ms 	 50.233343ms 
+
+6.187156192s 	 27 	 2699 	 0 	 56.033279ms 	 56.033279ms 	 56.033279ms 	 55.738367ms 	 54.525951ms 	 46.596095ms 
+
+7.194340359s 	 24 	 2399 	 0 	 55.672831ms 	 55.672831ms 	 55.672831ms 	 55.574527ms 	 54.001663ms 	 48.365567ms 
+
+8.228281459s 	 23 	 2299 	 0 	 58.195967ms 	 58.195967ms 	 58.195967ms 	 57.475071ms 	 56.655871ms 	 49.610751ms 
+
+9.275884023s 	 28 	 2798 	 0 	 57.901055ms 	 57.901055ms 	 57.901055ms 	 57.540607ms 	 52.690943ms 	 47.054847ms 
+
+10.291057838s 	 21 	 2099 	 0 	 58.490879ms 	 58.490879ms 	 58.490879ms 	 56.098815ms 	 54.394879ms 	 50.200575ms 
+
+11.295939144s 	 28 	 2799 	 0 	 80.740351ms 	 80.740351ms 	 80.740351ms 	 62.324735ms 	 53.608447ms 	 47.284223ms 
+
+12.333362134s 	 26 	 2598 	 0 	 57.343999ms 	 57.343999ms 	 57.343999ms 	 56.819711ms 	 56.098815ms 	 50.298879ms 
+
+13.354870934s 	 23 	 2299 	 0 	 59.932671ms 	 59.932671ms 	 59.932671ms 	 55.541759ms 	 54.820863ms 	 50.331647ms 
+
+14.368001869s 	 22 	 2199 	 0 	 56.655871ms 	 56.655871ms 	 56.655871ms 	 56.393727ms 	 56.000511ms 	 49.119231ms 
+
+15.374384991s 	 19 	 1897 	 0 	 64.290815ms 	 64.290815ms 	 64.290815ms 	 57.737215ms 	 56.688639ms 	 52.297727ms 
+
+16.378739815s 	 31 	 3099 	 0 	 58.916863ms 	 58.916863ms 	 58.916863ms 	 55.377919ms 	 55.345151ms 	 48.496639ms 
+
+17.403884438s 	 24 	 2399 	 0 	 57.835519ms 	 57.835519ms 	 57.835519ms 	 57.376767ms 	 54.919167ms 	 50.069503ms 
+
+18.450362265s 	 29 	 2899 	 0 	 58.327039ms 	 58.327039ms 	 58.327039ms 	 57.606143ms 	 56.524799ms 	 49.315839ms 
+
+19.466218054s 	 25 	 2499 	 0 	 57.573375ms 	 57.573375ms 	 57.573375ms 	 56.459263ms 	 55.410687ms 	 48.234495ms 
+
+20.49370068s 	 28 	 2799 	 0 	 58.097663ms 	 58.097663ms 	 58.097663ms 	 57.507839ms 	 53.870591ms 	 49.840127ms 
+
+21.523339092s 	 25 	 2499 	 0 	 63.012863ms 	 63.012863ms 	 63.012863ms 	 58.130431ms 	 57.507839ms 	 49.086463ms 
+
+22.534159634s 	 24 	 2397 	 0 	 60.555263ms 	 60.555263ms 	 60.555263ms 	 56.524799ms 	 53.837823ms 	 48.627711ms 
+
+23.543877129s 	 24 	 2398 	 0 	 57.966591ms 	 57.966591ms 	 57.966591ms 	 55.148543ms 	 55.115775ms 	 47.710207ms 
+
+24.575747574s 	 26 	 2598 	 0 	 59.375615ms 	 59.375615ms 	 59.375615ms 	 56.229887ms 	 54.951935ms 	 49.971199ms 
+
+25.587559168s 	 23 	 2298 	 0 	 57.376767ms 	 57.376767ms 	 57.376767ms 	 57.245695ms 	 56.393727ms 	 48.627711ms 
+
+26.614754373s 	 32 	 3197 	 0 	 58.523647ms 	 58.523647ms 	 58.523647ms 	 55.443455ms 	 54.099967ms 	 46.235647ms 
+
+27.636777414s 	 24 	 2399 	 0 	 60.260351ms 	 60.260351ms 	 60.260351ms 	 58.425343ms 	 54.657023ms 	 49.217535ms 
+
+28.642211612s 	 22 	 2198 	 0 	 55.934975ms 	 55.934975ms 	 55.934975ms 	 55.377919ms 	 54.067199ms 	 49.610751ms 
+
+29.66062165s 	 25 	 2499 	 0 	 61.177855ms 	 61.177855ms 	 61.177855ms 	 54.427647ms 	 53.084159ms 	 50.462719ms 
+
+
+
+Results
+
+Time (avg):	 30.015348539s
+
+Total ops:	 735
+
+Total rows:	 73451
+
+Operations/s:	 24.487471769484486
+
+Rows/s:		 2447.114678830483
+
+Latency:
+
+  max:		 80.740351ms 
+
+  99.9th:	 64.290815ms 
+
+  99th:		 60.555263ms 
+
+  95th:		 57.376767ms 
+
+  90th:		 55.541759ms 
+
+  median:	 49.643519ms
+
