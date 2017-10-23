@@ -1,1 +1,1 @@
-cassandra-stress write cl=QUORUM duration=10080m -schema keyspace=keyspace$2 'replication(factor=2) compaction(strategy=LeveledCompactionStrategy)' -port jmx=6868 -mode cql3 native -rate threads=250 limit=200000/s -col 'size=gauss(1..128) n=FIXED(1)' -pop seq=1..100000000 -log interval=5 -node 172.16.99.174
+cassandra-stress write cl=QUORUM duration=10080m -schema keyspace=keyspace 'replication(factor=2)' -port jmx=6868 -mode cql3 native -rate threads=250 limit=200000/s -col 'size=gauss(1..128) n=FIXED(1)' -pop seq=1..100000000 -log interval=5 -node 172.16.99.174
