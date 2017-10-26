@@ -13,7 +13,7 @@ def boot_cluster():
 
 
 def boot_cluster_service():
-    ccm_commands = ["sudo service syclla-server stop","sudo pkill -9 scylla","sudo rm -Rf /var/lib/scylla/data/*", "sudo rm -Rf /var/lib/scylla/commitlog/*","sleep 3","sudo service scylla-server start","sleep 60"]
+#    ccm_commands = ["sudo service syclla-server stop","sudo pkill -9 scylla","sudo rm -Rf /var/lib/scylla/data/*", "sudo rm -Rf /var/lib/scylla/commitlog/*","sleep 3","sudo service scylla-server start","sleep 60"]
     ccm_commands = ["sudo pkill -9 scylla","sudo pkill -9 java","sudo rm -Rf /var/lib/scylla/cassandra/data/*", "sudo rm -Rf /var/lib/scylla//cassandra/commitlog/*","sudo rm -Rf /var/lib/scylla//cassandra/saved_caches/*","sleep 3","cd ~/cassandra/apache-cassandra-3.11.0/; bin/cassandra","sleep 60"]
     for ccm_command in ccm_commands:
         p = subprocess.Popen(ccm_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
@@ -41,12 +41,13 @@ def run_test(clustering_row_count,clustering_row_size):
     p.wait()
     
 #    run_page_size_test(clustering_row_count,clustering_row_size,10) 
-    for page_size in [10,50,100,1000,2500,5000,10000,50000]:
+    for page_size in [10,50,100,500,1000,5000,10000,50000]:
        run_page_size_test(clustering_row_count,clustering_row_size,page_size) 
 
 
-for clustering_row_size in [10,100,1000,10000]:
+for clustering_row_size in [100,1000,10000,100000]:
+#for clustering_row_size in [100000]:
     boot_cluster_service()
-    run_test(5*1000000/clustering_row_size,clustering_row_size)
-#    run_test(1*10000000/clustering_row_size,clustering_row_size)
+#    run_test(5*1000000/clustering_row_size,clustering_row_size)
+    run_test(10*10000000/clustering_row_size,clustering_row_size)
 
